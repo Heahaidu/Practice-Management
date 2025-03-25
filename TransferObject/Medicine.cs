@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TransferObject
+{
+    public class Medicine
+    {
+        //ID
+        [Display(Name = "ID")]
+        public int id { get; set; }
+        //Name
+        [Display(Name = "Tên thuốc")]
+        public string name { get; set; }
+        // Nhà sản xuất
+        [Display(Name = "Nhà sản xuất")]
+        public string manufacturer { get; set; }
+        // Loại
+        [Display(Name = "Bào chế dạng")]
+        public string type { get; set; }
+        // Mô tả
+        [Display(Name = "Mô tả")]
+        public string description { get; set; }
+        // Giá
+        // Giá khuyến mãi
+        [Display(Name = "Giá khuyến mãi")]
+        public string discountPrice { get; set; }
+        [Display(Name = "Giá")]
+        public float price { get; set; }
+        // Số lượng
+        [Display(Name = "Số lượng")]
+        public int quantity { get; set; }
+        // Ngày sản xuất
+        [Display(Name = "Ngày sản xuất")]
+        public DateTime manufacturingDate { get; set; }
+        // Hạn sử dụng
+        [Display(Name = "Hạn sử dụng")]
+        public DateTime expiryDate { get; set; }
+        // Ngày nhập
+        [Display(Name = "Ngày nhập")]
+        public DateTime importDate { get; set; }
+        // Cách sử dụng
+        [Display(Name = "Cách sử dụng")]
+        public string usage { get; set; }
+        // Liều lượng
+        [Display(Name = "Liều lượng")]
+        public string dosage { get; set; }
+
+    }
+}
