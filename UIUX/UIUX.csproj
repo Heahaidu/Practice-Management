@@ -81,7 +81,9 @@
     <Reference Include="Syncfusion.SpellChecker.Base, Version=28.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Tools.Base, Version=28.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Tools.Windows, Version=28.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -261,6 +263,24 @@
     <Compile Include="Popup\AccountPopup.Designer.cs">
       <DependentUpon>AccountPopup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Popup\AccountSettingPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\AccountSettingPopup.Designer.cs">
+      <DependentUpon>AccountSettingPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\NewIndicationPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\NewIndicationPopup.Designer.cs">
+      <DependentUpon>NewIndicationPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\NewExaminationPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\NewExaminationPopup.Designer.cs">
+      <DependentUpon>NewExaminationPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Popup\NewMedicinePopup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +311,12 @@
     </Compile>
     <Compile Include="TransPanel.Designer.cs">
       <DependentUpon>TransPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CabinetPage.cs">
       <SubType>Form</SubType>
@@ -325,6 +351,15 @@
     <EmbeddedResource Include="Popup\AccountPopup.resx">
       <DependentUpon>AccountPopup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Popup\AccountSettingPopup.resx">
+      <DependentUpon>AccountSettingPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\NewIndicationPopup.resx">
+      <DependentUpon>NewIndicationPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\NewExaminationPopup.resx">
+      <DependentUpon>NewExaminationPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Popup\NewMedicinePopup.resx">
       <DependentUpon>NewMedicinePopup.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +374,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CabinetPage.resx">
       <DependentUpon>CabinetPage.cs</DependentUpon>
@@ -372,6 +410,7 @@
     <Content Include="Resources\Images\icons8-close-16.png" />
     <Content Include="Resources\Images\icons8-close-25.png" />
     <Content Include="Resources\Images\icons8-close-48.png" />
+    <Content Include="Resources\Images\icons8-create-24.png" />
     <Content Include="Resources\Images\icons8-dashboard-layout-24-0.png" />
     <Content Include="Resources\Images\icons8-dashboard-layout-24-1.png" />
     <Content Include="Resources\Images\icons8-doctors-bag-24-0.png" />

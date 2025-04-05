@@ -11,7 +11,6 @@ namespace TransferObject
     public class Medicine
     {
         //ID
-        [Display(Name = "ID")]
         public int id { get; set; }
         //Name
         [Display(Name = "Tên thuốc")]
@@ -28,7 +27,7 @@ namespace TransferObject
         // Giá
         // Giá khuyến mãi
         [Display(Name = "Giá khuyến mãi")]
-        public string discountPrice { get; set; }
+        public float discountPrice { get; set; }
         [Display(Name = "Giá")]
         public float price { get; set; }
         // Số lượng
@@ -50,5 +49,20 @@ namespace TransferObject
         [Display(Name = "Liều lượng")]
         public string dosage { get; set; }
 
+        public Medicine(string name, string manufacturer, string type, string description, float discountPrice, float price, int quantity, DateTime manufacturingDate, DateTime expiryDate, DateTime importDate, string usage, string dosage)
+        {
+            this.name = name;
+            this.manufacturer = manufacturer;
+            this.type = type;
+            this.description = description;
+            this.discountPrice = discountPrice;
+            this.price = price;
+            this.quantity = quantity;
+            this.manufacturingDate = manufacturingDate;
+            this.expiryDate = expiryDate;
+            this.importDate = importDate;
+            this.usage = usage;
+            this.dosage = dosage;
+        }
     }
 }

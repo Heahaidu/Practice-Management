@@ -63,6 +63,16 @@ namespace UIUX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_create_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-create-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_plus_math_0 {
             get {
                 object obj = ResourceManager.GetObject("icons8-plus-math-0", resourceCulture);

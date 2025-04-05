@@ -12,10 +12,18 @@ namespace UIUX.Popup
 {
     public partial class AccountPopup: Form
     {
+
+        public EventHandler Clicked;
+
         public AccountPopup()
         {
             InitializeComponent();
         }
 
+        private void ShowAccountSettingPopup_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+            Clicked?.Invoke(sender, e);
+        }
     }
 }

@@ -42,7 +42,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(20, 10);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(110, 33);
+            this.bunifuLabel3.Size = new System.Drawing.Size(87, 26);
             this.bunifuLabel3.TabIndex = 4;
             this.bunifuLabel3.Text = "Trang chủ";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -50,8 +50,7 @@
             // 
             // DashboardPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bunifuLabel3);

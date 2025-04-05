@@ -54,7 +54,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(20, 10);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(94, 33);
+            this.bunifuLabel3.Size = new System.Drawing.Size(75, 26);
             this.bunifuLabel3.TabIndex = 5;
             this.bunifuLabel3.Text = "Tủ thuốc";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -122,7 +122,7 @@
             this.bunifuButton2.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.IdleIconLeftImage")));
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(660, 6);
+            this.bunifuButton2.Location = new System.Drawing.Point(727, 6);
             this.bunifuButton2.Name = "bunifuButton2";
             this.bunifuButton2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.OnDisabledState.BorderRadius = 15;
@@ -156,7 +156,7 @@
             this.bunifuButton2.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.bunifuButton2.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.OnPressedState.IconLeftImage")));
             this.bunifuButton2.OnPressedState.IconRightImage = null;
-            this.bunifuButton2.Size = new System.Drawing.Size(214, 40);
+            this.bunifuButton2.Size = new System.Drawing.Size(186, 40);
             this.bunifuButton2.TabIndex = 14;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -214,7 +214,7 @@
             this.bunifuButton1.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.IdleIconLeftImage")));
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(890, 6);
+            this.bunifuButton1.Location = new System.Drawing.Point(930, 6);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 15;
@@ -248,7 +248,7 @@
             this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.bunifuButton1.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnPressedState.IconLeftImage")));
             this.bunifuButton1.OnPressedState.IconRightImage = null;
-            this.bunifuButton1.Size = new System.Drawing.Size(197, 40);
+            this.bunifuButton1.Size = new System.Drawing.Size(174, 40);
             this.bunifuButton1.TabIndex = 13;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -306,7 +306,7 @@
             this.addNewMedicine_btn.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewMedicine_btn.IdleIconLeftImage")));
             this.addNewMedicine_btn.IdleIconRightImage = null;
             this.addNewMedicine_btn.IndicateFocus = false;
-            this.addNewMedicine_btn.Location = new System.Drawing.Point(1104, 6);
+            this.addNewMedicine_btn.Location = new System.Drawing.Point(1119, 6);
             this.addNewMedicine_btn.Name = "addNewMedicine_btn";
             this.addNewMedicine_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.addNewMedicine_btn.OnDisabledState.BorderRadius = 15;
@@ -340,7 +340,7 @@
             this.addNewMedicine_btn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.addNewMedicine_btn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewMedicine_btn.OnPressedState.IconLeftImage")));
             this.addNewMedicine_btn.OnPressedState.IconRightImage = null;
-            this.addNewMedicine_btn.Size = new System.Drawing.Size(130, 40);
+            this.addNewMedicine_btn.Size = new System.Drawing.Size(115, 40);
             this.addNewMedicine_btn.TabIndex = 13;
             this.addNewMedicine_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addNewMedicine_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -370,6 +370,7 @@
             // sfDataGrid
             // 
             this.sfDataGrid.AccessibleName = "Table";
+            this.sfDataGrid.AllowEditing = false;
             this.sfDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sfDataGrid.Location = new System.Drawing.Point(20, 0);
             this.sfDataGrid.Name = "sfDataGrid";
@@ -380,8 +381,7 @@
             // 
             // CabinetPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1254, 450);
             this.Controls.Add(this.bunifuPanel1);

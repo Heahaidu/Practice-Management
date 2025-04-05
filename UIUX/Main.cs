@@ -2,24 +2,29 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 using UIUX.Popup;
 using UIUX.View;
 
 namespace UIUX
 {
+
+    public interface CallBack { 
+        void ShowAccountSettingPopup();
+    }
+
     public partial class Main : Form
     {
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(int dpiFlag);
 
-
-
         private Form statePage;
         private int navKey = 0;
         private BunifuButton disableButton;
         private AccountPopup accountPopup;
         private TransPanel overlayPanel;
+        private AccountSettingPopup accountSettingPopup;
 
         public Main()
         {
@@ -29,11 +34,20 @@ namespace UIUX
             changePage(new DashboardPage());
             disableButton = dashboard_btn;
 
+            accountSettingPopup = new AccountSettingPopup
+            {
+                TopLevel = false,
+                Visible = false
+            };
+            this.Controls.Add(accountSettingPopup);
+
             accountPopup = new AccountPopup
             {
                 TopLevel = false,
                 Visible = false
             };
+            accountPopup.Clicked += AccountSettingShowup_Click;
+
             this.Controls.Add(accountPopup);
 
             overlayPanel = new TransPanel
@@ -41,7 +55,7 @@ namespace UIUX
                 Size = Screen.PrimaryScreen.Bounds.Size,
                 Location = new Point(0, 0),
                 BackColor = Color.White,
-                Opacity = 10,
+                Opacity = 0,
             };
             this.Controls.Add(overlayPanel);
 
@@ -110,6 +124,7 @@ namespace UIUX
 
         private void account_btn_Click(object sender, EventArgs e)
         {
+            this.ActiveControl = null;
             int x = account_btn.Location.X;
             int y = account_btn.Location.Y + account_btn.Height + 5;
             int x_ = panel2.Location.X;
@@ -128,13 +143,32 @@ namespace UIUX
         private void Main_MouseDown(object sender, MouseEventArgs e)
         {
             Point mouseLocation = this.PointToClient(e.Location);
-            if (accountPopup != null && accountPopup.Visible &&
-                !accountPopup.Bounds.Contains(mouseLocation))
+            if ((accountPopup != null && accountPopup.Visible && !accountPopup.Bounds.Contains(mouseLocation)) || 
+                (accountSettingPopup != null && accountSettingPopup.Visible && !accountSettingPopup.Bounds.Contains(mouseLocation)))
             {
                 accountPopup.Visible = false;
+                accountSettingPopup.Visible = false;
                 overlayPanel.Visible = false;
-                account_btn.Invalidate();
             }
+        }
+
+        private void AccountSettingShowup_Click(object sender, EventArgs e)
+        {
+            accountPopup.Visible = false;
+
+            int x = account_btn.Location.X;
+            int y = account_btn.Location.Y + account_btn.Height + 5;
+            int x_ = panel2.Location.X;
+            int y_ = panel2.Location.Y;
+            Point popupLocation = new Point(x + x_, y + y_ + 5);
+            accountSettingPopup.Location = popupLocation;
+            //overlayPanel.Visible = true;
+            //overlayPanel.BringToFront();
+            //overlayPanel.BackColor = Color.Black;
+            //overlayPanel.Opacity = 50;
+            accountSettingPopup.Visible = true;
+            accountSettingPopup.BringToFront();
+
         }
 
     }

@@ -100,7 +100,7 @@
             this.addNewTechnicalCatalog_btn.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewTechnicalCatalog_btn.IdleIconLeftImage")));
             this.addNewTechnicalCatalog_btn.IdleIconRightImage = null;
             this.addNewTechnicalCatalog_btn.IndicateFocus = false;
-            this.addNewTechnicalCatalog_btn.Location = new System.Drawing.Point(606, 6);
+            this.addNewTechnicalCatalog_btn.Location = new System.Drawing.Point(632, 6);
             this.addNewTechnicalCatalog_btn.Name = "addNewTechnicalCatalog_btn";
             this.addNewTechnicalCatalog_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.addNewTechnicalCatalog_btn.OnDisabledState.BorderRadius = 15;
@@ -116,7 +116,7 @@
             this.addNewTechnicalCatalog_btn.onHoverState.BorderThickness = 0;
             this.addNewTechnicalCatalog_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(128)))), ((int)(((byte)(234)))));
             this.addNewTechnicalCatalog_btn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.addNewTechnicalCatalog_btn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.onHoverState.IconLeftImage")));
+            this.addNewTechnicalCatalog_btn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewTechnicalCatalog_btn.onHoverState.IconLeftImage")));
             this.addNewTechnicalCatalog_btn.onHoverState.IconRightImage = null;
             this.addNewTechnicalCatalog_btn.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
             this.addNewTechnicalCatalog_btn.OnIdleState.BorderRadius = 15;
@@ -124,7 +124,7 @@
             this.addNewTechnicalCatalog_btn.OnIdleState.BorderThickness = 0;
             this.addNewTechnicalCatalog_btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.addNewTechnicalCatalog_btn.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.addNewTechnicalCatalog_btn.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.OnIdleState.IconLeftImage")));
+            this.addNewTechnicalCatalog_btn.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewTechnicalCatalog_btn.OnIdleState.IconLeftImage")));
             this.addNewTechnicalCatalog_btn.OnIdleState.IconRightImage = null;
             this.addNewTechnicalCatalog_btn.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
             this.addNewTechnicalCatalog_btn.OnPressedState.BorderRadius = 15;
@@ -132,9 +132,9 @@
             this.addNewTechnicalCatalog_btn.OnPressedState.BorderThickness = 0;
             this.addNewTechnicalCatalog_btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.addNewTechnicalCatalog_btn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.addNewTechnicalCatalog_btn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.OnPressedState.IconLeftImage")));
+            this.addNewTechnicalCatalog_btn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewTechnicalCatalog_btn.OnPressedState.IconLeftImage")));
             this.addNewTechnicalCatalog_btn.OnPressedState.IconRightImage = null;
-            this.addNewTechnicalCatalog_btn.Size = new System.Drawing.Size(174, 40);
+            this.addNewTechnicalCatalog_btn.Size = new System.Drawing.Size(148, 40);
             this.addNewTechnicalCatalog_btn.TabIndex = 14;
             this.addNewTechnicalCatalog_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addNewTechnicalCatalog_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -153,7 +153,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(20, 10);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(211, 33);
+            this.bunifuLabel3.Size = new System.Drawing.Size(167, 26);
             this.bunifuLabel3.TabIndex = 5;
             this.bunifuLabel3.Text = "Danh mục kỹ thuật";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -162,6 +162,7 @@
             // sfDataGrid
             // 
             this.sfDataGrid.AccessibleName = "Table";
+            this.sfDataGrid.AllowEditing = false;
             this.sfDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sfDataGrid.Location = new System.Drawing.Point(20, 0);
             this.sfDataGrid.Name = "sfDataGrid";
@@ -189,8 +190,7 @@
             // 
             // TechnicalCatalogPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bunifuPanel1);

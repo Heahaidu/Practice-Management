@@ -11,8 +11,8 @@ namespace TransferObject
     // System.ComponentModel.DataAnnotations
     public class Patient
     {
+
         // ID
-        [Display(Name = "ID")]
         public int id { get; set; }
         // Tên bệnh nhân
         [Display(Name = "Họ tên")]
@@ -22,7 +22,7 @@ namespace TransferObject
         public DateTime dob { get; set; }
         // Giới tính
         [Display(Name = "Giới tính")]
-        public Gender Gender { get; set; }
+        public Gender gender { get; set; }
         // Địa chỉ
         [Display(Name = "Địa chỉ")]
         public string address { get; set; }
@@ -32,14 +32,34 @@ namespace TransferObject
         // Email
         [Display(Name = "Email")]
         public string email { get; set; }
-        // Bảo hiểm y tế
-        [Display(Name = "Bảo hiểm y tế")]
-        public string healthInsurance { get; set; }
+        // Mã bảo hiểm y tế
+        [Display(Name = "Mã bảo hiểm y tế")]
+        public string healthInsuranceId { get; set; }
         // CMND/CCCD
         [Display(Name = "CMND/CCCD")]
         public string idCard { get; set; }
         // Tiền căn
         [Display(Name = "Tiền căn")]
-        public float roomFee { get; set; }
+        public string medicalHistory { get; set; }
+
+        public Patient(string name, DateTime dob, Gender gender, string address, string phone, string email, string healthInsuranceId, string idCard, string medicalHistory)
+        {
+            this.name = name;
+            this.dob = dob;
+            this.gender = gender;
+            this.address = address;
+            this.phone = phone;
+            this.email = email;
+            this.healthInsuranceId = healthInsuranceId;
+            this.idCard = idCard;
+            this.medicalHistory = medicalHistory;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("ID: {0} Name: {1} Dob: {2} Gender: {3} Address: {4} Phone: {5} Email: {6} HealthInsuranceId: {7} IdCard: {8} MedicalHistory",
+                                    id, name, dob.ToString(), gender, address, phone, email, healthInsuranceId, idCard, medicalHistory);
+        }
+
     }
 }

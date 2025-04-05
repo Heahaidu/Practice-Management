@@ -8,7 +8,7 @@ namespace TransferObject
 {
     public enum Gender
     {
-        Male = 0,
-        Female = 1
+        MALE = 0,
+        FEMALE = 1
     }
 }

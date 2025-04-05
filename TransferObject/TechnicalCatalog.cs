@@ -11,7 +11,6 @@ namespace TransferObject
     public class TechnicalCatalog
     {
         //ID
-        [Display(Name = "ID")]
         public int id { get; set; }
         // Loại
         [Display(Name = "Loại")]
@@ -28,5 +27,15 @@ namespace TransferObject
         // Mô tả
         [Display(Name = "Mô tả")]
         public string description { get; set; }
+
+        public TechnicalCatalog(string type, string name, float price, float discountPrice, string description)
+        {
+            this.type = type;
+            this.name = name;
+            this.price = price;
+            this.discountPrice = discountPrice;
+            this.description = description;
+        }
+
     }
 }

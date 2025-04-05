@@ -118,7 +118,7 @@
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(322, 49);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(322, 45);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 0;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -136,7 +136,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(71)))), ((int)(((byte)(88)))));
             this.label1.Location = new System.Drawing.Point(132, 247);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên đăng nhập";
             // 
@@ -147,7 +147,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(71)))), ((int)(((byte)(88)))));
             this.label2.Location = new System.Drawing.Point(134, 338);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 19);
+            this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
             // 
@@ -216,7 +216,7 @@
             this.bunifuTextBox2.SelectionLength = 0;
             this.bunifuTextBox2.SelectionStart = 0;
             this.bunifuTextBox2.ShortcutsEnabled = true;
-            this.bunifuTextBox2.Size = new System.Drawing.Size(322, 49);
+            this.bunifuTextBox2.Size = new System.Drawing.Size(322, 45);
             this.bunifuTextBox2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox2.TabIndex = 2;
             this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -325,7 +325,7 @@
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(71)))), ((int)(((byte)(88)))));
             this.checkBox1.Location = new System.Drawing.Point(136, 422);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(158, 23);
+            this.checkBox1.Size = new System.Drawing.Size(131, 19);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Ghi nhớ đăng nhập";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -428,7 +428,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(71)))), ((int)(((byte)(88)))));
             this.label3.Location = new System.Drawing.Point(128, 117);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 26);
+            this.label3.Size = new System.Drawing.Size(142, 22);
             this.label3.TabIndex = 14;
             this.label3.Text = "Chào mừng trở lại";
             // 
@@ -455,7 +455,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(71)))), ((int)(((byte)(88)))));
             this.label4.Location = new System.Drawing.Point(193, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 28);
+            this.label4.Size = new System.Drawing.Size(89, 23);
             this.label4.TabIndex = 16;
             this.label4.Text = "MediCare";
             // 
@@ -466,14 +466,13 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(71)))), ((int)(((byte)(88)))));
             this.label5.Location = new System.Drawing.Point(125, 143);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 53);
+            this.label5.Size = new System.Drawing.Size(167, 43);
             this.label5.TabIndex = 17;
             this.label5.Text = "MediCare";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(606, 598);
             this.Controls.Add(this.label5);

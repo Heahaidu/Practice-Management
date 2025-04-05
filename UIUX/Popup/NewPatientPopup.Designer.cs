@@ -71,7 +71,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuTextBox5 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnAddNewPatient = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.close_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
@@ -128,7 +128,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(20, 20);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(275, 38);
+            this.bunifuLabel3.Size = new System.Drawing.Size(224, 32);
             this.bunifuLabel3.TabIndex = 6;
             this.bunifuLabel3.Text = "Thêm bệnh nhân mới";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -161,7 +161,7 @@
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 66);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(541, 11);
@@ -173,7 +173,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(39, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 23);
+            this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 9;
             this.label1.Text = "Họ và Tên";
             // 
@@ -260,7 +260,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(39, 178);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 23);
+            this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Giới tính";
             // 
@@ -317,7 +317,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(289, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 23);
+            this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "Ngày sinh";
             // 
@@ -439,7 +439,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(39, 263);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 23);
+            this.label4.Size = new System.Drawing.Size(53, 19);
             this.label4.TabIndex = 19;
             this.label4.Text = "Địa chỉ";
             // 
@@ -526,7 +526,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(39, 349);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 23);
+            this.label5.Size = new System.Drawing.Size(93, 19);
             this.label5.TabIndex = 21;
             this.label5.Text = "Số điện thoại";
             // 
@@ -613,7 +613,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(289, 349);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 23);
+            this.label6.Size = new System.Drawing.Size(95, 19);
             this.label6.TabIndex = 23;
             this.label6.Text = "CMND/CCCD";
             // 
@@ -700,100 +700,101 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(39, 436);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 23);
+            this.label7.Size = new System.Drawing.Size(62, 19);
             this.label7.TabIndex = 25;
             this.label7.Text = "Tiền căn";
             // 
-            // bunifuButton1
+            // btnAddNewPatient
             // 
-            this.bunifuButton1.AllowAnimations = true;
-            this.bunifuButton1.AllowMouseEffects = true;
-            this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.AnimationSpeed = 200;
-            this.bunifuButton1.AutoGenerateColors = false;
-            this.bunifuButton1.AutoRoundBorders = false;
-            this.bunifuButton1.AutoSizeLeftIcon = true;
-            this.bunifuButton1.AutoSizeRightIcon = true;
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Thêm bệnh nhân";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.ColorContrastOnClick = 45;
-            this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddNewPatient.AllowAnimations = true;
+            this.btnAddNewPatient.AllowMouseEffects = true;
+            this.btnAddNewPatient.AllowToggling = false;
+            this.btnAddNewPatient.AnimationSpeed = 200;
+            this.btnAddNewPatient.AutoGenerateColors = false;
+            this.btnAddNewPatient.AutoRoundBorders = false;
+            this.btnAddNewPatient.AutoSizeLeftIcon = true;
+            this.btnAddNewPatient.AutoSizeRightIcon = true;
+            this.btnAddNewPatient.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddNewPatient.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnAddNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddNewPatient.BackgroundImage")));
+            this.btnAddNewPatient.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddNewPatient.ButtonText = "Thêm bệnh nhân";
+            this.btnAddNewPatient.ButtonTextMarginLeft = 0;
+            this.btnAddNewPatient.ColorContrastOnClick = 45;
+            this.btnAddNewPatient.ColorContrastOnHover = 45;
+            this.btnAddNewPatient.Cursor = System.Windows.Forms.Cursors.Default;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
             borderEdges2.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges2;
-            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Empty;
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.Empty;
-            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.IconLeft = null;
-            this.bunifuButton1.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bunifuButton1.IconMarginLeft = 11;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRight = null;
-            this.bunifuButton1.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bunifuButton1.IconSize = 25;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.Empty;
-            this.bunifuButton1.IdleBorderRadius = 0;
-            this.bunifuButton1.IdleBorderThickness = 0;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.Empty;
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(260, 534);
-            this.bunifuButton1.Name = "bunifuButton1";
-            this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.OnDisabledState.BorderRadius = 10;
-            this.bunifuButton1.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnDisabledState.BorderThickness = 1;
-            this.bunifuButton1.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.OnDisabledState.IconLeftImage = null;
-            this.bunifuButton1.OnDisabledState.IconRightImage = null;
-            this.bunifuButton1.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.bunifuButton1.onHoverState.BorderRadius = 10;
-            this.bunifuButton1.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.onHoverState.BorderThickness = 1;
-            this.bunifuButton1.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.bunifuButton1.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.onHoverState.IconLeftImage = null;
-            this.bunifuButton1.onHoverState.IconRightImage = null;
-            this.bunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.OnIdleState.BorderRadius = 10;
-            this.bunifuButton1.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnIdleState.BorderThickness = 1;
-            this.bunifuButton1.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.OnIdleState.IconLeftImage = null;
-            this.bunifuButton1.OnIdleState.IconRightImage = null;
-            this.bunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.OnPressedState.BorderRadius = 10;
-            this.bunifuButton1.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnPressedState.BorderThickness = 1;
-            this.bunifuButton1.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.OnPressedState.IconLeftImage = null;
-            this.bunifuButton1.OnPressedState.IconRightImage = null;
-            this.bunifuButton1.Size = new System.Drawing.Size(160, 43);
-            this.bunifuButton1.TabIndex = 27;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuButton1.TextMarginLeft = 0;
-            this.bunifuButton1.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.btnAddNewPatient.CustomizableEdges = borderEdges2;
+            this.btnAddNewPatient.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAddNewPatient.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAddNewPatient.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnAddNewPatient.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnAddNewPatient.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnAddNewPatient.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewPatient.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewPatient.IconLeft = null;
+            this.btnAddNewPatient.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNewPatient.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddNewPatient.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAddNewPatient.IconMarginLeft = 11;
+            this.btnAddNewPatient.IconPadding = 10;
+            this.btnAddNewPatient.IconRight = null;
+            this.btnAddNewPatient.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddNewPatient.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddNewPatient.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAddNewPatient.IconSize = 25;
+            this.btnAddNewPatient.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnAddNewPatient.IdleBorderRadius = 0;
+            this.btnAddNewPatient.IdleBorderThickness = 0;
+            this.btnAddNewPatient.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnAddNewPatient.IdleIconLeftImage = null;
+            this.btnAddNewPatient.IdleIconRightImage = null;
+            this.btnAddNewPatient.IndicateFocus = false;
+            this.btnAddNewPatient.Location = new System.Drawing.Point(260, 534);
+            this.btnAddNewPatient.Name = "btnAddNewPatient";
+            this.btnAddNewPatient.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAddNewPatient.OnDisabledState.BorderRadius = 10;
+            this.btnAddNewPatient.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddNewPatient.OnDisabledState.BorderThickness = 1;
+            this.btnAddNewPatient.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAddNewPatient.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAddNewPatient.OnDisabledState.IconLeftImage = null;
+            this.btnAddNewPatient.OnDisabledState.IconRightImage = null;
+            this.btnAddNewPatient.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnAddNewPatient.onHoverState.BorderRadius = 10;
+            this.btnAddNewPatient.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddNewPatient.onHoverState.BorderThickness = 1;
+            this.btnAddNewPatient.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnAddNewPatient.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewPatient.onHoverState.IconLeftImage = null;
+            this.btnAddNewPatient.onHoverState.IconRightImage = null;
+            this.btnAddNewPatient.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddNewPatient.OnIdleState.BorderRadius = 10;
+            this.btnAddNewPatient.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddNewPatient.OnIdleState.BorderThickness = 1;
+            this.btnAddNewPatient.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddNewPatient.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewPatient.OnIdleState.IconLeftImage = null;
+            this.btnAddNewPatient.OnIdleState.IconRightImage = null;
+            this.btnAddNewPatient.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddNewPatient.OnPressedState.BorderRadius = 10;
+            this.btnAddNewPatient.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddNewPatient.OnPressedState.BorderThickness = 1;
+            this.btnAddNewPatient.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddNewPatient.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewPatient.OnPressedState.IconLeftImage = null;
+            this.btnAddNewPatient.OnPressedState.IconRightImage = null;
+            this.btnAddNewPatient.Size = new System.Drawing.Size(160, 43);
+            this.btnAddNewPatient.TabIndex = 27;
+            this.btnAddNewPatient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddNewPatient.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddNewPatient.TextMarginLeft = 0;
+            this.btnAddNewPatient.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnAddNewPatient.UseDefaultRadiusAndThickness = true;
+            this.btnAddNewPatient.Click += new System.EventHandler(this.btnAddNewPatient_Click);
             // 
             // close_btn
             // 
@@ -889,12 +890,11 @@
             // 
             // NewPatientPopup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(541, 610);
             this.Controls.Add(this.close_btn);
-            this.Controls.Add(this.bunifuButton1);
+            this.Controls.Add(this.btnAddNewPatient);
             this.Controls.Add(this.bunifuTextBox5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bunifuTextBox4);
@@ -947,6 +947,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton close_btn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddNewPatient;
     }
 }
