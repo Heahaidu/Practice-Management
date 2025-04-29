@@ -1,4 +1,5 @@
 ﻿using Bunifu.UI.WinForms.BunifuButton;
+using BusinessLayer;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,7 +10,8 @@ using UIUX.View;
 namespace UIUX
 {
 
-    public interface CallBack { 
+    public interface CallBack
+    {
         void ShowAccountSettingPopup();
     }
 
@@ -31,6 +33,9 @@ namespace UIUX
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             InitializeComponent();
             SetProcessDpiAwarenessContext(-4);
+
+            btnAccount.Text = UserSession.Instance.CurrentUser.displayName;
+
             changePage(new DashboardPage());
             disableButton = dashboard_btn;
 
@@ -40,6 +45,10 @@ namespace UIUX
                 Visible = false
             };
             this.Controls.Add(accountSettingPopup);
+            accountSettingPopup.changeDisplayNameEvent += (sender, e) =>
+            {
+                btnAccount.Text = UserSession.Instance.CurrentUser.displayName;
+            };
 
             accountPopup = new AccountPopup
             {
@@ -114,24 +123,26 @@ namespace UIUX
             tech_btn_2.BringToFront();
             disableButton = (BunifuButton)sender;
         }
-        private void setting_btn_Click(object sender, EventArgs e)
+
+        private void btnAccounts_Click(object sender, EventArgs e)
         {
+            changePage(new AccountsPage());
             disableButton.BringToFront();
-            setting_btn.SendToBack();
-            setting_btn_2.BringToFront();
+            btnAccounts.SendToBack();
+            btnAccounts2.BringToFront();
             disableButton = (BunifuButton)sender;
         }
 
         private void account_btn_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-            int x = account_btn.Location.X;
-            int y = account_btn.Location.Y + account_btn.Height + 5;
+            int x = btnAccount.Location.X;
+            int y = btnAccount.Location.Y + btnAccount.Height + 5;
             int x_ = panel2.Location.X;
             int y_ = panel2.Location.Y;
             Point popupLocation = new Point(x + x_, y + y_ + 5);
             accountPopup.Location = popupLocation;
-
+            accountPopup.Refesh();
             overlayPanel.Visible = true;
             overlayPanel.BringToFront();
 
@@ -143,7 +154,7 @@ namespace UIUX
         private void Main_MouseDown(object sender, MouseEventArgs e)
         {
             Point mouseLocation = this.PointToClient(e.Location);
-            if ((accountPopup != null && accountPopup.Visible && !accountPopup.Bounds.Contains(mouseLocation)) || 
+            if ((accountPopup != null && accountPopup.Visible && !accountPopup.Bounds.Contains(mouseLocation)) ||
                 (accountSettingPopup != null && accountSettingPopup.Visible && !accountSettingPopup.Bounds.Contains(mouseLocation)))
             {
                 accountPopup.Visible = false;
@@ -156,12 +167,13 @@ namespace UIUX
         {
             accountPopup.Visible = false;
 
-            int x = account_btn.Location.X;
-            int y = account_btn.Location.Y + account_btn.Height + 5;
+            int x = btnAccount.Location.X;
+            int y = btnAccount.Location.Y + btnAccount.Height + 5;
             int x_ = panel2.Location.X;
             int y_ = panel2.Location.Y;
             Point popupLocation = new Point(x + x_, y + y_ + 5);
             accountSettingPopup.Location = popupLocation;
+            accountSettingPopup.Refesh();
             //overlayPanel.Visible = true;
             //overlayPanel.BringToFront();
             //overlayPanel.BackColor = Color.Black;
@@ -169,6 +181,11 @@ namespace UIUX
             accountSettingPopup.Visible = true;
             accountSettingPopup.BringToFront();
 
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
     }

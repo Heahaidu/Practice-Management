@@ -245,6 +245,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentGrid\Item.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +319,12 @@
     <Compile Include="ViewForm\PatientForm.Designer.cs">
       <DependentUpon>PatientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AccountsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountsPage.Designer.cs">
+      <DependentUpon>AccountsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CabinetPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewForm\PatientForm.resx">
       <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AccountsPage.resx">
+      <DependentUpon>AccountsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CabinetPage.resx">
       <DependentUpon>CabinetPage.cs</DependentUpon>
@@ -440,6 +450,10 @@
     <Content Include="Resources\Images\photo_2025-03-24_01-04-17.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{572ca83f-e2f3-4c3c-84ba-39ee6ac507e6}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TransferObject\TransferObject.csproj">
       <Project>{908ef2fe-c14e-43d5-a385-08539ebb857e}</Project>
       <Name>TransferObject</Name>

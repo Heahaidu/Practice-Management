@@ -100,7 +100,7 @@
             this.addNewTechnicalCatalog_btn.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewTechnicalCatalog_btn.IdleIconLeftImage")));
             this.addNewTechnicalCatalog_btn.IdleIconRightImage = null;
             this.addNewTechnicalCatalog_btn.IndicateFocus = false;
-            this.addNewTechnicalCatalog_btn.Location = new System.Drawing.Point(632, 6);
+            this.addNewTechnicalCatalog_btn.Location = new System.Drawing.Point(603, 6);
             this.addNewTechnicalCatalog_btn.Name = "addNewTechnicalCatalog_btn";
             this.addNewTechnicalCatalog_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.addNewTechnicalCatalog_btn.OnDisabledState.BorderRadius = 15;
@@ -134,7 +134,7 @@
             this.addNewTechnicalCatalog_btn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.addNewTechnicalCatalog_btn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewTechnicalCatalog_btn.OnPressedState.IconLeftImage")));
             this.addNewTechnicalCatalog_btn.OnPressedState.IconRightImage = null;
-            this.addNewTechnicalCatalog_btn.Size = new System.Drawing.Size(148, 40);
+            this.addNewTechnicalCatalog_btn.Size = new System.Drawing.Size(177, 40);
             this.addNewTechnicalCatalog_btn.TabIndex = 14;
             this.addNewTechnicalCatalog_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addNewTechnicalCatalog_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -153,7 +153,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(20, 10);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(167, 26);
+            this.bunifuLabel3.Size = new System.Drawing.Size(211, 33);
             this.bunifuLabel3.TabIndex = 5;
             this.bunifuLabel3.Text = "Danh mục kỹ thuật";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
