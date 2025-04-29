@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientPage));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addNewPatient_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -70,11 +70,11 @@
             this.addNewPatient_btn.ColorContrastOnClick = 45;
             this.addNewPatient_btn.ColorContrastOnHover = 45;
             this.addNewPatient_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.addNewPatient_btn.CustomizableEdges = borderEdges6;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.addNewPatient_btn.CustomizableEdges = borderEdges1;
             this.addNewPatient_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.addNewPatient_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.addNewPatient_btn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -100,7 +100,7 @@
             this.addNewPatient_btn.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewPatient_btn.IdleIconLeftImage")));
             this.addNewPatient_btn.IdleIconRightImage = null;
             this.addNewPatient_btn.IndicateFocus = false;
-            this.addNewPatient_btn.Location = new System.Drawing.Point(615, 7);
+            this.addNewPatient_btn.Location = new System.Drawing.Point(583, 7);
             this.addNewPatient_btn.Name = "addNewPatient_btn";
             this.addNewPatient_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.addNewPatient_btn.OnDisabledState.BorderRadius = 15;
@@ -134,7 +134,7 @@
             this.addNewPatient_btn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.addNewPatient_btn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewPatient_btn.OnPressedState.IconLeftImage")));
             this.addNewPatient_btn.OnPressedState.IconRightImage = null;
-            this.addNewPatient_btn.Size = new System.Drawing.Size(165, 40);
+            this.addNewPatient_btn.Size = new System.Drawing.Size(197, 40);
             this.addNewPatient_btn.TabIndex = 12;
             this.addNewPatient_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addNewPatient_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -153,7 +153,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(20, 10);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(94, 26);
+            this.bunifuLabel3.Size = new System.Drawing.Size(119, 33);
             this.bunifuLabel3.TabIndex = 5;
             this.bunifuLabel3.Text = "Bệnh nhân";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

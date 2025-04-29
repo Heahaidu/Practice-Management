@@ -25,5 +25,11 @@ namespace UIUX.Popup
             this.ActiveControl = null;
             Clicked?.Invoke(sender, e);
         }
+
+        public void Refesh()
+        {
+            lbDisplayName.Text = BusinessLayer.UserSession.Instance.CurrentUser.displayName;
+        }
+
     }
 }
