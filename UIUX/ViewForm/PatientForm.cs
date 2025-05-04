@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferObject;
 using UIUX.Popup;
+using BusinessLayer;
+using Syncfusion.Windows.Forms.Interop;
 
 namespace UIUX.ViewForm
 {
@@ -18,9 +20,9 @@ namespace UIUX.ViewForm
     {
 
         private Patient patient;
-        private static ObservableCollection<TransferObject.Examination> examinations;
-        private static ObservableCollection<TransferObject.Indication> indications;
-
+        private static ObservableCollection<Examination> examinations;
+        private static ObservableCollection<Indication> indications;
+        public EventHandler updatePatientEvent;
         public PatientForm(Patient patient)
         {
             this.patient = patient;
@@ -31,49 +33,89 @@ namespace UIUX.ViewForm
             //tbEmail.Text = patient.email;
             tbMedicalHistory.Text = patient.medicalHistory;
             tbIdCard.Text = patient.idCard;
-            dateTimeDob.Value = patient.dob;
-            dropdowGender.Text = patient.gender == Gender.MALE? "Nam" : "Nữ";
+            dtDob.Value = patient.dob;
+            ddGender.Text = patient.gender == Gender.MALE? "Nam" : "Nữ";
 
             // Initialize the data grid for examinations
-            examinations = new ObservableCollection<TransferObject.Examination>();
-            dataGridExamination.DataSource = examinations;
+            LoadExam();
             dataGridExamination.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
 
 
             // Initialize the data grid for indications
-            indications = new ObservableCollection<TransferObject.Indication>();
-            dataGridIndication.DataSource = indications;
+            LoadIndication();
             dataGridIndication.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
 
         }
 
+        private void LoadExam()
+        {
+            dataGridExamination.DataSource = new ExaminationBL().GetExaminations(patient.id);
+        }
+
+        private void LoadIndication()
+        {
+            dataGridIndication.DataSource = new IndicationBL().GetIndications(patient.id);
+        }
+
         private void btnAddNewExamination_Click(object sender, EventArgs e)
         {
-            NewExaminationPopup newExaminationPopup = new NewExaminationPopup();
+            NewExaminationPopup newExaminationPopup = new NewExaminationPopup(patientId:patient.id);
             newExaminationPopup.addExaminationEvent += addNewExaminationEvent;
             newExaminationPopup.ShowDialog();
         }
 
         private void btnAddNewIndication_Click(object sender, EventArgs e)
         {
-            NewIndicationPopup newIndicationPopup = new NewIndicationPopup();
+            NewIndicationPopup newIndicationPopup = new NewIndicationPopup(patientId: patient.id);
             newIndicationPopup.addIndicationEvent += addNewIndicationEvent;
             newIndicationPopup.ShowDialog();
         }
 
-        private void addNewExaminationEvent(object sender, EventArgs e)
+        private void addNewExaminationEvent(object examination, EventArgs e)
         {
-            Examination examination = sender as TransferObject.Examination;
-            examinations.Add(examination);
-            Console.WriteLine("Name: " + examination.DiagnosisName);
+            try
+            {
+                ExaminationBL examinationBL = new ExaminationBL();
+                examinationBL.Add((Examination)examination, patientId: patient.id);
+                LoadExam();
+            }
+            catch (Exception ex)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void addNewIndicationEvent(object sender, EventArgs e)
+        private void addNewIndicationEvent(object indication, EventArgs e)
         {
-            Indication indication = sender as TransferObject.Indication;
-            indications.Add(indication);
-            Console.WriteLine(indication.ToString());
+            try
+            {
+                IndicationBL indicationBL = new IndicationBL();
+                indicationBL.Add((Indication)indication, patientId: patient.id);
+                LoadIndication();
+            }
+            catch (Exception ex)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                MessageBox.Show(ex.Message);
+            }
         }
 
+        private void btnUpdatePatient_Click(object sender, EventArgs e)
+        {
+            Gender gender = ddGender.SelectedIndex == 0 ? Gender.MALE : Gender.FEMALE;
+            Patient patient_update = new Patient(id: patient.id,name: tbPatientName.Text, dob: dtDob.Value.Value, gender: gender, address: tbLocation.Text, phone: tbPhone.Text, idCard: tbIdCard.Text, medicalHistory: tbMedicalHistory.Text);
+            PatientBL patientBL = new PatientBL();
+            try
+            {
+                patientBL.Update(patient_update);
+                updatePatientEvent?.Invoke(patient, e);
+            }
+            catch (Exception ex)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

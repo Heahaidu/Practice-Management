@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferObject;
 
 namespace UIUX.Popup
 {
@@ -14,11 +15,18 @@ namespace UIUX.Popup
     {
 
         public EventHandler addIndicationEvent;
-
+        private int patientId;
         public NewIndicationPopup()
         {
             InitializeComponent();
-            dateIndication.Value = DateTime.Now;
+            dtIndication.Value = DateTime.Now;
+        }
+
+        public NewIndicationPopup(int patientId)
+        {
+            InitializeComponent();
+            dtIndication.Value = DateTime.Now;
+            this.patientId = patientId;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -28,8 +36,11 @@ namespace UIUX.Popup
 
         private void btnAddNewIndication_Click(object sender, EventArgs e)
         {
-            // Create a new indication object with dummy data
-            TransferObject.Indication indication = new TransferObject.Indication(DateTime.Now, "X-ray", "Dr. Smith", "Normal", "No issues detected");
+
+            DateTime indicationDate = dtIndication.Value.Value;
+            Indication indication = new Indication(indicationDate:  indicationDate,
+                indicationType: tbIndicationType.Text, doctorName: tbDoctorName.Text,
+                diagnosisName: tbDiagnosisName.Text, notes: tbNotes.Text, patientId: patientId);
             addIndicationEvent?.Invoke(indication, e);
             Close();
         }

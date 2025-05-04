@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -19,11 +20,15 @@ namespace UIUX.View
         public TechnicalCatalogPage()
         {
             InitializeComponent();
-
-            technicalCatalogs = new ObservableCollection<TransferObject.TechnicalCatalog>();
-
-            sfDataGrid.DataSource = technicalCatalogs;
+            LoadTech();
+            
             sfDataGrid.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
+        }
+
+        private void LoadTech()
+        {
+           
+            sfDataGrid.DataSource = new TechCatalogBL().GetTechnicalCatalogs();
         }
 
         private void addNewTechnicalCatalog_btn_Click(object sender, EventArgs e)
@@ -35,7 +40,17 @@ namespace UIUX.View
 
         private void AddNewTechnicalCatalog(object technicalCatalog, EventArgs e)
         {
-            technicalCatalogs.Add((TechnicalCatalog)technicalCatalog);
+            try
+            {
+                TechCatalogBL techCatalogBL = new TechCatalogBL();
+                techCatalogBL.Add((TechnicalCatalog)technicalCatalog);
+                this.DialogResult = DialogResult.OK;
+                LoadTech();
+            }
+            catch (Exception ex) {
+                this.DialogResult = DialogResult.Cancel;
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }

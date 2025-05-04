@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using TransferObject;
 using UIUX.Popup;
 using UIUX.ViewForm;
+using BusinessLayer;
 
 namespace UIUX.View
 {
@@ -24,9 +25,7 @@ namespace UIUX.View
         public PatientPage()
         {
             InitializeComponent();
-            patients = new ObservableCollection<TransferObject.Patient>();
-
-            sfDataGrid.DataSource = patients;
+            LoadPatient();
 
             //var editColumn = new Syncfusion.WinForms.DataGrid.GridButtonColumn()
             //{
@@ -49,6 +48,11 @@ namespace UIUX.View
             sfDataGrid.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
         }
 
+        private void LoadPatient()
+        {
+            sfDataGrid.DataSource = new PatientBL().GetPatients();
+        }
+
         private void addNewPatient_btn_Click(object sender, EventArgs e)
         {
             NewPatientPopup newPatientPopup = new NewPatientPopup();
@@ -58,16 +62,38 @@ namespace UIUX.View
 
         private void AddNewPatient(object patient, EventArgs e)
         {
-            patients.Add((Patient)patient);
+           try
+            {
+                PatientBL patientBL = new PatientBL();
+
+                patientBL.Add((Patient)patient);
+
+                this.DialogResult = DialogResult.OK;
+
+                LoadPatient(); 
+
+            }
+            catch (Exception ex) { 
+                this.DialogResult = DialogResult.No;
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void sfDataGrid_CellDoubleClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
         {
             Patient row = e.DataRow.RowData as Patient;
-            Console.WriteLine(row.ToString());
             PatientForm patientForm = new PatientForm(row);
+            patientForm.updatePatientEvent += updatePatientEvent;
             patientForm.ShowDialog();
         }
 
+        private void updatePatientEvent(object sender, EventArgs e)
+        {
+            Patient updatedPatient = sender as Patient;
+            if (updatedPatient != null)
+            {
+                LoadPatient();
+            }
+        }
     }
 }

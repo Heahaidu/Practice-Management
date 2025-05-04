@@ -9,6 +9,7 @@ namespace TransferObject
 {
     public class Indication
     {
+        public int id { get; set; }
         // Ngày chỉ định
         [Display(Name = "Ngày chỉ định")]
         public DateTime indicationDate { get; set; }
@@ -25,8 +26,21 @@ namespace TransferObject
         [Display(Name = "Ghi chú")]
         public string notes { get; set; }
 
-        public Indication(DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes)
+        public int patientId {  get; set; }
+      
+
+        public Indication(DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId)
         {
+            this.indicationDate = indicationDate;
+            this.indicationType = indicationType;
+            this.doctorName = doctorName;
+            this.diagnosisName = diagnosisName;
+            this.notes = notes;
+            this.patientId = patientId;
+        }
+        public Indication(int id, DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes)
+        {
+            this.id = id;
             this.indicationDate = indicationDate;
             this.indicationType = indicationType;
             this.doctorName = doctorName;

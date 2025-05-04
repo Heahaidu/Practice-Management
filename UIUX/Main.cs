@@ -188,5 +188,9 @@ namespace UIUX
             Application.Exit();
         }
 
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,28 @@ namespace UIUX.Popup
 
         private void btnAddNewTechnical_Click(object sender, EventArgs e)
         {
-            TechnicalCatalog technicalCatalog = new TechnicalCatalog("Blood Test", "Blood test", 120000, 100000, "");
+
+            try
+            {
+                float value1 = float.Parse(tbDiscountPrice.Text);
+                float value2 = float.Parse(tbPrice.Text);
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Vui lòng nhập số hợp lệ!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+
+            TechnicalCatalog technicalCatalog = new TechnicalCatalog(
+                name: tbNameTech.Text, type: ddTypeTech.Text,
+                price: float.Parse(tbPrice.Text), discountPrice: float.Parse(tbDiscountPrice.Text),
+                description: tbDescriptionTech.Text);
+
+
             addTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
             Close();
         }

@@ -49,6 +49,23 @@ namespace TransferObject
         [Display(Name = "Liều lượng")]
         public string dosage { get; set; }
 
+        public Medicine(int id, string name, string manufacturer, string type, string description, float discountPrice, float price, int quantity, DateTime manufacturingDate, DateTime expiryDate, DateTime importDate, string usage, string dosage)
+        {
+            this.id = id;
+            this.name = name;
+            this.manufacturer = manufacturer;
+            this.type = type;
+            this.description = description;
+            this.discountPrice = discountPrice;
+            this.price = price;
+            this.quantity = quantity;
+            this.manufacturingDate = manufacturingDate;
+            this.expiryDate = expiryDate;
+            this.importDate = importDate;
+            this.usage = usage;
+            this.dosage = dosage;
+        }
+
         public Medicine(string name, string manufacturer, string type, string description, float discountPrice, float price, int quantity, DateTime manufacturingDate, DateTime expiryDate, DateTime importDate, string usage, string dosage)
         {
             this.name = name;

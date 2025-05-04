@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UIUX.Popup;
+using TransferObject;
+using BusinessLayer;
 
 namespace UIUX.View
 {
@@ -21,9 +23,13 @@ namespace UIUX.View
         public CabinetPage()
         {
             InitializeComponent();
-            medicines = new ObservableCollection<TransferObject.Medicine>();
-            sfDataGrid.DataSource = medicines;
+            LoadMedicine();
             sfDataGrid.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
+        }
+
+        public void LoadMedicine()
+        {
+            sfDataGrid.DataSource = new MedicineBL().GetMedicines();
         }
 
         private void addNewMedicine_btn_Click(object sender, EventArgs e)
@@ -35,7 +41,21 @@ namespace UIUX.View
 
         private void AddNewMedicine(object medicine, EventArgs e)
         {
-            medicines.Add((TransferObject.Medicine)medicine);
+            try
+            {
+                MedicineBL medicineBL = new MedicineBL();
+
+                medicineBL.Add((Medicine)medicine);
+
+                this.DialogResult = DialogResult.OK;
+
+                LoadMedicine();
+            }
+            catch (Exception ex)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }

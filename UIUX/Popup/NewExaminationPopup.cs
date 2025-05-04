@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferObject;
 
 namespace UIUX.Popup
 {
@@ -14,11 +15,17 @@ namespace UIUX.Popup
     {
 
         public EventHandler addExaminationEvent;
-
+        private int patientId;
         public NewExaminationPopup()
         {
             InitializeComponent();
-            dateExamination.Value = DateTime.Now;
+            dtExamination.Value = DateTime.Now;
+        }
+        public NewExaminationPopup(int patientId)
+        {
+            InitializeComponent();
+            dtExamination.Value = DateTime.Now;
+            this.patientId = patientId;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -28,10 +35,12 @@ namespace UIUX.Popup
 
         private void btnAddNewExamination_Click(object sender, EventArgs e)
         {
-            // Create a new examination object with dummy data
-            TransferObject.Examination examination = new TransferObject.Examination(DateTime.Now, "Blood Test", "Dr. Smith", "Normal", "No issues detected");
+
+            DateTime examinationDate = dtExamination.Value.Value;
+            Examination examination = new Examination(examinationDate: examinationDate,
+                doctorName: tbDoctorName.Text, medicalHistory: tbMedicalHistory.Text,
+                diagnosisName: tbDiagnosisName.Text, notes: tbNote.Text, patientId: patientId);
             addExaminationEvent?.Invoke(examination, e);
-            Console.WriteLine(examination.ToString());
             Close();
         }
     }

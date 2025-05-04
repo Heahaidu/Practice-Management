@@ -42,6 +42,20 @@ namespace TransferObject
         [Display(Name = "Tiền căn")]
         public string medicalHistory { get; set; }
 
+        public Patient(int id, string name, DateTime dob, Gender gender, string address, string phone, string email, string healthInsuranceId, string idCard, string medicalHistory)
+        {
+            this.id = id;
+            this.name = name;
+            this.dob = dob;
+            this.gender = gender;
+            this.address = address;
+            this.phone = phone;
+            this.email = email;
+            this.healthInsuranceId = healthInsuranceId;
+            this.idCard = idCard;
+            this.medicalHistory = medicalHistory;
+        }
+
         public Patient(string name, DateTime dob, Gender gender, string address, string phone, string email, string healthInsuranceId, string idCard, string medicalHistory)
         {
             this.name = name;
@@ -51,6 +65,18 @@ namespace TransferObject
             this.phone = phone;
             this.email = email;
             this.healthInsuranceId = healthInsuranceId;
+            this.idCard = idCard;
+            this.medicalHistory = medicalHistory;
+        }
+
+        public Patient(int id, string name, DateTime dob, Gender gender, string address, string phone, string idCard, string medicalHistory)
+        {
+            this.id = id;
+            this.name = name;
+            this.dob = dob;
+            this.gender = gender;
+            this.address = address;
+            this.phone = phone;
             this.idCard = idCard;
             this.medicalHistory = medicalHistory;
         }

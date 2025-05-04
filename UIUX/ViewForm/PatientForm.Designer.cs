@@ -65,7 +65,7 @@
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAddNewIndication = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnAddNewPatient = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnUpdatePatient = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tbMedicalHistory = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbIdCard = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -76,9 +76,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dateTimeDob = new Syncfusion.WinForms.Input.SfDateTimeEdit();
+            this.dtDob = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             this.label3 = new System.Windows.Forms.Label();
-            this.dropdowGender = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.ddGender = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPatientName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -130,6 +130,7 @@
             this.dataGridExamination.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridExamination.Location = new System.Drawing.Point(20, 0);
             this.dataGridExamination.Name = "dataGridExamination";
+            this.dataGridExamination.PreviewRowHeight = 35;
             this.dataGridExamination.Size = new System.Drawing.Size(560, 167);
             this.dataGridExamination.TabIndex = 0;
             this.dataGridExamination.Text = " ";
@@ -155,7 +156,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(20, 20);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(134, 23);
+            this.bunifuLabel1.Size = new System.Drawing.Size(163, 28);
             this.bunifuLabel1.TabIndex = 0;
             this.bunifuLabel1.Text = "Danh sách khám";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -288,6 +289,7 @@
             this.dataGridIndication.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridIndication.Location = new System.Drawing.Point(20, 0);
             this.dataGridIndication.Name = "dataGridIndication";
+            this.dataGridIndication.PreviewRowHeight = 35;
             this.dataGridIndication.Size = new System.Drawing.Size(560, 167);
             this.dataGridIndication.TabIndex = 0;
             this.dataGridIndication.Text = "sfDataGrid1";
@@ -312,7 +314,7 @@
             this.bunifuLabel2.Location = new System.Drawing.Point(20, 20);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(226, 23);
+            this.bunifuLabel2.Size = new System.Drawing.Size(277, 28);
             this.bunifuLabel2.TabIndex = 0;
             this.bunifuLabel2.Text = "Danh cận lâm sàng, kỹ thuật";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -419,7 +421,7 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 20;
             this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.btnAddNewPatient);
+            this.bunifuPanel3.Controls.Add(this.btnUpdatePatient);
             this.bunifuPanel3.Controls.Add(this.tbMedicalHistory);
             this.bunifuPanel3.Controls.Add(this.label7);
             this.bunifuPanel3.Controls.Add(this.tbIdCard);
@@ -430,7 +432,7 @@
             this.bunifuPanel3.Controls.Add(this.label4);
             this.bunifuPanel3.Controls.Add(this.bunifuPanel4);
             this.bunifuPanel3.Controls.Add(this.label3);
-            this.bunifuPanel3.Controls.Add(this.dropdowGender);
+            this.bunifuPanel3.Controls.Add(this.ddGender);
             this.bunifuPanel3.Controls.Add(this.label2);
             this.bunifuPanel3.Controls.Add(this.tbPatientName);
             this.bunifuPanel3.Controls.Add(this.label1);
@@ -441,96 +443,97 @@
             this.bunifuPanel3.Size = new System.Drawing.Size(345, 515);
             this.bunifuPanel3.TabIndex = 17;
             // 
-            // btnAddNewPatient
+            // btnUpdatePatient
             // 
-            this.btnAddNewPatient.AllowAnimations = true;
-            this.btnAddNewPatient.AllowMouseEffects = true;
-            this.btnAddNewPatient.AllowToggling = false;
-            this.btnAddNewPatient.AnimationSpeed = 200;
-            this.btnAddNewPatient.AutoGenerateColors = false;
-            this.btnAddNewPatient.AutoRoundBorders = false;
-            this.btnAddNewPatient.AutoSizeLeftIcon = true;
-            this.btnAddNewPatient.AutoSizeRightIcon = true;
-            this.btnAddNewPatient.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddNewPatient.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnAddNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddNewPatient.BackgroundImage")));
-            this.btnAddNewPatient.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.ButtonText = "Sửa thông tin";
-            this.btnAddNewPatient.ButtonTextMarginLeft = 0;
-            this.btnAddNewPatient.ColorContrastOnClick = 45;
-            this.btnAddNewPatient.ColorContrastOnHover = 45;
-            this.btnAddNewPatient.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnUpdatePatient.AllowAnimations = true;
+            this.btnUpdatePatient.AllowMouseEffects = true;
+            this.btnUpdatePatient.AllowToggling = false;
+            this.btnUpdatePatient.AnimationSpeed = 200;
+            this.btnUpdatePatient.AutoGenerateColors = false;
+            this.btnUpdatePatient.AutoRoundBorders = false;
+            this.btnUpdatePatient.AutoSizeLeftIcon = true;
+            this.btnUpdatePatient.AutoSizeRightIcon = true;
+            this.btnUpdatePatient.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdatePatient.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnUpdatePatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdatePatient.BackgroundImage")));
+            this.btnUpdatePatient.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdatePatient.ButtonText = "Sửa thông tin";
+            this.btnUpdatePatient.ButtonTextMarginLeft = 0;
+            this.btnUpdatePatient.ColorContrastOnClick = 45;
+            this.btnUpdatePatient.ColorContrastOnHover = 45;
+            this.btnUpdatePatient.Cursor = System.Windows.Forms.Cursors.Default;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
             borderEdges3.TopRight = true;
-            this.btnAddNewPatient.CustomizableEdges = borderEdges3;
-            this.btnAddNewPatient.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAddNewPatient.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddNewPatient.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAddNewPatient.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.IconLeft = null;
-            this.btnAddNewPatient.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewPatient.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddNewPatient.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnAddNewPatient.IconMarginLeft = 11;
-            this.btnAddNewPatient.IconPadding = 10;
-            this.btnAddNewPatient.IconRight = null;
-            this.btnAddNewPatient.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddNewPatient.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddNewPatient.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAddNewPatient.IconSize = 25;
-            this.btnAddNewPatient.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.IdleBorderRadius = 0;
-            this.btnAddNewPatient.IdleBorderThickness = 0;
-            this.btnAddNewPatient.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.IdleIconLeftImage = null;
-            this.btnAddNewPatient.IdleIconRightImage = null;
-            this.btnAddNewPatient.IndicateFocus = false;
-            this.btnAddNewPatient.Location = new System.Drawing.Point(20, 446);
-            this.btnAddNewPatient.Name = "btnAddNewPatient";
-            this.btnAddNewPatient.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddNewPatient.OnDisabledState.BorderRadius = 10;
-            this.btnAddNewPatient.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.OnDisabledState.BorderThickness = 1;
-            this.btnAddNewPatient.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAddNewPatient.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAddNewPatient.OnDisabledState.IconLeftImage = null;
-            this.btnAddNewPatient.OnDisabledState.IconRightImage = null;
-            this.btnAddNewPatient.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnAddNewPatient.onHoverState.BorderRadius = 10;
-            this.btnAddNewPatient.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.onHoverState.BorderThickness = 1;
-            this.btnAddNewPatient.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnAddNewPatient.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.onHoverState.IconLeftImage = null;
-            this.btnAddNewPatient.onHoverState.IconRightImage = null;
-            this.btnAddNewPatient.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnIdleState.BorderRadius = 10;
-            this.btnAddNewPatient.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.OnIdleState.BorderThickness = 1;
-            this.btnAddNewPatient.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.OnIdleState.IconLeftImage = null;
-            this.btnAddNewPatient.OnIdleState.IconRightImage = null;
-            this.btnAddNewPatient.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnPressedState.BorderRadius = 10;
-            this.btnAddNewPatient.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.OnPressedState.BorderThickness = 1;
-            this.btnAddNewPatient.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.OnPressedState.IconLeftImage = null;
-            this.btnAddNewPatient.OnPressedState.IconRightImage = null;
-            this.btnAddNewPatient.Size = new System.Drawing.Size(303, 45);
-            this.btnAddNewPatient.TabIndex = 28;
-            this.btnAddNewPatient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddNewPatient.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAddNewPatient.TextMarginLeft = 0;
-            this.btnAddNewPatient.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnAddNewPatient.UseDefaultRadiusAndThickness = true;
+            this.btnUpdatePatient.CustomizableEdges = borderEdges3;
+            this.btnUpdatePatient.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnUpdatePatient.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnUpdatePatient.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnUpdatePatient.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnUpdatePatient.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnUpdatePatient.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePatient.ForeColor = System.Drawing.Color.White;
+            this.btnUpdatePatient.IconLeft = null;
+            this.btnUpdatePatient.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdatePatient.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnUpdatePatient.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnUpdatePatient.IconMarginLeft = 11;
+            this.btnUpdatePatient.IconPadding = 10;
+            this.btnUpdatePatient.IconRight = null;
+            this.btnUpdatePatient.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdatePatient.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnUpdatePatient.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnUpdatePatient.IconSize = 25;
+            this.btnUpdatePatient.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnUpdatePatient.IdleBorderRadius = 0;
+            this.btnUpdatePatient.IdleBorderThickness = 0;
+            this.btnUpdatePatient.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnUpdatePatient.IdleIconLeftImage = null;
+            this.btnUpdatePatient.IdleIconRightImage = null;
+            this.btnUpdatePatient.IndicateFocus = false;
+            this.btnUpdatePatient.Location = new System.Drawing.Point(20, 446);
+            this.btnUpdatePatient.Name = "btnUpdatePatient";
+            this.btnUpdatePatient.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnUpdatePatient.OnDisabledState.BorderRadius = 10;
+            this.btnUpdatePatient.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdatePatient.OnDisabledState.BorderThickness = 1;
+            this.btnUpdatePatient.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnUpdatePatient.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnUpdatePatient.OnDisabledState.IconLeftImage = null;
+            this.btnUpdatePatient.OnDisabledState.IconRightImage = null;
+            this.btnUpdatePatient.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnUpdatePatient.onHoverState.BorderRadius = 10;
+            this.btnUpdatePatient.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdatePatient.onHoverState.BorderThickness = 1;
+            this.btnUpdatePatient.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnUpdatePatient.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnUpdatePatient.onHoverState.IconLeftImage = null;
+            this.btnUpdatePatient.onHoverState.IconRightImage = null;
+            this.btnUpdatePatient.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdatePatient.OnIdleState.BorderRadius = 10;
+            this.btnUpdatePatient.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdatePatient.OnIdleState.BorderThickness = 1;
+            this.btnUpdatePatient.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdatePatient.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnUpdatePatient.OnIdleState.IconLeftImage = null;
+            this.btnUpdatePatient.OnIdleState.IconRightImage = null;
+            this.btnUpdatePatient.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdatePatient.OnPressedState.BorderRadius = 10;
+            this.btnUpdatePatient.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdatePatient.OnPressedState.BorderThickness = 1;
+            this.btnUpdatePatient.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdatePatient.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnUpdatePatient.OnPressedState.IconLeftImage = null;
+            this.btnUpdatePatient.OnPressedState.IconRightImage = null;
+            this.btnUpdatePatient.Size = new System.Drawing.Size(303, 45);
+            this.btnUpdatePatient.TabIndex = 28;
+            this.btnUpdatePatient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdatePatient.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnUpdatePatient.TextMarginLeft = 0;
+            this.btnUpdatePatient.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnUpdatePatient.UseDefaultRadiusAndThickness = true;
+            this.btnUpdatePatient.Click += new System.EventHandler(this.btnUpdatePatient_Click);
             // 
             // tbMedicalHistory
             // 
@@ -617,7 +620,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(17, 358);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 15);
+            this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 39;
             this.label7.Text = "Tiền căn";
             // 
@@ -706,7 +709,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(179, 278);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 15);
+            this.label6.Size = new System.Drawing.Size(99, 20);
             this.label6.TabIndex = 37;
             this.label6.Text = "CMND/CCCD";
             // 
@@ -795,7 +798,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(17, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 15);
+            this.label5.Size = new System.Drawing.Size(99, 20);
             this.label5.TabIndex = 35;
             this.label5.Text = "Số điện thoại";
             // 
@@ -884,7 +887,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(16, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 15);
+            this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 33;
             this.label4.Text = "Địa chỉ";
             // 
@@ -905,23 +908,23 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.dateTimeDob);
+            this.panel5.Controls.Add(this.dtDob);
             this.panel5.Location = new System.Drawing.Point(2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(134, 32);
             this.panel5.TabIndex = 19;
             // 
-            // dateTimeDob
+            // dtDob
             // 
-            this.dateTimeDob.BackColor = System.Drawing.Color.Transparent;
-            this.dateTimeDob.DateTimeIcon = null;
-            this.dateTimeDob.Font = new System.Drawing.Font("Segoe UI Semibold", 9.2F, System.Drawing.FontStyle.Bold);
-            this.dateTimeDob.Location = new System.Drawing.Point(-1, -1);
-            this.dateTimeDob.Name = "dateTimeDob";
-            this.dateTimeDob.Size = new System.Drawing.Size(140, 34);
-            this.dateTimeDob.TabIndex = 17;
-            this.dateTimeDob.ToolTipText = "";
-            this.dateTimeDob.Value = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
+            this.dtDob.BackColor = System.Drawing.Color.Transparent;
+            this.dtDob.DateTimeIcon = null;
+            this.dtDob.Font = new System.Drawing.Font("Segoe UI Semibold", 9.2F, System.Drawing.FontStyle.Bold);
+            this.dtDob.Location = new System.Drawing.Point(-1, -1);
+            this.dtDob.Name = "dtDob";
+            this.dtDob.Size = new System.Drawing.Size(140, 34);
+            this.dtDob.TabIndex = 17;
+            this.dtDob.ToolTipText = "";
+            this.dtDob.Value = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
             // 
             // label3
             // 
@@ -931,56 +934,56 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(179, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 31;
             this.label3.Text = "Ngày sinh";
             // 
-            // dropdowGender
+            // ddGender
             // 
-            this.dropdowGender.BackColor = System.Drawing.Color.Transparent;
-            this.dropdowGender.BackgroundColor = System.Drawing.Color.White;
-            this.dropdowGender.BorderColor = System.Drawing.Color.Silver;
-            this.dropdowGender.BorderRadius = 5;
-            this.dropdowGender.Color = System.Drawing.Color.Silver;
-            this.dropdowGender.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.dropdowGender.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dropdowGender.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dropdowGender.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dropdowGender.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.dropdowGender.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.dropdowGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.dropdowGender.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.dropdowGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dropdowGender.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.dropdowGender.FillDropDown = true;
-            this.dropdowGender.FillIndicator = false;
-            this.dropdowGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dropdowGender.Font = new System.Drawing.Font("Segoe UI Semibold", 9.2F, System.Drawing.FontStyle.Bold);
-            this.dropdowGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.dropdowGender.FormattingEnabled = true;
-            this.dropdowGender.Icon = null;
-            this.dropdowGender.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.dropdowGender.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.dropdowGender.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.dropdowGender.IndicatorThickness = 2;
-            this.dropdowGender.IsDropdownOpened = false;
-            this.dropdowGender.ItemBackColor = System.Drawing.Color.White;
-            this.dropdowGender.ItemBorderColor = System.Drawing.Color.White;
-            this.dropdowGender.ItemForeColor = System.Drawing.Color.Black;
-            this.dropdowGender.ItemHeight = 30;
-            this.dropdowGender.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.dropdowGender.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.dropdowGender.Items.AddRange(new object[] {
+            this.ddGender.BackColor = System.Drawing.Color.Transparent;
+            this.ddGender.BackgroundColor = System.Drawing.Color.White;
+            this.ddGender.BorderColor = System.Drawing.Color.Silver;
+            this.ddGender.BorderRadius = 5;
+            this.ddGender.Color = System.Drawing.Color.Silver;
+            this.ddGender.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.ddGender.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ddGender.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ddGender.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ddGender.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ddGender.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ddGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ddGender.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.ddGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddGender.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddGender.FillDropDown = true;
+            this.ddGender.FillIndicator = false;
+            this.ddGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddGender.Font = new System.Drawing.Font("Segoe UI Semibold", 9.2F, System.Drawing.FontStyle.Bold);
+            this.ddGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.ddGender.FormattingEnabled = true;
+            this.ddGender.Icon = null;
+            this.ddGender.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddGender.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.ddGender.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddGender.IndicatorThickness = 2;
+            this.ddGender.IsDropdownOpened = false;
+            this.ddGender.ItemBackColor = System.Drawing.Color.White;
+            this.ddGender.ItemBorderColor = System.Drawing.Color.White;
+            this.ddGender.ItemForeColor = System.Drawing.Color.Black;
+            this.ddGender.ItemHeight = 30;
+            this.ddGender.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.ddGender.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ddGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.dropdowGender.ItemTopMargin = 3;
-            this.dropdowGender.Location = new System.Drawing.Point(19, 155);
-            this.dropdowGender.Name = "dropdowGender";
-            this.dropdowGender.Size = new System.Drawing.Size(140, 36);
-            this.dropdowGender.TabIndex = 30;
-            this.dropdowGender.Text = null;
-            this.dropdowGender.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.dropdowGender.TextLeftMargin = 5;
+            this.ddGender.ItemTopMargin = 3;
+            this.ddGender.Location = new System.Drawing.Point(19, 155);
+            this.ddGender.Name = "ddGender";
+            this.ddGender.Size = new System.Drawing.Size(140, 36);
+            this.ddGender.TabIndex = 30;
+            this.ddGender.Text = null;
+            this.ddGender.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddGender.TextLeftMargin = 5;
             // 
             // label2
             // 
@@ -990,7 +993,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(16, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 29;
             this.label2.Text = "Giới tính";
             // 
@@ -1079,7 +1082,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(16, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 27;
             this.label1.Text = "Họ và Tên";
             // 
@@ -1092,7 +1095,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(20, 25);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(149, 22);
+            this.bunifuLabel3.Size = new System.Drawing.Size(193, 27);
             this.bunifuLabel3.TabIndex = 14;
             this.bunifuLabel3.Text = "Thông tin bệnh nhân";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1101,7 +1104,7 @@
             // PatientForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1004, 561);
+            this.ClientSize = new System.Drawing.Size(1004, 566);
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
@@ -1152,12 +1155,12 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         private System.Windows.Forms.Panel panel5;
-        private Syncfusion.WinForms.Input.SfDateTimeEdit dateTimeDob;
+        private Syncfusion.WinForms.Input.SfDateTimeEdit dtDob;
         private System.Windows.Forms.Label label3;
-        private Bunifu.UI.WinForms.BunifuDropdown dropdowGender;
+        private Bunifu.UI.WinForms.BunifuDropdown ddGender;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuTextBox tbPatientName;
         private System.Windows.Forms.Label label1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddNewPatient;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnUpdatePatient;
     }
 }

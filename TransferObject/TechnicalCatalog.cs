@@ -37,5 +37,15 @@ namespace TransferObject
             this.description = description;
         }
 
+        public TechnicalCatalog(int id, string type, string name, float price, float discountPrice, string description)
+        {
+            this.id = id;
+            this.type = type;
+            this.name = name;
+            this.price = price;
+            this.discountPrice = discountPrice;
+            this.description = description;
+        }
+
     }
 }
