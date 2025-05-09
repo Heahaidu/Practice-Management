@@ -1,28 +1,27 @@
-﻿using Syncfusion.WinForms.DataGrid;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using TransferObject;
 using UIUX.Popup;
 using BusinessLayer;
-using Syncfusion.Windows.Forms.Interop;
+using System.Windows;
+using System.Windows.Forms;
+using System.Collections;
+using System.Windows.Controls;
+using Syncfusion.WinForms.DataGrid;
+using UIUX.View;
 
 namespace UIUX.ViewForm
 {
-    public partial class PatientForm: Form
+    public partial class PatientForm : Form
     {
 
         private Patient patient;
         private static ObservableCollection<Examination> examinations;
         private static ObservableCollection<Indication> indications;
-        public EventHandler updatePatientEvent;
+        public EventHandler updatePatientsEvent;
+
+        private PrescriptionPage prescriptionPage;
+        private MedicalTestsScriptionPage medicalTestsScriptionPage;
         public PatientForm(Patient patient)
         {
             this.patient = patient;
@@ -30,12 +29,16 @@ namespace UIUX.ViewForm
             tbPatientName.Text = patient.name;
             tbLocation.Text = patient.address;
             tbPhone.Text = patient.phone;
-            //tbEmail.Text = patient.email;
+            tbEmail.Text = patient.email;
             tbMedicalHistory.Text = patient.medicalHistory;
             tbIdCard.Text = patient.idCard;
             dtDob.Value = patient.dob;
-            ddGender.Text = patient.gender == Gender.MALE? "Nam" : "Nữ";
+            ddGender.Items.Add(Gender.MALE.GetDescription());
+            ddGender.Items.Add(Gender.FEMALE.GetDescription());
+            ddGender.SelectedIndex = patient.gender == Gender.MALE ? 0 : 1;
 
+
+            tbHealthInsuranceId.Text = patient.healthInsuranceId;
             // Initialize the data grid for examinations
             LoadExam();
             dataGridExamination.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
@@ -45,21 +48,49 @@ namespace UIUX.ViewForm
             LoadIndication();
             dataGridIndication.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
 
+            btnSave.Visible = false;
+            btnExit.Visible = false;
+
+            altPanel.Dock = DockStyle.Fill;
+
+            prescriptionPage = new PrescriptionPage()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+                FormBorderStyle = FormBorderStyle.None,
+                Visible = false
+            };
+
+            this.Controls.Add(prescriptionPage);
+
+            medicalTestsScriptionPage = new MedicalTestsScriptionPage()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+                FormBorderStyle = FormBorderStyle.None,
+                Visible = false
+            };
+
+            this.Controls.Add(medicalTestsScriptionPage);
         }
 
         private void LoadExam()
         {
             dataGridExamination.DataSource = new ExaminationBL().GetExaminations(patient.id);
+            dataGridExamination.Columns["id"].Visible = false;
+            dataGridExamination.Columns["patientId"].Visible = false;
         }
 
         private void LoadIndication()
         {
             dataGridIndication.DataSource = new IndicationBL().GetIndications(patient.id);
+            dataGridIndication.Columns["id"].Visible = false;
+            dataGridIndication.Columns["patientId"].Visible = false;
         }
 
         private void btnAddNewExamination_Click(object sender, EventArgs e)
         {
-            NewExaminationPopup newExaminationPopup = new NewExaminationPopup(patientId:patient.id);
+            NewExaminationPopup newExaminationPopup = new NewExaminationPopup(patientId: patient.id);
             newExaminationPopup.addExaminationEvent += addNewExaminationEvent;
             newExaminationPopup.ShowDialog();
         }
@@ -81,8 +112,7 @@ namespace UIUX.ViewForm
             }
             catch (Exception ex)
             {
-                this.DialogResult = DialogResult.Cancel;
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
 
@@ -96,26 +126,114 @@ namespace UIUX.ViewForm
             }
             catch (Exception ex)
             {
-                this.DialogResult = DialogResult.Cancel;
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnUpdatePatient_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            Gender gender = ddGender.SelectedIndex == 0 ? Gender.MALE : Gender.FEMALE;
-            Patient patient_update = new Patient(id: patient.id,name: tbPatientName.Text, dob: dtDob.Value.Value, gender: gender, address: tbLocation.Text, phone: tbPhone.Text, idCard: tbIdCard.Text, medicalHistory: tbMedicalHistory.Text);
+            Gender gender = ddGender.SelectedIndex == 0?Gender.MALE: Gender.FEMALE;
+
+            Patient patient_update = new Patient(id: patient.id, name: tbPatientName.Text, dob: dtDob.Value.Value, gender: gender, address: tbLocation.Text, phone: tbPhone.Text, email:tbEmail.Text, idCard: tbIdCard.Text, medicalHistory: tbMedicalHistory.Text);
             PatientBL patientBL = new PatientBL();
             try
             {
-                patientBL.Update(patient_update);
-                updatePatientEvent?.Invoke(patient, e);
+                if (patientBL.Update(patient_update) == 0)
+                {
+                    System.Windows.MessageBox.Show("Cập nhật thông tin bệnh nhân không thành công");
+                    return;
+                }
+
+                btnChangeInfo.Visible = true;
+                btnSave.Visible = false;
+                btnExit.Visible = false;
+                ChangePatientInfoElemnts(false);
+                updatePatientsEvent?.Invoke(patient, e);
             }
             catch (Exception ex)
             {
-                this.DialogResult = DialogResult.Cancel;
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnChangeInfo_Click(object sender, EventArgs e)
+        {
+            btnChangeInfo.Visible = false;
+            btnSave.Visible = true;
+            btnExit.Visible = true;
+
+            ChangePatientInfoElemnts(true);
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            btnChangeInfo.Visible = true;
+            btnSave.Visible = false;
+            btnExit.Visible = false;
+
+            ChangePatientInfoElemnts(false);
+        }
+
+        private void ChangePatientInfoElemnts(bool isEnabled)
+        {
+            tbPatientName.Enabled = isEnabled;
+            ddGender.Enabled = isEnabled;
+            dtDob.Enabled = isEnabled;
+            tbLocation.Enabled = isEnabled;
+            tbPhone.Enabled = isEnabled;
+            tbIdCard.Enabled = isEnabled;
+            tbMedicalHistory.Enabled = isEnabled;
+            tbHealthInsuranceId.Enabled = isEnabled;
+            tbEmail.Enabled = isEnabled;
+            btnDeletePatient.Enabled = isEnabled;
+        }
+
+        private void btnDeletePatient_Click(object sender, EventArgs e)
+        {
+            System.Windows.MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (messageBoxResult == MessageBoxResult.No)
+            {
+                return;
+            }
+            BusinessLayer.PatientBL patientBL = new BusinessLayer.PatientBL();
+            patientBL.Delete(patient.id);
+            updatePatientsEvent?.Invoke(patient, e);
+            this.Close();
+        }
+
+        private void dataGridExamination_CellDoubleClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
+        {
+            if (e.DataRow.RowIndex == 1) return;
+            Examination examination = e.DataRow.RowData as Examination;
+            if (examination == null) return;
+
+            prescriptionPage.backEvent += (sender_, e_) =>
+            {
+                prescriptionPage.Visible = false;
+
+            };
+
+            prescriptionPage.Visible = true;
+            prescriptionPage.Refresh();
+            prescriptionPage.BringToFront();
+        }
+
+        private void dataGridIndication_CellDoubleClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
+        {
+            if (e.DataRow.RowIndex == 1) return;
+            Indication indication = e.DataRow.RowData as Indication;
+            if (indication == null) return;
+
+            medicalTestsScriptionPage.backEvent += (sender_, e_) =>
+            {
+                medicalTestsScriptionPage.Visible = false;
+
+            };
+
+            medicalTestsScriptionPage.Visible = true;
+            medicalTestsScriptionPage.Refresh();
+            medicalTestsScriptionPage.BringToFront();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Security.Policy;
+using System.Configuration;
 
 namespace DataLayer
 {
@@ -16,8 +17,21 @@ namespace DataLayer
 
         public DataProvider()
         {
-            string cnStr = "Data Source=db-programming.database.windows.net;Initial Catalog=Prescription;User ID=administrator_;Password=123456789A1@";
-            this.cn = new SqlConnection(cnStr);
+            try
+            {
+                this.cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString);
+            } catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (this.cn != null && this.cn.State == System.Data.ConnectionState.Open)
+                {
+                    this.cn.Close();
+                }
+            }
+
         }
 
         public void Connect()
@@ -70,9 +84,18 @@ namespace DataLayer
             }
         }
 
-        public SqlDataReader MyExecuteReader(string sql, CommandType type) { 
+        public SqlDataReader MyExecuteReader(string sql, CommandType type, List<SqlParameter> parameters=null) { 
             SqlCommand cmd = new SqlCommand(sql, cn);
             cmd.CommandType = type;
+
+            if (parameters != null)
+            {
+                foreach (SqlParameter param in parameters)
+                {
+                    cmd.Parameters.Add(param);
+                }
+            }
+
             try
             {
                 return (cmd.ExecuteReader());
@@ -89,17 +112,14 @@ namespace DataLayer
             cmd.CommandType = type;
             try
             {
-                if (type == CommandType.StoredProcedure)
+                if (parameters != null)
                 {
-                    cmd.CommandText = sql;
                     foreach (SqlParameter param in parameters)
                     {
                         cmd.Parameters.Add(param);
                     }
-                    return cmd.ExecuteNonQuery();
                 }
-                Console.WriteLine("Add");
-                return (cmd.ExecuteNonQuery());
+                return (cmd.ExecuteNonQuery()); 
             }
             catch (SqlException ex)
             {

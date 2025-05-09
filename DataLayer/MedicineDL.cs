@@ -94,5 +94,56 @@ namespace DataLayer
                 DisConnect();
             }
         }
+    
+        public int Update(Medicine medicine)
+        {
+            string sql = "uspUpdateMedicine";
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@id", (int)medicine.id),
+                new SqlParameter("@nameMed", (object)medicine.name),
+                new SqlParameter("@manufacturer", (object)medicine.manufacturer),
+                new SqlParameter("@typeMed", (object)(medicine.type)),
+                new SqlParameter("@descriptionMed", (object)medicine.description),
+                new SqlParameter("@discountPrice", (float)medicine.discountPrice),
+                new SqlParameter("@price", (float)(medicine.price)),
+                new SqlParameter("@quantity", (int)medicine.quantity),
+                new SqlParameter("@manufacturingDate", medicine.manufacturingDate),
+                new SqlParameter("@expiryDate", medicine.expiryDate),
+                new SqlParameter("@importDate", medicine.importDate),
+                new SqlParameter("@usage", (object)medicine.usage),
+                new SqlParameter("@dosage", (object)medicine.dosage)
+            };
+            try
+            {
+                Connect();
+                return MyExecuteNonQuerry(sql, CommandType.StoredProcedure, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
+
+        public int Delete(int id)
+        {
+            try
+            {
+                Connect();
+                return MyExecuteNonQuerry("DELETE FROM Medicine WHERE id=@id", CommandType.Text, new List<SqlParameter> { new SqlParameter("@id", id) });
+
+            } catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
     }
 }

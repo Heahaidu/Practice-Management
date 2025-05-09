@@ -19,7 +19,7 @@ namespace UIUX.Popup
         public NewPatientPopup()
         {
             InitializeComponent();
-            InitializeControls();
+            //InitializeControls();
         }
 
         public class GenderDisplay
@@ -55,12 +55,18 @@ namespace UIUX.Popup
 
         private void btnAddNewPatient_Click(object sender, EventArgs e)
         {
+            Console.WriteLine(tbName.Text.Length);
+            if (tbName.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập tên bệnh nhân.");
+                return;
+            }
             if (!dtDob.Value.HasValue)
             {
                 MessageBox.Show("Vui lòng chọn ngày sinh.");
                 return;
             }
-            if (ddGender.SelectedValue == null)
+            if (ddGender.SelectedIndex == null)
             {
                 MessageBox.Show("Vui lòng chọn giới tính.");
                 return;
@@ -68,11 +74,16 @@ namespace UIUX.Popup
             DateTime dob = dtDob.Value.Value;
             Gender gender = ddGender.SelectedIndex == 0 ? Gender.MALE : Gender.FEMALE;
 
-            Patient patient = new Patient(name: tbName.Text, dob: dob, 
+            Patient patient = new Patient(
+                name: tbName.Text,
+                dob: dob, 
                 gender: gender, 
-                address: tbAddress.Text, phone: tbPhone.Text, 
-                email: tbEmail.Text, healthInsuranceId: tbHealthInsuranceId.Text, 
-                idCard: tbCardId.Text, medicalHistory: tbMedicalHistory.Text);
+                address: tbAddress.Text, 
+                phone: tbPhone.Text, 
+                email: tbEmail.Text, 
+                healthInsuranceId: tbHealthInsuranceId.Text, 
+                idCard: tbCardId.Text, 
+                medicalHistory: tbMedicalHistory.Text);
 
             addPatientEvent?.Invoke(patient, e);
 

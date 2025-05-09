@@ -85,6 +85,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbHealthInsuranceId = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -211,7 +214,7 @@
             this.tbName.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.DefaultText = "";
             this.tbName.FillColor = System.Drawing.Color.White;
-            this.tbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbName.HideSelection = true;
             this.tbName.IconLeft = null;
             this.tbName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -242,13 +245,13 @@
             this.tbName.OnHoverState = stateProperties27;
             stateProperties28.BorderColor = System.Drawing.Color.Silver;
             stateProperties28.FillColor = System.Drawing.Color.White;
-            stateProperties28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbName.OnIdleState = stateProperties28;
             this.tbName.Padding = new System.Windows.Forms.Padding(3);
             this.tbName.PasswordChar = '\0';
-            this.tbName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbName.PlaceholderText = "Nguyễn Hải Dương";
+            this.tbName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbName.PlaceholderText = "Nguyễn Văn A";
             this.tbName.ReadOnly = false;
             this.tbName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbName.SelectedText = "";
@@ -262,7 +265,7 @@
             this.tbName.TextMarginBottom = 0;
             this.tbName.TextMarginLeft = 3;
             this.tbName.TextMarginTop = 1;
-            this.tbName.TextPlaceholder = "Nguyễn Hải Dương";
+            this.tbName.TextPlaceholder = "Nguyễn Văn A";
             this.tbName.UseSystemPasswordChar = false;
             this.tbName.WordWrap = true;
             // 
@@ -343,7 +346,7 @@
             this.dtDob.Size = new System.Drawing.Size(198, 40);
             this.dtDob.TabIndex = 17;
             this.dtDob.ToolTipText = "";
-            this.dtDob.Value = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
+            this.dtDob.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             // 
             // bunifuPanel2
             // 
@@ -390,7 +393,7 @@
             this.tbAddress.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAddress.DefaultText = "";
             this.tbAddress.FillColor = System.Drawing.Color.White;
-            this.tbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbAddress.HideSelection = true;
             this.tbAddress.IconLeft = null;
             this.tbAddress.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -421,12 +424,12 @@
             this.tbAddress.OnHoverState = stateProperties23;
             stateProperties24.BorderColor = System.Drawing.Color.Silver;
             stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbAddress.OnIdleState = stateProperties24;
             this.tbAddress.Padding = new System.Windows.Forms.Padding(3);
             this.tbAddress.PasswordChar = '\0';
-            this.tbAddress.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbAddress.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbAddress.PlaceholderText = "Nhà Bè, TP.HCM";
             this.tbAddress.ReadOnly = false;
             this.tbAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -513,7 +516,7 @@
             this.tbPhone.OnIdleState = stateProperties20;
             this.tbPhone.Padding = new System.Windows.Forms.Padding(3);
             this.tbPhone.PasswordChar = '\0';
-            this.tbPhone.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbPhone.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbPhone.PlaceholderText = "0912xxxxxx";
             this.tbPhone.ReadOnly = false;
             this.tbPhone.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -564,7 +567,7 @@
             this.tbEmail.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.DefaultText = "";
             this.tbEmail.FillColor = System.Drawing.Color.White;
-            this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbEmail.HideSelection = true;
             this.tbEmail.IconLeft = null;
             this.tbEmail.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -595,13 +598,13 @@
             this.tbEmail.OnHoverState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.Silver;
             stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbEmail.OnIdleState = stateProperties16;
             this.tbEmail.Padding = new System.Windows.Forms.Padding(3);
             this.tbEmail.PasswordChar = '\0';
-            this.tbEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbEmail.PlaceholderText = "2251010021d@ou.edu.vn";
+            this.tbEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbEmail.PlaceholderText = "******@email.com";
             this.tbEmail.ReadOnly = false;
             this.tbEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbEmail.SelectedText = "";
@@ -615,7 +618,7 @@
             this.tbEmail.TextMarginBottom = 0;
             this.tbEmail.TextMarginLeft = 3;
             this.tbEmail.TextMarginTop = 1;
-            this.tbEmail.TextPlaceholder = "2251010021d@ou.edu.vn";
+            this.tbEmail.TextPlaceholder = "******@email.com";
             this.tbEmail.UseSystemPasswordChar = false;
             this.tbEmail.WordWrap = true;
             // 
@@ -651,7 +654,7 @@
             this.tbMedicalHistory.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMedicalHistory.DefaultText = "";
             this.tbMedicalHistory.FillColor = System.Drawing.Color.White;
-            this.tbMedicalHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbMedicalHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbMedicalHistory.HideSelection = true;
             this.tbMedicalHistory.IconLeft = null;
             this.tbMedicalHistory.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -682,13 +685,13 @@
             this.tbMedicalHistory.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.Silver;
             stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbMedicalHistory.OnIdleState = stateProperties12;
             this.tbMedicalHistory.Padding = new System.Windows.Forms.Padding(3);
             this.tbMedicalHistory.PasswordChar = '\0';
-            this.tbMedicalHistory.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbMedicalHistory.PlaceholderText = "Trĩ nội, trĩ ngoại";
+            this.tbMedicalHistory.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbMedicalHistory.PlaceholderText = "";
             this.tbMedicalHistory.ReadOnly = false;
             this.tbMedicalHistory.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbMedicalHistory.SelectedText = "";
@@ -702,7 +705,7 @@
             this.tbMedicalHistory.TextMarginBottom = 0;
             this.tbMedicalHistory.TextMarginLeft = 3;
             this.tbMedicalHistory.TextMarginTop = 1;
-            this.tbMedicalHistory.TextPlaceholder = "Trĩ nội, trĩ ngoại";
+            this.tbMedicalHistory.TextPlaceholder = "";
             this.tbMedicalHistory.UseSystemPasswordChar = false;
             this.tbMedicalHistory.WordWrap = true;
             // 
@@ -958,7 +961,7 @@
             this.tbCardId.OnIdleState = stateProperties4;
             this.tbCardId.Padding = new System.Windows.Forms.Padding(3);
             this.tbCardId.PasswordChar = '\0';
-            this.tbCardId.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbCardId.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbCardId.PlaceholderText = "Số căn cước";
             this.tbCardId.ReadOnly = false;
             this.tbCardId.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -1009,7 +1012,7 @@
             this.tbHealthInsuranceId.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHealthInsuranceId.DefaultText = "";
             this.tbHealthInsuranceId.FillColor = System.Drawing.Color.White;
-            this.tbHealthInsuranceId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbHealthInsuranceId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbHealthInsuranceId.HideSelection = true;
             this.tbHealthInsuranceId.IconLeft = null;
             this.tbHealthInsuranceId.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -1040,12 +1043,12 @@
             this.tbHealthInsuranceId.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbHealthInsuranceId.OnIdleState = stateProperties8;
             this.tbHealthInsuranceId.Padding = new System.Windows.Forms.Padding(3);
             this.tbHealthInsuranceId.PasswordChar = '\0';
-            this.tbHealthInsuranceId.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbHealthInsuranceId.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbHealthInsuranceId.PlaceholderText = "HS401011016xxxx";
             this.tbHealthInsuranceId.ReadOnly = false;
             this.tbHealthInsuranceId.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -1074,11 +1077,47 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Mã BHYT";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(121, 89);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 20);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "*";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(110, 178);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(16, 20);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(372, 178);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(16, 20);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "*";
+            // 
             // NewPatientPopup
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(541, 687);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.tbCardId);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbHealthInsuranceId);
@@ -1142,5 +1181,8 @@
         private System.Windows.Forms.Label label8;
         private Bunifu.UI.WinForms.BunifuTextBox tbHealthInsuranceId;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }

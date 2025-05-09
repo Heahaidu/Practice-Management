@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountBL.cs" />
     <Compile Include="ExaminationBL.cs" />
     <Compile Include="IndicationBL.cs" />
     <Compile Include="MedicineBL.cs" />

@@ -31,7 +31,7 @@ namespace UIUX
         private void btnLogin_Click(object sender, EventArgs e)
         {
             BusinessLayer.AuthenticationService authenticationService = new BusinessLayer.AuthenticationService();
-            (bool success, TransferObject.User user) = authenticationService.Login(tbUsername.Text, tbPassword.Text);
+            bool success = authenticationService.Login(tbUsername.Text, tbPassword.Text);
             if (success)
             {
                 // Proceed to the next form or functionality

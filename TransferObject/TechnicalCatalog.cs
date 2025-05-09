@@ -11,6 +11,7 @@ namespace TransferObject
     public class TechnicalCatalog
     {
         //ID
+        [Browsable(false)]
         public int id { get; set; }
         // Loại
         [Display(Name = "Loại")]

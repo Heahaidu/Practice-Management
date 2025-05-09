@@ -14,7 +14,7 @@ namespace UIUX.Popup
     public partial class NewTechnicalCatalogPopup : Form
     {
 
-        public EventHandler addTechnicalCatalogEvent;
+        public EventHandler UpdateTechnicalCatalogEvent;
 
         public NewTechnicalCatalogPopup()
         {
@@ -26,7 +26,7 @@ namespace UIUX.Popup
             Close();
         }
 
-        private void btnAddNewTechnical_Click(object sender, EventArgs e)
+        protected void btnAddNewTechnical_Click(object sender, EventArgs e)
         {
 
             try
@@ -50,8 +50,9 @@ namespace UIUX.Popup
                 description: tbDescriptionTech.Text);
 
 
-            addTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
+            UpdateTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
             Close();
         }
+
     }
 }

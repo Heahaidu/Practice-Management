@@ -163,6 +163,7 @@
             // 
             this.sfDataGrid.AccessibleName = "Table";
             this.sfDataGrid.AllowEditing = false;
+            this.sfDataGrid.AllowResizingColumns = true;
             this.sfDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sfDataGrid.Location = new System.Drawing.Point(20, 0);
             this.sfDataGrid.Name = "sfDataGrid";
@@ -170,6 +171,7 @@
             this.sfDataGrid.Size = new System.Drawing.Size(760, 375);
             this.sfDataGrid.TabIndex = 6;
             this.sfDataGrid.Text = "sfDataGrid1";
+            this.sfDataGrid.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.sfDataGrid_CellDoubleClick);
             // 
             // bunifuPanel1
             // 

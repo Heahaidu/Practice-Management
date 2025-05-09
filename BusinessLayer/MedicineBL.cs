@@ -34,5 +34,16 @@ namespace BusinessLayer
         public int Add(Medicine medicine) { 
             return medicineDL.Add(medicine);
         }
+
+        public int Delete(int id)
+        {
+            return medicineDL.Delete(id);
+        }
+
+        public bool MedicineUpdate(Medicine medicine)
+        {
+            return medicineDL.Update(medicine) == 1;
+        }
+
     }
 }

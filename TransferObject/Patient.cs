@@ -13,6 +13,7 @@ namespace TransferObject
     {
 
         // ID
+        [Browsable(false)]
         public int id { get; set; }
         // Tên bệnh nhân
         [Display(Name = "Họ tên")]
@@ -69,7 +70,7 @@ namespace TransferObject
             this.medicalHistory = medicalHistory;
         }
 
-        public Patient(int id, string name, DateTime dob, Gender gender, string address, string phone, string idCard, string medicalHistory)
+        public Patient(int id, string name, DateTime dob, Gender gender, string address, string phone, string email, string idCard, string medicalHistory)
         {
             this.id = id;
             this.name = name;
@@ -77,6 +78,7 @@ namespace TransferObject
             this.gender = gender;
             this.address = address;
             this.phone = phone;
+            this.email = email;
             this.idCard = idCard;
             this.medicalHistory = medicalHistory;
         }

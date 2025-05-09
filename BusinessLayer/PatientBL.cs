@@ -40,5 +40,10 @@ namespace BusinessLayer
         {
             return patientDL.Update(patient);
         }
+
+        public int Delete(int id)
+        {
+            return patientDL.Delete(id);
+        }
     }
 }

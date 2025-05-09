@@ -1,3 +1,6 @@
+IF DB_ID('Prescription') IS NULL 
+	CREATE DATABASE Prescription
+
 USE Prescription;
 GO
 
@@ -75,15 +78,16 @@ CREATE TABLE Users (
 	username NVARCHAR(20),
 	password NVARCHAR(200),
 	displayName NVARCHAR(20),
-	email NVARCHAR(50)
+	email NVARCHAR(50),
+	authority_level TINYINT DEFAULT 1
 )
 
 
-INSERT INTO Users (username, password, displayName, email) VALUES
-('admin1', 'hashed_password_123', N'Nguyen Van A', 'admin1@hospital.com'),
-('doctor1', 'hashed_password_456', N'Tran Thi B', 'doctor1@hospital.com'),
-('nurse1', 'hashed_password_789', N'Le Minh C', 'nurse1@hospital.com'),
-('staff1', 'hashed_password_101', N'Pham Quoc D', 'staff1@hospital.com');
+INSERT INTO Users (username, password, displayName, email, authority_level) VALUES
+('admin', '2', N'Nguyen Van A', 'admin1@hospital.com', 3)
+
+INSERT INTO Users (username, password, displayName, email, authority_level) VALUES
+('aaa', '2', N'Nguyen Van B', 'aaaa@hospital.com', 1)
 
 INSERT INTO Patient (namePat, dob, gender, addressPat, phone, email, healthInsuranceId, idCard, medicalHistory) VALUES
 (N'Nguyen Van An', '1990-05-15', 0, N'123 Le Loi, Hanoi', '0912345678', 'an.nguyen@gmail.com', 'BH123456789', '123456789012', N'High blood pressure'),
@@ -137,9 +141,9 @@ CREATE PROC uspAddPatient
 	@gender INT,
 	@addressPat NVARCHAR(100),
 	@phone NVARCHAR(10),
-	@email NVARCHAR(50),
 	@healthInsuranceId NVARCHAR(15),
 	@idCard NVARCHAR(12),
+	@email NVARCHAR(50),
 	@medicalHistory NVARCHAR(100)
 AS
 	BEGIN 
@@ -213,6 +217,7 @@ CREATE PROC uspUpdatePatient
     @dob DATETIME,
     @gender INT,
     @addressPat NVARCHAR(100),
+	@email NVARCHAR(50),
     @phone NVARCHAR(10),
     @idCard NVARCHAR(12),
     @medicalHistory NVARCHAR(100)
@@ -225,7 +230,66 @@ BEGIN
         gender = @gender,
         addressPat = @addressPat,
         phone = @phone,
+		email = @email,
         idCard = @idCard,
         medicalHistory = @medicalHistory
     WHERE id = @id;
 END;
+
+GO
+CREATE PROC uspUpdateMedicine
+	@id INT,
+	@nameMed NVARCHAR(20),
+	@manufacturer NVARCHAR(50),
+	@typeMed NVARCHAR(10),
+	@descriptionMed NVARCHAR(100),
+	@discountPrice FLOAT,
+	@price FLOAT,
+	@quantity INT,
+	@manufacturingDate DATETIME,
+	@expiryDate DATETIME,
+	@importDate DATETIME,
+	@usage NVARCHAR(50),
+	@dosage NVARCHAR(50)
+AS 
+	BEGIN
+		UPDATE Medicine
+		SET 
+			nameMed = @nameMed,
+			manufacturer = @manufacturer,
+			typeMed = @typeMed,
+			descriptionMed = @descriptionMed,
+			discountPrice = @discountPrice,
+			price = @price,
+			quantity = @quantity,
+			manufacturingDate = @manufacturingDate,
+			expiryDate = @expiryDate,
+			importDate = @importDate,
+			usage = @usage,
+			dosage = @dosage
+		WHERE id = @id
+	END;
+
+GO
+
+CREATE PROC uspDeletePatient
+	@id INT
+AS 
+BEGIN
+	DELETE FROM Examination WHERE patientId = @id;
+	DELETE FROM Indication WHERE patientId = @id;
+	DELETE FROM Patient WHERE id = @id;
+END;
+
+ALTER TRIGGER createNewUser
+ON USERS
+FOR INSERT, UPDATE
+AS
+BEGIN
+	SELECT username FROM Users
+	IF EXISTS (SELECT 1 FROM inserted WHERE username IN (SELECT username FROM Users WHERE inserted.id <> Users.id))
+	BEGIN
+		RAISERROR('Username already exists', 16, 1);
+		Rollback Transaction;
+	END
+END

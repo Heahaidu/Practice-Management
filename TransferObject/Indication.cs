@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,8 @@ namespace TransferObject
 {
     public class Indication
     {
+        [Browsable(false)]
+
         public int id { get; set; }
         // Ngày chỉ định
         [Display(Name = "Ngày chỉ định")]

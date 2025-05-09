@@ -39,8 +39,11 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Charts.WinForms, Version=1.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.Licensing.5.0.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.6.1.0\lib\net40\Bunifu.UI.WinForms.dll</HintPath>
@@ -263,6 +266,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentGrid\Item.cs" />
+    <Compile Include="DataView\AccountItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataView\AccountItem.Designer.cs">
+      <DependentUpon>AccountItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +295,15 @@
     </Compile>
     <Compile Include="Popup\AccountSettingPopup.Designer.cs">
       <DependentUpon>AccountSettingPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ChangePasswordPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ChangePasswordPopup.Designer.cs">
+      <DependentUpon>ChangePasswordPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MedicineEditPopup.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Popup\NewIndicationPopup.cs">
       <SubType>Form</SubType>
@@ -316,6 +334,9 @@
     </Compile>
     <Compile Include="Popup\NewTechnicalCatalogPopup.Designer.cs">
       <DependentUpon>NewTechnicalCatalogPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\TechnicalCatalogEditPopup.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -354,11 +375,35 @@
     <Compile Include="View\DashboardPage.Designer.cs">
       <DependentUpon>DashboardPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\IndicationItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\IndicationItem.Designer.cs">
+      <DependentUpon>IndicationItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MedicineItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MedicineItem.Designer.cs">
+      <DependentUpon>MedicineItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PatientPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\PatientPage.Designer.cs">
       <DependentUpon>PatientPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MedicalTestsScriptionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MedicalTestsScriptionPage.Designer.cs">
+      <DependentUpon>MedicalTestsScriptionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrescriptionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PrescriptionPage.Designer.cs">
+      <DependentUpon>PrescriptionPage.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TechnicalCatalogPage.cs">
       <SubType>Form</SubType>
@@ -366,6 +411,9 @@
     <Compile Include="View\TechnicalCatalogPage.Designer.cs">
       <DependentUpon>TechnicalCatalogPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DataView\AccountItem.resx">
+      <DependentUpon>AccountItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Popup\AccountSettingPopup.resx">
       <DependentUpon>AccountSettingPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ChangePasswordPopup.resx">
+      <DependentUpon>ChangePasswordPopup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Popup\NewIndicationPopup.resx">
       <DependentUpon>NewIndicationPopup.cs</DependentUpon>
@@ -411,8 +462,20 @@
     <EmbeddedResource Include="View\DashboardPage.resx">
       <DependentUpon>DashboardPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\IndicationItem.resx">
+      <DependentUpon>IndicationItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MedicineItem.resx">
+      <DependentUpon>MedicineItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\PatientPage.resx">
       <DependentUpon>PatientPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MedicalTestsScriptionPage.resx">
+      <DependentUpon>MedicalTestsScriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PrescriptionPage.resx">
+      <DependentUpon>PrescriptionPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TechnicalCatalogPage.resx">
       <DependentUpon>TechnicalCatalogPage.cs</DependentUpon>
@@ -433,6 +496,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\icon.png" />
+    <Content Include="Resources\Images\icons8-back-50 %281%29.png" />
+    <Content Include="Resources\Images\icons8-back-50.png" />
     <Content Include="Resources\Images\icons8-close-144.png" />
     <Content Include="Resources\Images\icons8-close-16.png" />
     <Content Include="Resources\Images\icons8-close-25.png" />

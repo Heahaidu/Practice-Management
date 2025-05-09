@@ -77,5 +77,22 @@ namespace DataLayer
                 DisConnect();
             }
         }
+
+        public int Delete(int id)
+        {
+            try
+            {
+                Connect();
+                return MyExecuteNonQuerry("DELETE FROM TechnicalCatalog WHERE id = @id", CommandType.Text, new List<SqlParameter> { new SqlParameter("@id", id) });
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
     }
 }

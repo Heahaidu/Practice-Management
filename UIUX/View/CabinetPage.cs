@@ -30,6 +30,7 @@ namespace UIUX.View
         public void LoadMedicine()
         {
             sfDataGrid.DataSource = new MedicineBL().GetMedicines();
+            sfDataGrid.Columns["id"].Visible = false;  
         }
 
         private void addNewMedicine_btn_Click(object sender, EventArgs e)
@@ -48,8 +49,6 @@ namespace UIUX.View
                 medicineBL.Add((Medicine)medicine);
 
                 this.DialogResult = DialogResult.OK;
-
-                LoadMedicine();
             }
             catch (Exception ex)
             {
@@ -58,5 +57,30 @@ namespace UIUX.View
             }
         }
 
+        private void sfDataGrid_CellDoubleClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
+        {
+            if (e.DataRow.Index == 1) return;
+
+            Medicine medicine = e.DataRow.RowData as Medicine;
+            MedicineEditPopup medicineEditPopup = new MedicineEditPopup(medicine);
+            medicineEditPopup.editMedicine += EditMedicine;
+            DialogResult result = medicineEditPopup.ShowDialog();   
+        }
+
+        private void EditMedicine(object medicine, EventArgs e)
+        {
+            try
+            {
+                MedicineBL medicineBL = new MedicineBL();
+                medicineBL.MedicineUpdate((Medicine)medicine);
+                this.DialogResult = DialogResult.OK;
+                LoadMedicine();
+            }
+            catch (Exception ex)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

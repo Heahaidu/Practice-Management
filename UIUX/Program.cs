@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIUX.View;
 
 namespace UIUX
 {
@@ -22,6 +23,7 @@ namespace UIUX
             {
                 SetProcessDPIAware();
             }
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NNaF5cWWNCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWXpedHVTRGlYU0x2WEFWYUA=");
             //AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

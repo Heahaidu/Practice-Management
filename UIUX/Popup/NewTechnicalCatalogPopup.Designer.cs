@@ -48,8 +48,9 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.title = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnDeleteTech = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -106,21 +107,21 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // bunifuLabel3
+            // title
             // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(20, 20);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(238, 38);
-            this.bunifuLabel3.TabIndex = 6;
-            this.bunifuLabel3.Text = "Thêm chỉ định mới";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.title.AllowParentOverrides = false;
+            this.title.AutoEllipsis = false;
+            this.title.Cursor = System.Windows.Forms.Cursors.Default;
+            this.title.CursorType = System.Windows.Forms.Cursors.Default;
+            this.title.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Location = new System.Drawing.Point(20, 20);
+            this.title.Name = "title";
+            this.title.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.title.Size = new System.Drawing.Size(238, 38);
+            this.title.TabIndex = 6;
+            this.title.Text = "Thêm chỉ định mới";
+            this.title.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.title.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuPanel1
             // 
@@ -130,13 +131,26 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
+            this.bunifuPanel1.Controls.Add(this.btnDeleteTech);
+            this.bunifuPanel1.Controls.Add(this.title);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(458, 66);
+            this.bunifuPanel1.Size = new System.Drawing.Size(511, 66);
             this.bunifuPanel1.TabIndex = 7;
+            // 
+            // btnDeleteTech
+            // 
+            this.btnDeleteTech.AutoSize = true;
+            this.btnDeleteTech.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTech.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteTech.Location = new System.Drawing.Point(448, 20);
+            this.btnDeleteTech.Name = "btnDeleteTech";
+            this.btnDeleteTech.Size = new System.Drawing.Size(40, 23);
+            this.btnDeleteTech.TabIndex = 43;
+            this.btnDeleteTech.Text = "Xóa";
+            this.btnDeleteTech.Visible = false;
             // 
             // bunifuSeparator1
             // 
@@ -152,7 +166,7 @@
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(458, 11);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(511, 11);
             this.bunifuSeparator1.TabIndex = 8;
             // 
             // label1
@@ -234,7 +248,7 @@
             this.tbDescriptionTech.Padding = new System.Windows.Forms.Padding(3);
             this.tbDescriptionTech.PasswordChar = '\0';
             this.tbDescriptionTech.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbDescriptionTech.PlaceholderText = "Ughhhhhhhhhh";
+            this.tbDescriptionTech.PlaceholderText = "";
             this.tbDescriptionTech.ReadOnly = false;
             this.tbDescriptionTech.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbDescriptionTech.SelectedText = "";
@@ -248,7 +262,7 @@
             this.tbDescriptionTech.TextMarginBottom = 0;
             this.tbDescriptionTech.TextMarginLeft = 3;
             this.tbDescriptionTech.TextMarginTop = 1;
-            this.tbDescriptionTech.TextPlaceholder = "Ughhhhhhhhhh";
+            this.tbDescriptionTech.TextPlaceholder = "";
             this.tbDescriptionTech.UseSystemPasswordChar = false;
             this.tbDescriptionTech.WordWrap = true;
             // 
@@ -512,7 +526,7 @@
             this.tbNameTech.SelectionLength = 0;
             this.tbNameTech.SelectionStart = 0;
             this.tbNameTech.ShortcutsEnabled = true;
-            this.tbNameTech.Size = new System.Drawing.Size(369, 45);
+            this.tbNameTech.Size = new System.Drawing.Size(430, 45);
             this.tbNameTech.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNameTech.TabIndex = 31;
             this.tbNameTech.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -589,7 +603,7 @@
             this.tbPrice.SelectionLength = 0;
             this.tbPrice.SelectionStart = 0;
             this.tbPrice.ShortcutsEnabled = true;
-            this.tbPrice.Size = new System.Drawing.Size(166, 45);
+            this.tbPrice.Size = new System.Drawing.Size(198, 45);
             this.tbPrice.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbPrice.TabIndex = 37;
             this.tbPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -640,7 +654,7 @@
             this.tbDiscountPrice.IconRight = null;
             this.tbDiscountPrice.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbDiscountPrice.Lines = new string[0];
-            this.tbDiscountPrice.Location = new System.Drawing.Point(249, 289);
+            this.tbDiscountPrice.Location = new System.Drawing.Point(278, 289);
             this.tbDiscountPrice.MaxLength = 32767;
             this.tbDiscountPrice.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbDiscountPrice.Modified = false;
@@ -676,7 +690,7 @@
             this.tbDiscountPrice.SelectionLength = 0;
             this.tbDiscountPrice.SelectionStart = 0;
             this.tbDiscountPrice.ShortcutsEnabled = true;
-            this.tbDiscountPrice.Size = new System.Drawing.Size(166, 45);
+            this.tbDiscountPrice.Size = new System.Drawing.Size(195, 45);
             this.tbDiscountPrice.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbDiscountPrice.TabIndex = 39;
             this.tbDiscountPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -691,7 +705,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(245, 263);
+            this.label12.Location = new System.Drawing.Point(274, 263);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(115, 23);
             this.label12.TabIndex = 38;
@@ -745,7 +759,7 @@
             this.ddTypeTech.ItemTopMargin = 3;
             this.ddTypeTech.Location = new System.Drawing.Point(43, 115);
             this.ddTypeTech.Name = "ddTypeTech";
-            this.ddTypeTech.Size = new System.Drawing.Size(369, 44);
+            this.ddTypeTech.Size = new System.Drawing.Size(430, 44);
             this.ddTypeTech.TabIndex = 42;
             this.ddTypeTech.Text = null;
             this.ddTypeTech.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -755,7 +769,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(458, 510);
+            this.ClientSize = new System.Drawing.Size(511, 510);
             this.Controls.Add(this.ddTypeTech);
             this.Controls.Add(this.tbDiscountPrice);
             this.Controls.Add(this.label12);
@@ -784,20 +798,21 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        protected Bunifu.UI.WinForms.BunifuLabel title;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuTextBox tbDescriptionTech;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbDescriptionTech;
         private System.Windows.Forms.Label label7;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton close_btn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddNewTechnical;
-        private Bunifu.UI.WinForms.BunifuTextBox tbNameTech;
-        private Bunifu.UI.WinForms.BunifuTextBox tbDiscountPrice;
+        protected Bunifu.UI.WinForms.BunifuButton.BunifuButton close_btn;
+        protected Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddNewTechnical;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbNameTech;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbDiscountPrice;
         private System.Windows.Forms.Label label12;
-        private Bunifu.UI.WinForms.BunifuTextBox tbPrice;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbPrice;
         private System.Windows.Forms.Label label11;
-        private Bunifu.UI.WinForms.BunifuDropdown ddTypeTech;
+        protected Bunifu.UI.WinForms.BunifuDropdown ddTypeTech;
+        protected System.Windows.Forms.Label btnDeleteTech;
     }
 }

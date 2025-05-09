@@ -68,7 +68,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewMedicinePopup));
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.title = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
@@ -101,11 +101,26 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.dtImportDate = new Syncfusion.WinForms.Input.SfDateTimeEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDeleteMedicine = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.bunifuPanel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuFormDock1
@@ -148,21 +163,21 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // bunifuLabel3
+            // title
             // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(20, 20);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(209, 38);
-            this.bunifuLabel3.TabIndex = 6;
-            this.bunifuLabel3.Text = "Thêm thuốc mới";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.title.AllowParentOverrides = false;
+            this.title.AutoEllipsis = false;
+            this.title.Cursor = System.Windows.Forms.Cursors.Default;
+            this.title.CursorType = System.Windows.Forms.Cursors.Default;
+            this.title.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Location = new System.Drawing.Point(20, 20);
+            this.title.Name = "title";
+            this.title.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.title.Size = new System.Drawing.Size(209, 38);
+            this.title.TabIndex = 6;
+            this.title.Text = "Thêm thuốc mới";
+            this.title.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.title.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuPanel1
             // 
@@ -172,7 +187,8 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
+            this.bunifuPanel1.Controls.Add(this.btnDeleteMedicine);
+            this.bunifuPanel1.Controls.Add(this.title);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPanel1.Name = "bunifuPanel1";
@@ -229,7 +245,7 @@
             this.tbNameMed.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNameMed.DefaultText = "";
             this.tbNameMed.FillColor = System.Drawing.Color.White;
-            this.tbNameMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbNameMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbNameMed.HideSelection = true;
             this.tbNameMed.IconLeft = null;
             this.tbNameMed.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -260,13 +276,13 @@
             this.tbNameMed.OnHoverState = stateProperties35;
             stateProperties36.BorderColor = System.Drawing.Color.Silver;
             stateProperties36.FillColor = System.Drawing.Color.White;
-            stateProperties36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbNameMed.OnIdleState = stateProperties36;
             this.tbNameMed.Padding = new System.Windows.Forms.Padding(3);
             this.tbNameMed.PasswordChar = '\0';
-            this.tbNameMed.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbNameMed.PlaceholderText = "Co Tri";
+            this.tbNameMed.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbNameMed.PlaceholderText = "";
             this.tbNameMed.ReadOnly = false;
             this.tbNameMed.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbNameMed.SelectedText = "";
@@ -280,7 +296,7 @@
             this.tbNameMed.TextMarginBottom = 0;
             this.tbNameMed.TextMarginLeft = 3;
             this.tbNameMed.TextMarginTop = 1;
-            this.tbNameMed.TextPlaceholder = "Co Tri";
+            this.tbNameMed.TextPlaceholder = "";
             this.tbNameMed.UseSystemPasswordChar = false;
             this.tbNameMed.WordWrap = true;
             // 
@@ -361,7 +377,7 @@
             this.tbQuantity.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbQuantity.DefaultText = "";
             this.tbQuantity.FillColor = System.Drawing.Color.White;
-            this.tbQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbQuantity.HideSelection = true;
             this.tbQuantity.IconLeft = null;
             this.tbQuantity.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -392,12 +408,12 @@
             this.tbQuantity.OnHoverState = stateProperties31;
             stateProperties32.BorderColor = System.Drawing.Color.Silver;
             stateProperties32.FillColor = System.Drawing.Color.White;
-            stateProperties32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbQuantity.OnIdleState = stateProperties32;
             this.tbQuantity.Padding = new System.Windows.Forms.Padding(3);
             this.tbQuantity.PasswordChar = '\0';
-            this.tbQuantity.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbQuantity.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbQuantity.PlaceholderText = "";
             this.tbQuantity.ReadOnly = false;
             this.tbQuantity.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -448,7 +464,7 @@
             this.tbDescriptionMed.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDescriptionMed.DefaultText = "";
             this.tbDescriptionMed.FillColor = System.Drawing.Color.White;
-            this.tbDescriptionMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbDescriptionMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbDescriptionMed.HideSelection = true;
             this.tbDescriptionMed.IconLeft = null;
             this.tbDescriptionMed.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -479,13 +495,13 @@
             this.tbDescriptionMed.OnHoverState = stateProperties27;
             stateProperties28.BorderColor = System.Drawing.Color.Silver;
             stateProperties28.FillColor = System.Drawing.Color.White;
-            stateProperties28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbDescriptionMed.OnIdleState = stateProperties28;
             this.tbDescriptionMed.Padding = new System.Windows.Forms.Padding(3);
             this.tbDescriptionMed.PasswordChar = '\0';
-            this.tbDescriptionMed.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbDescriptionMed.PlaceholderText = "Ughhhhhhhhh";
+            this.tbDescriptionMed.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbDescriptionMed.PlaceholderText = "";
             this.tbDescriptionMed.ReadOnly = false;
             this.tbDescriptionMed.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbDescriptionMed.SelectedText = "";
@@ -499,7 +515,7 @@
             this.tbDescriptionMed.TextMarginBottom = 0;
             this.tbDescriptionMed.TextMarginLeft = 3;
             this.tbDescriptionMed.TextMarginTop = 1;
-            this.tbDescriptionMed.TextPlaceholder = "Ughhhhhhhhh";
+            this.tbDescriptionMed.TextPlaceholder = "";
             this.tbDescriptionMed.UseSystemPasswordChar = false;
             this.tbDescriptionMed.WordWrap = true;
             // 
@@ -719,7 +735,7 @@
             this.tbManafacture.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbManafacture.DefaultText = "";
             this.tbManafacture.FillColor = System.Drawing.Color.White;
-            this.tbManafacture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbManafacture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbManafacture.HideSelection = true;
             this.tbManafacture.IconLeft = null;
             this.tbManafacture.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -750,13 +766,13 @@
             this.tbManafacture.OnHoverState = stateProperties23;
             stateProperties24.BorderColor = System.Drawing.Color.Silver;
             stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbManafacture.OnIdleState = stateProperties24;
             this.tbManafacture.Padding = new System.Windows.Forms.Padding(3);
             this.tbManafacture.PasswordChar = '\0';
-            this.tbManafacture.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbManafacture.PlaceholderText = "10258.KD.12.1";
+            this.tbManafacture.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbManafacture.PlaceholderText = "";
             this.tbManafacture.ReadOnly = false;
             this.tbManafacture.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbManafacture.SelectedText = "";
@@ -770,7 +786,7 @@
             this.tbManafacture.TextMarginBottom = 0;
             this.tbManafacture.TextMarginLeft = 3;
             this.tbManafacture.TextMarginTop = 1;
-            this.tbManafacture.TextPlaceholder = "10258.KD.12.1";
+            this.tbManafacture.TextPlaceholder = "";
             this.tbManafacture.UseSystemPasswordChar = false;
             this.tbManafacture.WordWrap = true;
             // 
@@ -780,9 +796,9 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(452, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 23);
+            this.label8.Size = new System.Drawing.Size(112, 23);
             this.label8.TabIndex = 29;
-            this.label8.Text = "Số đăng ký";
+            this.label8.Text = "Nhà sản xuất";
             // 
             // tbUsage
             // 
@@ -806,7 +822,7 @@
             this.tbUsage.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsage.DefaultText = "";
             this.tbUsage.FillColor = System.Drawing.Color.White;
-            this.tbUsage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbUsage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbUsage.HideSelection = true;
             this.tbUsage.IconLeft = null;
             this.tbUsage.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -837,12 +853,12 @@
             this.tbUsage.OnHoverState = stateProperties19;
             stateProperties20.BorderColor = System.Drawing.Color.Silver;
             stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbUsage.OnIdleState = stateProperties20;
             this.tbUsage.Padding = new System.Windows.Forms.Padding(3);
             this.tbUsage.PasswordChar = '\0';
-            this.tbUsage.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbUsage.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbUsage.PlaceholderText = "Tenofovir (TDF)";
             this.tbUsage.ReadOnly = false;
             this.tbUsage.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -883,7 +899,7 @@
             this.tbTypeMed.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTypeMed.DefaultText = "";
             this.tbTypeMed.FillColor = System.Drawing.Color.White;
-            this.tbTypeMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbTypeMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbTypeMed.HideSelection = true;
             this.tbTypeMed.IconLeft = null;
             this.tbTypeMed.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -914,12 +930,12 @@
             this.tbTypeMed.OnHoverState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.Silver;
             stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbTypeMed.OnIdleState = stateProperties16;
             this.tbTypeMed.Padding = new System.Windows.Forms.Padding(3);
             this.tbTypeMed.PasswordChar = '\0';
-            this.tbTypeMed.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbTypeMed.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbTypeMed.PlaceholderText = "Viên";
             this.tbTypeMed.ReadOnly = false;
             this.tbTypeMed.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -970,7 +986,7 @@
             this.tbDousage.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDousage.DefaultText = "";
             this.tbDousage.FillColor = System.Drawing.Color.White;
-            this.tbDousage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbDousage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbDousage.HideSelection = true;
             this.tbDousage.IconLeft = null;
             this.tbDousage.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -1001,13 +1017,13 @@
             this.tbDousage.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.Silver;
             stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbDousage.OnIdleState = stateProperties12;
             this.tbDousage.Padding = new System.Windows.Forms.Padding(3);
             this.tbDousage.PasswordChar = '\0';
-            this.tbDousage.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbDousage.PlaceholderText = "Viên";
+            this.tbDousage.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbDousage.PlaceholderText = "200 mg/ml";
             this.tbDousage.ReadOnly = false;
             this.tbDousage.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbDousage.SelectedText = "";
@@ -1021,7 +1037,7 @@
             this.tbDousage.TextMarginBottom = 0;
             this.tbDousage.TextMarginLeft = 3;
             this.tbDousage.TextMarginTop = 1;
-            this.tbDousage.TextPlaceholder = "Viên";
+            this.tbDousage.TextPlaceholder = "200 mg/ml";
             this.tbDousage.UseSystemPasswordChar = false;
             this.tbDousage.WordWrap = true;
             // 
@@ -1057,7 +1073,7 @@
             this.tbPrice.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPrice.DefaultText = "";
             this.tbPrice.FillColor = System.Drawing.Color.White;
-            this.tbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbPrice.HideSelection = true;
             this.tbPrice.IconLeft = null;
             this.tbPrice.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -1088,12 +1104,12 @@
             this.tbPrice.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbPrice.OnIdleState = stateProperties8;
             this.tbPrice.Padding = new System.Windows.Forms.Padding(3);
             this.tbPrice.PasswordChar = '\0';
-            this.tbPrice.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbPrice.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbPrice.PlaceholderText = "";
             this.tbPrice.ReadOnly = false;
             this.tbPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -1144,7 +1160,7 @@
             this.tbDiscountPrice.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDiscountPrice.DefaultText = "";
             this.tbDiscountPrice.FillColor = System.Drawing.Color.White;
-            this.tbDiscountPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbDiscountPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbDiscountPrice.HideSelection = true;
             this.tbDiscountPrice.IconLeft = null;
             this.tbDiscountPrice.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -1175,12 +1191,12 @@
             this.tbDiscountPrice.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbDiscountPrice.OnIdleState = stateProperties4;
             this.tbDiscountPrice.Padding = new System.Windows.Forms.Padding(3);
             this.tbDiscountPrice.PasswordChar = '\0';
-            this.tbDiscountPrice.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tbDiscountPrice.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.tbDiscountPrice.PlaceholderText = "";
             this.tbDiscountPrice.ReadOnly = false;
             this.tbDiscountPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -1270,19 +1286,174 @@
             this.dtImportDate.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dtImportDate.DateTimeIcon = null;
             this.dtImportDate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtImportDate.Location = new System.Drawing.Point(456, 375);
+            this.dtImportDate.Location = new System.Drawing.Point(-1, -1);
             this.dtImportDate.Name = "dtImportDate";
             this.dtImportDate.Size = new System.Drawing.Size(163, 40);
             this.dtImportDate.TabIndex = 41;
             this.dtImportDate.ToolTipText = "";
             this.dtImportDate.Value = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(120, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 20);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "*";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(561, 89);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 20);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(120, 178);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(16, 20);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(357, 178);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(16, 20);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "*";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(544, 178);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(16, 20);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "*";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(113, 263);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(16, 20);
+            this.label17.TabIndex = 47;
+            this.label17.Text = "*";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(310, 263);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(16, 20);
+            this.label18.TabIndex = 48;
+            this.label18.Text = "*";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(157, 346);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(16, 20);
+            this.label19.TabIndex = 49;
+            this.label19.Text = "*";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(357, 343);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(16, 20);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "*";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 8.8F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(544, 343);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(16, 20);
+            this.label21.TabIndex = 50;
+            this.label21.Text = "*";
+            // 
+            // bunifuPanel4
+            // 
+            this.bunifuPanel4.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel4.BackgroundImage")));
+            this.bunifuPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel4.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuPanel4.BorderRadius = 10;
+            this.bunifuPanel4.BorderThickness = 0;
+            this.bunifuPanel4.Controls.Add(this.panel3);
+            this.bunifuPanel4.Location = new System.Drawing.Point(456, 369);
+            this.bunifuPanel4.Name = "bunifuPanel4";
+            this.bunifuPanel4.ShowBorders = true;
+            this.bunifuPanel4.Size = new System.Drawing.Size(166, 45);
+            this.bunifuPanel4.TabIndex = 22;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dtImportDate);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(160, 38);
+            this.panel3.TabIndex = 19;
+            // 
+            // btnDeleteMedicine
+            // 
+            this.btnDeleteMedicine.AutoSize = true;
+            this.btnDeleteMedicine.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteMedicine.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteMedicine.Location = new System.Drawing.Point(603, 22);
+            this.btnDeleteMedicine.Name = "btnDeleteMedicine";
+            this.btnDeleteMedicine.Size = new System.Drawing.Size(40, 23);
+            this.btnDeleteMedicine.TabIndex = 7;
+            this.btnDeleteMedicine.Text = "Xóa";
+            this.btnDeleteMedicine.Visible = false;
+            // 
             // NewMedicinePopup
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 610);
-            this.Controls.Add(this.dtImportDate);
+            this.Controls.Add(this.bunifuPanel4);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label);
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.label5);
@@ -1320,6 +1491,8 @@
             this.panel1.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.bunifuPanel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1328,38 +1501,51 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private Bunifu.UI.WinForms.BunifuTextBox tbNameMed;
+        protected Bunifu.UI.WinForms.BunifuLabel title;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbNameMed;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Syncfusion.WinForms.Input.SfDateTimeEdit dtManufacturingDate;
+        protected Syncfusion.WinForms.Input.SfDateTimeEdit dtManufacturingDate;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuTextBox tbDescriptionMed;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbDescriptionMed;
         private System.Windows.Forms.Label label7;
-        private Bunifu.UI.WinForms.BunifuTextBox tbQuantity;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbQuantity;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton close_btn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddNewMedicine;
-        private Bunifu.UI.WinForms.BunifuTextBox tbUsage;
-        private Bunifu.UI.WinForms.BunifuTextBox tbManafacture;
+        protected Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddNewMedicine;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbUsage;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbManafacture;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private System.Windows.Forms.Panel panel2;
-        private Syncfusion.WinForms.Input.SfDateTimeEdit dtExpiryDate;
+        protected Syncfusion.WinForms.Input.SfDateTimeEdit dtExpiryDate;
         private System.Windows.Forms.Label label5;
-        private Bunifu.UI.WinForms.BunifuTextBox tbDiscountPrice;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbDiscountPrice;
         private System.Windows.Forms.Label label12;
-        private Bunifu.UI.WinForms.BunifuTextBox tbPrice;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbPrice;
         private System.Windows.Forms.Label label11;
-        private Bunifu.UI.WinForms.BunifuTextBox tbDousage;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbDousage;
         private System.Windows.Forms.Label label10;
-        private Bunifu.UI.WinForms.BunifuTextBox tbTypeMed;
+        protected Bunifu.UI.WinForms.BunifuTextBox tbTypeMed;
         private System.Windows.Forms.Label label9;
-        private Syncfusion.WinForms.Input.SfDateTimeEdit dtImportDate;
+        protected Syncfusion.WinForms.Input.SfDateTimeEdit dtImportDate;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label6;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
+        private System.Windows.Forms.Panel panel3;
+        protected System.Windows.Forms.Label btnDeleteMedicine;
     }
 }

@@ -25,7 +25,7 @@ namespace UIUX.Popup
             Close();
         }
 
-        private void btnAddNewMedicine_Click(object sender, EventArgs e)
+        protected void btnAddNewMedicine_Click(object sender, EventArgs e)
         {
             DateTime manufacturingDate = dtManufacturingDate.Value.Value;
             DateTime expiryDate = dtExpiryDate.Value.Value;
@@ -36,6 +36,16 @@ namespace UIUX.Popup
                 float value2 = float.Parse(tbPrice.Text);
                 float value3 = int.Parse(tbQuantity.Text);
 
+                Medicine medicine = new Medicine(name: tbNameMed.Text, manufacturer: tbManafacture.Text,
+                    type: tbTypeMed.Text, description: tbDescriptionMed.Text,
+                    discountPrice: float.Parse(tbDiscountPrice.Text),
+                    price: float.Parse(tbPrice.Text), quantity: int.Parse(tbQuantity.Text),
+                    manufacturingDate: manufacturingDate, expiryDate: expiryDate,
+                    importDate: importDate, usage: tbUsage.Text, dosage: tbDousage.Text);
+
+                addMedicineEvent?.Invoke(medicine, e);
+
+                Close();
             }
             catch (FormatException)
             {
@@ -46,16 +56,7 @@ namespace UIUX.Popup
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
 
-            Medicine medicine = new Medicine(name: tbNameMed.Text, manufacturer: tbManafacture.Text,
-            type: tbTypeMed.Text, description: tbDescriptionMed.Text,
-            discountPrice: float.Parse(tbDiscountPrice.Text),
-            price: float.Parse(tbPrice.Text), quantity: int.Parse(tbQuantity.Text),
-            manufacturingDate: manufacturingDate, expiryDate: expiryDate,
-            importDate: importDate, usage: tbUsage.Text, dosage: tbDousage.Text);
 
-            addMedicineEvent?.Invoke(medicine, e);
-
-            Close();
         }
     }
 }

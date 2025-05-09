@@ -47,7 +47,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 55);
+            this.panel1.Size = new System.Drawing.Size(886, 55);
             this.panel1.TabIndex = 10;
             // 
             // addNewPatient_btn
@@ -100,7 +100,7 @@
             this.addNewPatient_btn.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewPatient_btn.IdleIconLeftImage")));
             this.addNewPatient_btn.IdleIconRightImage = null;
             this.addNewPatient_btn.IndicateFocus = false;
-            this.addNewPatient_btn.Location = new System.Drawing.Point(583, 7);
+            this.addNewPatient_btn.Location = new System.Drawing.Point(669, 7);
             this.addNewPatient_btn.Name = "addNewPatient_btn";
             this.addNewPatient_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.addNewPatient_btn.OnDisabledState.BorderRadius = 15;
@@ -173,7 +173,7 @@
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(800, 395);
+            this.bunifuPanel1.Size = new System.Drawing.Size(886, 468);
             this.bunifuPanel1.TabIndex = 11;
             // 
             // sfDataGrid
@@ -186,7 +186,7 @@
             this.sfDataGrid.PreviewRowHeight = 35;
             this.sfDataGrid.RowHeaderWidth = 32D;
             this.sfDataGrid.RowHeight = 32;
-            this.sfDataGrid.Size = new System.Drawing.Size(760, 375);
+            this.sfDataGrid.Size = new System.Drawing.Size(846, 448);
             this.sfDataGrid.TabIndex = 6;
             this.sfDataGrid.Text = "sfDataGrid1";
             this.sfDataGrid.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.sfDataGrid_CellDoubleClick);
@@ -195,7 +195,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(886, 523);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "PatientPage";

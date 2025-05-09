@@ -34,5 +34,16 @@ namespace BusinessLayer
         {
             return techCatalogDL.Add(technicalCatalog);
         }
+
+        public int Delete(int id)
+        {
+            try
+            {
+                return techCatalogDL.Delete(id);
+            } catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
