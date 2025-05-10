@@ -8,19 +8,20 @@ namespace BusinessLayer
 {
     public class AuthenticationService
     {
-        public (bool, TransferObject.User) Login(string username, string password)
+        public bool Login(string username, string password)
         {
-            TransferObject.User user = new TransferObject.User() {
-                username = username,
-                password = password,
-                displayName = "Nguyễn Hải Dương",
-                email = "test@gmail.com"
-            };
+            DataLayer.LoginDL loginDL = new DataLayer.LoginDL();
+            
+            (bool success, TransferObject.User user) = loginDL.Login(username, password);
+
+            if (!success)
+            {
+                return false;
+            }
 
             UserSession.Instance.SetCurrentUser(user);
 
-
-            return (username == "admin" && password == "password", user);
+            return true;
         }
     }
 }

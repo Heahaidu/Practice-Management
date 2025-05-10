@@ -70,7 +70,6 @@
             this.close = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.parentBarItem1 = new Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AppImage)).BeginInit();
             this.panel2.SuspendLayout();
@@ -1015,7 +1014,7 @@
             this.btnAccounts2.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnAccounts2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccounts2.BackgroundImage")));
             this.btnAccounts2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAccounts2.ButtonText = "Cài đặt";
+            this.btnAccounts2.ButtonText = "Tài khoản";
             this.btnAccounts2.ButtonTextMarginLeft = 0;
             this.btnAccounts2.ColorContrastOnClick = 45;
             this.btnAccounts2.ColorContrastOnHover = 45;
@@ -1157,7 +1156,7 @@
             this.btnAccount.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnAccount.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnAccount.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAccount.Font = new System.Drawing.Font("Nunito Sans Normal", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.Font = new System.Drawing.Font("Nunito Sans Normal", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnAccount.IconLeft = null;
             this.btnAccount.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1212,7 +1211,7 @@
             this.btnAccount.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(53)))), ((int)(((byte)(47)))));
             this.btnAccount.OnPressedState.IconLeftImage = null;
             this.btnAccount.OnPressedState.IconRightImage = null;
-            this.btnAccount.Size = new System.Drawing.Size(203, 32);
+            this.btnAccount.Size = new System.Drawing.Size(222, 32);
             this.btnAccount.TabIndex = 7;
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccount.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1650,15 +1649,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1010, 617);
             this.mainPanel.TabIndex = 5;
-            // 
-            // parentBarItem1
-            // 
-            this.parentBarItem1.BarName = "parentBarItem1";
-            this.parentBarItem1.Manager = null;
-            this.parentBarItem1.MetroColor = System.Drawing.Color.LightSkyBlue;
-            this.parentBarItem1.ShowToolTipInPopUp = false;
-            this.parentBarItem1.SizeToFit = true;
-            this.parentBarItem1.WrapLength = 20;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // Main
             // 
@@ -1713,6 +1704,5 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton tech_btn_2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton cabinet_btn_2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAccounts2;
-        private Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem parentBarItem1;
     }
 }

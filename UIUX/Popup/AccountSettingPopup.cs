@@ -33,7 +33,13 @@ namespace UIUX.Popup
             this.ActiveControl = null;
             if (tbDisplayName.Text != BusinessLayer.UserSession.Instance.CurrentUser.displayName)
             {
-                BusinessLayer.UserSession.Instance.CurrentUser.displayName = tbDisplayName.Text;
+                AccountBL accountBL = new AccountBL();
+                bool success = accountBL.UpdateDisplayName(tbDisplayName.Text);
+                if (!success)
+                {
+                    MessageBox.Show("Failed to update display name.");
+                    return;
+                }
                 changeDisplayNameEvent?.Invoke(sender, e);
                 Refesh();
             }
@@ -49,7 +55,8 @@ namespace UIUX.Popup
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-
+            ChangePasswordPopup changePasswordPopup = new ChangePasswordPopup();
+            DialogResult result = changePasswordPopup.ShowDialog();
         }
 
         private void tbDisplayName_TextChange(object sender, EventArgs e)

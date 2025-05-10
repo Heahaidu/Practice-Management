@@ -25,11 +25,38 @@ namespace UIUX.Popup
             Close();
         }
 
-        private void btnAddNewMedicine_Click(object sender, EventArgs e)
+        protected void btnAddNewMedicine_Click(object sender, EventArgs e)
         {
-            Medicine medicine = new Medicine("Paracetamol", "A", "Tablet", "Take 1 tablet every 6 hours", 50000, 60000, 30, DateTime.Now, DateTime.Now.AddDays(30), DateTime.Now.AddDays(30), "", "500ml");
-            addMedicineEvent?.Invoke(medicine, e);
-            Close();
+            DateTime manufacturingDate = dtManufacturingDate.Value.Value;
+            DateTime expiryDate = dtExpiryDate.Value.Value;
+            DateTime importDate = dtImportDate.Value.Value;
+            try
+            {
+                float value1 = float.Parse(tbDiscountPrice.Text);
+                float value2 = float.Parse(tbPrice.Text);
+                float value3 = int.Parse(tbQuantity.Text);
+
+                Medicine medicine = new Medicine(name: tbNameMed.Text, manufacturer: tbManafacture.Text,
+                    type: tbTypeMed.Text, description: tbDescriptionMed.Text,
+                    discountPrice: float.Parse(tbDiscountPrice.Text),
+                    price: float.Parse(tbPrice.Text), quantity: int.Parse(tbQuantity.Text),
+                    manufacturingDate: manufacturingDate, expiryDate: expiryDate,
+                    importDate: importDate, usage: tbUsage.Text, dosage: tbDousage.Text);
+
+                addMedicineEvent?.Invoke(medicine, e);
+
+                Close();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Vui lòng nhập số hợp lệ!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+
+
         }
     }
 }

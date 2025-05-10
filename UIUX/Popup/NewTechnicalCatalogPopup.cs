@@ -14,7 +14,7 @@ namespace UIUX.Popup
     public partial class NewTechnicalCatalogPopup : Form
     {
 
-        public EventHandler addTechnicalCatalogEvent;
+        public EventHandler UpdateTechnicalCatalogEvent;
 
         public NewTechnicalCatalogPopup()
         {
@@ -26,11 +26,33 @@ namespace UIUX.Popup
             Close();
         }
 
-        private void btnAddNewTechnical_Click(object sender, EventArgs e)
+        protected void btnAddNewTechnical_Click(object sender, EventArgs e)
         {
-            TechnicalCatalog technicalCatalog = new TechnicalCatalog("Blood Test", "Blood test", 120000, 100000, "");
-            addTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
+
+            try
+            {
+                float value1 = float.Parse(tbDiscountPrice.Text);
+                float value2 = float.Parse(tbPrice.Text);
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Vui lòng nhập số hợp lệ!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+
+            TechnicalCatalog technicalCatalog = new TechnicalCatalog(
+                name: tbNameTech.Text, type: ddTypeTech.Text,
+                price: float.Parse(tbPrice.Text), discountPrice: float.Parse(tbDiscountPrice.Text),
+                description: tbDescriptionTech.Text);
+
+
+            UpdateTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
             Close();
         }
+
     }
 }

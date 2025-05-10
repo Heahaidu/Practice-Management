@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,33 @@ namespace UIUX.Popup
         public NewPatientPopup()
         {
             InitializeComponent();
+            //InitializeControls();
+        }
+
+        public class GenderDisplay
+        {
+            public string DisplayName { get; set; }
+            public Gender Value { get; set; }
+        }
+
+        private void InitializeControls()
+        {
+            var genderList = new List<GenderDisplay>
+            {
+                new GenderDisplay { DisplayName = "Nam", Value = Gender.MALE },
+                new GenderDisplay { DisplayName = "Nữ", Value = Gender.FEMALE }
+            };
+
+            if (genderList == null || genderList.Count == 0)
+            {
+                MessageBox.Show("Lỗi: Danh sách giới tính rỗng.");
+                return;
+            }
+            ddGender.DataSource = null;
+            ddGender.DataSource = genderList;
+            ddGender.DisplayMember = "DisplayName";
+            ddGender.ValueMember = "Value";
+            ddGender.SelectedIndex = 0;
         }
 
         private void close_btn_Click(object sender, EventArgs e)
@@ -27,8 +55,38 @@ namespace UIUX.Popup
 
         private void btnAddNewPatient_Click(object sender, EventArgs e)
         {
-            Patient patient = new Patient("Nguyen Van A", DateTime.Now, Gender.MALE, "HCM", "", "", "", "", "");
+            Console.WriteLine(tbName.Text.Length);
+            if (tbName.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập tên bệnh nhân.");
+                return;
+            }
+            if (!dtDob.Value.HasValue)
+            {
+                MessageBox.Show("Vui lòng chọn ngày sinh.");
+                return;
+            }
+            if (ddGender.SelectedIndex == null)
+            {
+                MessageBox.Show("Vui lòng chọn giới tính.");
+                return;
+            }
+            DateTime dob = dtDob.Value.Value;
+            Gender gender = ddGender.SelectedIndex == 0 ? Gender.MALE : Gender.FEMALE;
+
+            Patient patient = new Patient(
+                name: tbName.Text,
+                dob: dob, 
+                gender: gender, 
+                address: tbAddress.Text, 
+                phone: tbPhone.Text, 
+                email: tbEmail.Text, 
+                healthInsuranceId: tbHealthInsuranceId.Text, 
+                idCard: tbCardId.Text, 
+                medicalHistory: tbMedicalHistory.Text);
+
             addPatientEvent?.Invoke(patient, e);
+
             Close();
         }
     }
