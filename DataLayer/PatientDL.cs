@@ -250,7 +250,7 @@ namespace DataLayer
         {
             try
             {
-                List<double> totalPatients = new List<double>(7); // 7 ngày: T2 -> CN
+                List<double> totalPatients = new List<double>(7);
                 DateTime today = DateTime.Today;
                 int daysUntilMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
                 DateTime monday = today.AddDays(-daysUntilMonday);
