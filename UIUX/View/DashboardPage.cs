@@ -24,51 +24,87 @@ namespace UIUX.View
 
         private void LoadData()
         {
+            PatientBL patientBL = new PatientBL();
             lbPatient.Text = new PatientBL().GetTotalPatients().ToString();
             lbNewPatient.Text = new PatientBL().GetPatientsCreatedToday().ToString();
             lbPrescription.Text = new PrescriptionBL().GetTotalPrescriptionsToday().ToString();
             lbIndication.Text = new IndicationBL().GetTotalIndications().ToString();
-        }
 
-        private void DashForm_Load(object sender, EventArgs e)
-        {
+            List<double> newPatients = patientBL.GetNewPatientsByWeek();
+            List<double> totalPatients = patientBL.GetTotalPatientsByWeek();
+
             bunifuChartCanvas1.Labels = new[] { "T2", "T3", "T4", "T5", "T6", "T7", "CN" };
             bunifuChartCanvas1.AnimationDuration = 1000;
 
             bunifuBarChart1.TargetCanvas = bunifuChartCanvas1;
             bunifuBarChart1.Label = "Bệnh nhân mới";
-            bunifuBarChart1.Data = new List<double> { 20, 25, 30, 35, 40, 50, 45 };
+            bunifuBarChart1.Data = newPatients;
             bunifuBarChart1.BorderWidth = 2;
-            bunifuBarChart1.BackgroundColor = new List<Color>() {
-                Color.FromArgb(0,163,137),
-                Color.FromArgb(0,163,137),
-                Color.FromArgb(0,163,137),
-                Color.FromArgb(0,163,137),
-                Color.FromArgb(0,163,137),
-                Color.FromArgb(0,163,137),
-                Color.FromArgb(0,163,137)
+            bunifuBarChart1.BackgroundColor = new List<Color>()
+            {
+                Color.FromArgb(0, 163, 137),
+                Color.FromArgb(0, 163, 137),
+                Color.FromArgb(0, 163, 137),
+                Color.FromArgb(0, 163, 137),
+                Color.FromArgb(0, 163, 137),
+                Color.FromArgb(0, 163, 137),
+                Color.FromArgb(0, 163, 137)
             };
 
             bunifuBarChart2.TargetCanvas = bunifuChartCanvas1;
             bunifuBarChart2.Label = "Tổng số bệnh nhân";
-            bunifuBarChart2.Data = new List<double> {
-                100, 
-                120,
-                145,
-                175,
-                210,
-                260,
-                300 
+            bunifuBarChart2.Data = totalPatients;
+            bunifuBarChart2.BackgroundColor = new List<Color>()
+            {
+                Color.FromArgb(170, 84, 218),
+                Color.FromArgb(170, 84, 218),
+                Color.FromArgb(170, 84, 218),
+                Color.FromArgb(170, 84, 218),
+                Color.FromArgb(170, 84, 218),
+                Color.FromArgb(170, 84, 218),
+                Color.FromArgb(170, 84, 218)
             };
-            bunifuBarChart2.BackgroundColor = new List<Color>() {
-                Color.FromArgb(170,84,218), 
-                Color.FromArgb(170,84,218), 
-                Color.FromArgb(170,84,218), 
-                Color.FromArgb(170,84,218), 
-                Color.FromArgb(170,84,218), 
-                Color.FromArgb(170,84,218), 
-                Color.FromArgb(170,84,218)
-            };
+        }
+
+        private void DashForm_Load(object sender, EventArgs e)
+        {
+            //bunifuChartCanvas1.Labels = new[] { "T2", "T3", "T4", "T5", "T6", "T7", "CN" };
+            //bunifuChartCanvas1.AnimationDuration = 1000;
+
+            //bunifuBarChart1.TargetCanvas = bunifuChartCanvas1;
+            //bunifuBarChart1.Label = "Bệnh nhân mới";
+            //bunifuBarChart1.Data = new List<double> { 20, 25, 30, 35, 40, 50, 45 };
+            //bunifuBarChart1.BorderWidth = 2;
+            //bunifuBarChart1.BackgroundColor = new List<Color>() {
+            //    Color.FromArgb(0,163,137),
+            //    Color.FromArgb(0,163,137),
+            //    Color.FromArgb(0,163,137),
+            //    Color.FromArgb(0,163,137),
+            //    Color.FromArgb(0,163,137),
+            //    Color.FromArgb(0,163,137),
+            //    Color.FromArgb(0,163,137)
+            //};
+
+            //bunifuBarChart2.TargetCanvas = bunifuChartCanvas1;
+            //bunifuBarChart2.Label = "Tổng số bệnh nhân";
+            //bunifuBarChart2.Data = new List<double> {
+            //    100, 
+            //    120,
+            //    145,
+            //    175,
+            //    210,
+            //    260,
+            //    300 
+            //};
+            //bunifuBarChart2.BackgroundColor = new List<Color>() {
+            //    Color.FromArgb(170,84,218), 
+            //    Color.FromArgb(170,84,218), 
+            //    Color.FromArgb(170,84,218), 
+            //    Color.FromArgb(170,84,218), 
+            //    Color.FromArgb(170,84,218), 
+            //    Color.FromArgb(170,84,218), 
+            //    Color.FromArgb(170,84,218)
+            //};
 
             // Cấu hình nhãn trục Y phụ
             //lblYAuxiliary.Text = "Tổng số khách";

@@ -69,5 +69,29 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
+        public List<double> GetNewPatientsByWeek()
+        {
+            try
+            {
+                return patientDL.GetNewPatientsByWeek();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<double> GetTotalPatientsByWeek()
+        {
+            try
+            {
+                return patientDL.GetTotalPatientsByWeek();
+            }
+            catch(SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -24,13 +24,13 @@ namespace UIUX.DataView
             this.lbAuthority.Text = "";
             this.lbEmail.Text = user.email;
 
-            if (UserSession.Instance.CurrentUser.username == user.username)
+            if(UserSession.Instance.CurrentUser.level == 3)
             {
-                this.btnDeleteAccount.Visible = false;
+                this.btnDeleteAccount.Visible = true;
             }
             else
             {
-                this.btnDeleteAccount.Visible = true;
+                this.btnDeleteAccount.Visible = false;
             }
         }
 

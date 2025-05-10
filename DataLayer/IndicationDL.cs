@@ -35,7 +35,7 @@ namespace DataLayer
                     diagnosisName = reader["diagnosisName"].ToString();
                     notes = reader["notes"].ToString();
 
-                    Indication indication = new Indication(id, indicationDate, indicationType, doctorName, diagnosisName, notes, patientId, reader.IsDBNull(reader.GetOrdinal("doctorId")) ? 0 : reader.GetInt32(reader.GetOrdinal("doctorId")));
+                    Indication indication = new Indication(id, indicationDate, indicationType, doctorName, diagnosisName, notes, patientId, reader.IsDBNull(reader.GetOrdinal("doctorId")) ? 0 : reader.GetInt32(reader.GetOrdinal("doctorId")), 2);
                     indications.Add(indication);
                 }
                 reader.Close();

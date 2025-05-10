@@ -81,7 +81,8 @@ namespace UIUX.View
                                 diagnosisName: "Diagnosis",
                                 notes: $"Price: {price.Value}",
                                 patientId: patient.id,
-                                doctorId: UserSession.Instance.CurrentUser?.id ?? 1
+                                doctorId: UserSession.Instance.CurrentUser?.id ?? 1,
+                                1
                             ));
 
                             summary.AppendLine($"ID: {technicalCatalogId.Value}, Tên: {technicalCatalogName}, Giá: {price.Value}");

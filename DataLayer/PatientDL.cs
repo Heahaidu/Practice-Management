@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
@@ -211,6 +212,65 @@ namespace DataLayer
                 return null;
             }
             catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        public List<double> GetNewPatientsByWeek()
+        {
+            try
+            {
+                List<double> newPatients = new List<double>(7); // 7 ngày: T2 -> CN
+                DateTime today = DateTime.Today;
+                int daysUntilMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
+                DateTime monday = today.AddDays(-daysUntilMonday);
+
+                for (int i = 0; i < 7; i++)
+                {
+                    DateTime day = monday.AddDays(i);
+                    string query = "SELECT COUNT(*) FROM Patient WHERE CAST(createDate AS DATE) = @day";
+                    List<SqlParameter> parameters = new List<SqlParameter>
+                {
+                    new SqlParameter("@day", day)
+                };
+                    object result = MyExecuteScalar(query, System.Data.CommandType.Text, parameters);
+                    int count = Convert.ToInt32(result);
+                    newPatients.Add(count);
+                }
+
+                return newPatients;
+            }
+            catch(SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<double> GetTotalPatientsByWeek()
+        {
+            try
+            {
+                List<double> totalPatients = new List<double>(7); // 7 ngày: T2 -> CN
+                DateTime today = DateTime.Today;
+                int daysUntilMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
+                DateTime monday = today.AddDays(-daysUntilMonday);
+
+                for (int i = 0; i < 7; i++)
+                {
+                    DateTime day = monday.AddDays(i);
+                    string query = "SELECT COUNT(*) FROM Patient WHERE CAST(createDate AS DATE) <= @day";
+                    List<SqlParameter> parameters = new List<SqlParameter>
+                {
+                    new SqlParameter("@day", day)
+                };
+                    object result = MyExecuteScalar(query, System.Data.CommandType.Text, parameters);
+                    int count = Convert.ToInt32(result);
+                    totalPatients.Add(count);
+                }
+
+                return totalPatients;
+            }
+            catch(SqlException ex)
             {
                 throw ex;
             }

@@ -13,6 +13,6 @@ namespace TransferObject
         public string password { get; set; }
         public string displayName { get; set; }
         public string email { get; set; }
-
+        public int level { get; set; }
     }
 }

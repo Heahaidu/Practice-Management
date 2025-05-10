@@ -32,7 +32,8 @@ namespace DataLayer
                         username = reader["username"].ToString(),
                         password = reader["password"].ToString(),
                         displayName = reader["displayName"].ToString(),
-                        email = reader["email"].ToString()
+                        email = reader["email"].ToString(),
+                        level = reader.GetByte(reader.GetOrdinal("authority_level"))
                     };
                     reader.Close();
                     return (true, user);
