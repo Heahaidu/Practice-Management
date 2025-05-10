@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +40,7 @@ namespace UIUX.Popup
             DateTime examinationDate = dtExamination.Value.Value;
             Examination examination = new Examination(examinationDate: examinationDate,
                 doctorName: tbDoctorName.Text, medicalHistory: tbMedicalHistory.Text,
-                diagnosisName: tbDiagnosisName.Text, notes: tbNote.Text, patientId: patientId);
+                diagnosisName: tbDiagnosisName.Text, notes: tbNote.Text, patientId: patientId, doctorId: UserSession.Instance.CurrentUser?.id ?? 1);
             addExaminationEvent?.Invoke(examination, e);
             Close();
         }

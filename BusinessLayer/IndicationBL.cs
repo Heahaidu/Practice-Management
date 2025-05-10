@@ -42,5 +42,17 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
+        public int GetTotalIndications()
+        {
+            try
+            {
+                return IndicationDL.GetTotalIndication();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

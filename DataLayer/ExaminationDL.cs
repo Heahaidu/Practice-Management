@@ -10,7 +10,7 @@ using System.Data;
 
 namespace DataLayer
 {
-    public class ExaminationDL:DataProvider
+    public class ExaminationDL : DataProvider
     {
         public ObservableCollection<Examination> GetExaminations(int patientId)
         {
@@ -34,7 +34,7 @@ namespace DataLayer
                     diagnosisName = reader["diagnosisName"].ToString();
                     notes = reader["notes"].ToString();
 
-                    Examination examination = new Examination(id, examinationDate, doctorName, medicalHistory, diagnosisName, notes);
+                    Examination examination = new Examination(id, examinationDate, doctorName, medicalHistory, diagnosisName, notes, patientId, reader.IsDBNull(reader.GetOrdinal("doctorId")) ? 0 : reader.GetInt32(reader.GetOrdinal("doctorId")));
                     examinations.Add(examination);
                 }
                 reader.Close();
@@ -47,7 +47,7 @@ namespace DataLayer
             }
             finally
             {
-                DisConnect(); 
+                DisConnect();
             }
         }
 
@@ -60,8 +60,9 @@ namespace DataLayer
                 new SqlParameter("@doctorName", (object)examination.DoctorName),
                 new SqlParameter("@medicalHistory", (object)examination.MedicalHistory),
                 new SqlParameter("@diagnosisName", (object)examination.DiagnosisName),
-                new SqlParameter("@notes", (object)examination.notes),
-                new SqlParameter("@patientId", (int)patientId)
+                new SqlParameter("@notes", (object)examination.Notes),
+                new SqlParameter("@patientId", (int)patientId),
+                new SqlParameter("@doctorId", examination.DoctorId)
             };
 
             try

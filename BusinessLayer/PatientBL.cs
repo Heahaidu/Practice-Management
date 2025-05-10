@@ -45,5 +45,53 @@ namespace BusinessLayer
         {
             return patientDL.Delete(id);
         }
+
+        public int GetTotalPatients()
+        {
+            try
+            {
+                return patientDL.GetTotalPatients();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int GetPatientsCreatedToday()
+        {
+            try
+            {
+                return patientDL.GetPatientsCreatedToday();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<double> GetNewPatientsByWeek()
+        {
+            try
+            {
+                return patientDL.GetNewPatientsByWeek();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<double> GetTotalPatientsByWeek()
+        {
+            try
+            {
+                return patientDL.GetTotalPatientsByWeek();
+            }
+            catch(SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

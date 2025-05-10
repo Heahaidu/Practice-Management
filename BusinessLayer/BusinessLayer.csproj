@@ -46,6 +46,7 @@
     <Compile Include="IndicationBL.cs" />
     <Compile Include="MedicineBL.cs" />
     <Compile Include="PatientBL.cs" />
+    <Compile Include="PrescriptionBL.cs" />
     <Compile Include="Service\AuthenticationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TechCatalogBL.cs" />
