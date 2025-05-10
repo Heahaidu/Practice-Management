@@ -11,9 +11,10 @@ using System.Data;
 
 namespace DataLayer
 {
-    public class IndicationDL:DataProvider
+    public class IndicationDL : DataProvider
     {
-        public ObservableCollection<Indication> GetIndications(int patientId) {
+        public ObservableCollection<Indication> GetIndications(int patientId)
+        {
             string sql = "SELECT * FROM indication WHERE patientId = " + patientId;
             int id;
             DateTime indicationDate;
@@ -34,7 +35,7 @@ namespace DataLayer
                     diagnosisName = reader["diagnosisName"].ToString();
                     notes = reader["notes"].ToString();
 
-                    Indication indication = new Indication(id, indicationDate, indicationType, doctorName, diagnosisName, notes);
+                    Indication indication = new Indication(id, indicationDate, indicationType, doctorName, diagnosisName, notes, patientId, reader.IsDBNull(reader.GetOrdinal("doctorId")) ? 0 : reader.GetInt32(reader.GetOrdinal("doctorId")), 2);
                     indications.Add(indication);
                 }
                 reader.Close();
@@ -54,15 +55,15 @@ namespace DataLayer
         {
             string sql = "uspAddIndication";
 
-
             List<SqlParameter> parameters = new List<SqlParameter>()
             {
-                new SqlParameter("@indicationDate", indication.indicationDate),
-                new SqlParameter("@indicationType", (object)indication.indicationType),
-                new SqlParameter("@doctorName", (object)indication.doctorName),
-                new SqlParameter("@diagnosisName", (object)indication.diagnosisName),
-                new SqlParameter("@notes", (object)indication.notes),
-                new SqlParameter("@patientId", (int)patientId)
+                new SqlParameter("@indicationDate", indication.IndicationDate),
+                new SqlParameter("@indicationType", (object)indication.IndicationType),
+                new SqlParameter("@doctorName", (object)indication.DoctorName),
+                new SqlParameter("@diagnosisName", (object)indication.DiagnosisName),
+                new SqlParameter("@notes", (object)indication.Notes),
+                new SqlParameter("@patientId", (int)patientId),
+                new SqlParameter("@doctorId", indication.DoctorId)
             };
 
             try
@@ -79,6 +80,19 @@ namespace DataLayer
             finally
             {
                 DisConnect();
+            }
+        }
+
+        public int GetTotalIndication()
+        {
+            try
+            {
+                string sql = "SELECT COUNT(*) FROM Indication";
+                return Convert.ToInt32(MyExecuteScalar(sql, CommandType.Text));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
             }
         }
     }

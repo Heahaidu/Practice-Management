@@ -11,7 +11,6 @@ namespace TransferObject
     public class Medicine
     {
         //ID
-        [Browsable(false)]
         public int id { get; set; }
         //Name
         [Display(Name = "Tên thuốc")]
@@ -84,5 +83,7 @@ namespace TransferObject
             this.usage = usage;
             this.dosage = dosage;
         }
+
+        public Medicine() { }
     }
 }

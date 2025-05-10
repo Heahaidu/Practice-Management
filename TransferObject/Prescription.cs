@@ -1,34 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace TransferObject
 {
     public class Prescription
     {
-        // Thuốc
-        [Display(Name = "Thuốc")]
-        public Medicine medicine { get; set; }
+        public int Id { get; set; }
 
-        // Số lượng
-        [Display(Name = "Số lượng")]
-        public int quantity { get; set; }
-        // Số ngày dùng
-        [Display(Name = "Số ngày dùng")]
-        public int days { get; set; }
-        // Số lượng sử dụng buổi sáng
-        [Display(Name = "Số lượng sử dụng buổi sáng")]
-        public int morning { get; set; }
-        // Số lượng sử dụng buổi trưa
-        [Display(Name = "Số lượng sử dụng buổi trưa")]
-        public int noon { get; set; }
-        // Số lượng sử dụng buổi tối
-        [Display(Name = "Số lượng sử dụng buổi tối")]
-        public int evening { get; set; }
+        // Tổng giá
+        [Display(Name = "Tổng giá")]
+        public double TotalPrice { get; set; }
 
+        // Mã bác sĩ
+        [Display(Name = "Mã bác sĩ")]
+        public int DoctorId { get; set; }
+
+        // Danh sách chi tiết đơn thuốc
+        [Display(Name = "Chi tiết đơn thuốc")]
+        public List<Details> PrescriptionDetails { get; set; }
+
+        public Prescription()
+        {
+            PrescriptionDetails = new List<Details>();
+        }
+
+        public Prescription(int id, double totalPrice, int doctorId, List<Details> prescriptionDetails)
+        {
+            Id = id;
+            TotalPrice = totalPrice;
+            DoctorId = doctorId;
+            PrescriptionDetails = prescriptionDetails ?? new List<Details>();
+        }
+
+        public Prescription(double totalPrice, int doctorId, List<Details> prescriptionDetails)
+        {
+            TotalPrice = totalPrice;
+            DoctorId = doctorId;
+            PrescriptionDetails = prescriptionDetails ?? new List<Details>();
+        }
     }
 }

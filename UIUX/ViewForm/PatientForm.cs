@@ -77,15 +77,15 @@ namespace UIUX.ViewForm
         private void LoadExam()
         {
             dataGridExamination.DataSource = new ExaminationBL().GetExaminations(patient.id);
-            dataGridExamination.Columns["id"].Visible = false;
-            dataGridExamination.Columns["patientId"].Visible = false;
+            dataGridExamination.Columns["Id"].Visible = false;
+            dataGridExamination.Columns["PatientId"].Visible = false;
         }
 
         private void LoadIndication()
         {
             dataGridIndication.DataSource = new IndicationBL().GetIndications(patient.id);
-            dataGridIndication.Columns["id"].Visible = false;
-            dataGridIndication.Columns["patientId"].Visible = false;
+            dataGridIndication.Columns["Id"].Visible = false;
+            dataGridIndication.Columns["PatientId"].Visible = false;
         }
 
         private void btnAddNewExamination_Click(object sender, EventArgs e)
@@ -222,7 +222,8 @@ namespace UIUX.ViewForm
         private void dataGridIndication_CellDoubleClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
         {
             if (e.DataRow.RowIndex == 1) return;
-            Indication indication = e.DataRow.RowData as Indication;
+            Indication indication = e.DataRow.RowData as Indication; 
+            Patient row = e.DataRow.RowData as Patient;
             if (indication == null) return;
 
             medicalTestsScriptionPage.backEvent += (sender_, e_) =>

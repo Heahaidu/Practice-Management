@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +41,7 @@ namespace UIUX.Popup
             DateTime indicationDate = dtIndication.Value.Value;
             Indication indication = new Indication(indicationDate:  indicationDate,
                 indicationType: tbIndicationType.Text, doctorName: tbDoctorName.Text,
-                diagnosisName: tbDiagnosisName.Text, notes: tbNotes.Text, patientId: patientId);
+                diagnosisName: tbDiagnosisName.Text, notes: tbNotes.Text, patientId: patientId, doctorId: UserSession.Instance.CurrentUser?.id ?? 1, 1);
             addIndicationEvent?.Invoke(indication, e);
             Close();
         }

@@ -1,4 +1,4 @@
-﻿namespace UIUX.View
+namespace UIUX.View
 {
     partial class DashboardPage
     {

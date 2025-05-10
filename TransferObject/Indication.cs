@@ -11,44 +11,61 @@ namespace TransferObject
     public class Indication
     {
         [Browsable(false)]
+        public int Id { get; set; }
 
-        public int id { get; set; }
         // Ngày chỉ định
         [Display(Name = "Ngày chỉ định")]
-        public DateTime indicationDate { get; set; }
+        public DateTime IndicationDate { get; set; }
+
         // Loại chỉ định
         [Display(Name = "Loại chỉ định")]
-        public string indicationType { get; set; }
+        public string IndicationType { get; set; }
+
         // B.sĩ chỉ định
         [Display(Name = "B.sĩ chỉ định")]
-        public string doctorName { get; set; }
+        public string DoctorName { get; set; }
+
         // Chuẩn đoán
         [Display(Name = "Tên chuẩn đoán")]
-        public string diagnosisName { get; set; }
+        public string DiagnosisName { get; set; }
+
         // Ghi chú
         [Display(Name = "Ghi chú")]
-        public string notes { get; set; }
+        public string Notes { get; set; }
 
-        public int patientId {  get; set; }
-      
+        // Mã bệnh nhân
+        [Display(Name = "Mã bệnh nhân")]
+        public int PatientId { get; set; }
 
-        public Indication(DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId)
+        // Mã bác sĩ
+        [Display(Name = "Mã bác sĩ")]
+        public int DoctorId { get; set; }
+
+        public int DetailsIndicationId { get; set; }
+
+        public Indication(DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId, int doctorId, int detailsIndicationId)
         {
-            this.indicationDate = indicationDate;
-            this.indicationType = indicationType;
-            this.doctorName = doctorName;
-            this.diagnosisName = diagnosisName;
-            this.notes = notes;
-            this.patientId = patientId;
+            this.IndicationDate = indicationDate;
+            this.IndicationType = indicationType;
+            this.DoctorName = doctorName;
+            this.DiagnosisName = diagnosisName;
+            this.Notes = notes;
+            this.PatientId = patientId;
+            this.DoctorId = doctorId;
+            DetailsIndicationId = detailsIndicationId;
         }
-        public Indication(int id, DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes)
+
+        public Indication(int id, DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId, int doctorId, int detailsIndicationId)
         {
-            this.id = id;
-            this.indicationDate = indicationDate;
-            this.indicationType = indicationType;
-            this.doctorName = doctorName;
-            this.diagnosisName = diagnosisName;
-            this.notes = notes;
+            this.Id = id;
+            this.IndicationDate = indicationDate;
+            this.IndicationType = indicationType;
+            this.DoctorName = doctorName;
+            this.DiagnosisName = diagnosisName;
+            this.Notes = notes;
+            this.PatientId = patientId;
+            this.DoctorId = doctorId;
+            this.DetailsIndicationId = detailsIndicationId;
         }
     }
 }

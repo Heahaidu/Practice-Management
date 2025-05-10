@@ -52,6 +52,7 @@
     <Compile Include="LoginDL.cs" />
     <Compile Include="MedicineDL.cs" />
     <Compile Include="PatientDL.cs" />
+    <Compile Include="PrescriptionDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TechCatalogDL.cs" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿IF DB_ID('Prescription') IS NULL 
+IF DB_ID('Prescription') IS NULL 
 	CREATE DATABASE Prescription
 
 USE Prescription;
@@ -28,6 +28,28 @@ CREATE TABLE Users (
 	authority_level TINYINT DEFAULT 1
 )
 
+CREATE TABLE Examination (
+	id INT PRIMARY KEY IDENTITY(1,1),
+	examinationDate DATETIME,
+	doctorName NVARCHAR(50),
+	medicalHistory NVARCHAR(100),
+	diagnosisName NVARCHAR(100),
+	notes NVARCHAR(200),
+	patientId INT FOREIGN KEY REFERENCES Patient(id),
+	doctorId INT FOREIGN KEY REFERENCES Users(id)
+)
+
+CREATE TABLE Indication (
+	id INT PRIMARY KEY IDENTITY(1,1),
+	indicationDate DATETIME,
+	indicationType NVARCHAR(20),
+	doctorName NVARCHAR(50),
+	diagnosisName NVARCHAR(100),
+	notes NVARCHAR(200),
+	patientId INT FOREIGN KEY REFERENCES Patient(id),
+	doctorId INT FOREIGN KEY REFERENCES Users(id),
+	detailsiIndicationId INT FOREIGN KEY REFERENCES DetailsIndication(id)
+)
 
 CREATE TABLE Medicine (
 	id INT PRIMARY KEY IDENTITY(1,1),
@@ -45,6 +67,25 @@ CREATE TABLE Medicine (
 	dosage NVARCHAR(50)
 )
 
+CREATE TABLE Prescription (
+	id INT PRIMARY KEY IDENTITY(1,1),
+	totalPrice FLOAT,
+	Doctorid INT FOREIGN KEY REFERENCES Users(id),
+	createDate DATETIME
+)
+
+
+CREATE TABLE Details (
+	id INT PRIMARY KEY IDENTITY(1,1),
+	medicineId INT FOREIGN KEY REFERENCES Medicine(id),
+	prescriptionId INT FOREIGN KEY REFERENCES Prescription(id),
+	notes NVARCHAR(100),
+	daysUse INT,
+	morning INT,
+	noon INT,
+	evening INT
+)
+
 CREATE TABLE TechnicalCatalog (
 	id INT PRIMARY KEY IDENTITY(1,1),
 	typeTech NVARCHAR(10),
@@ -54,46 +95,10 @@ CREATE TABLE TechnicalCatalog (
 	descriptionTech NVARCHAR(100)
 )
 
-CREATE TABLE Examination (
+CREATE TABLE DetailsIndication (
 	id INT PRIMARY KEY IDENTITY(1,1),
-	examinationDate DATETIME,
-	doctorName NVARCHAR(50),
-	medicalHistory NVARCHAR(100),
-	diagnosisName NVARCHAR(100),
-	notes NVARCHAR(200),
-	patientId INT FOREIGN KEY REFERENCES Patient(id),
-	doctorId INT FOREIGN KEY REFERENCES Users(id)
-	 
+	patientId INT FOREIGN KEY REFERENCES Patient(id)
 )
-
-CREATE TABLE Indication (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	indicationDate DATETIME,
-	indicationType NVARCHAR(20),
-	doctorName NVARCHAR(50),
-	diagnosisName NVARCHAR(100),
-	notes NVARCHAR(200),
-	patientId INT FOREIGN KEY REFERENCES Patient(id),
-	doctorId INT FOREIGN KEY REFERENCES Users(id)
-)
-
-CREATE TABLE Details_Examination(
-	id INT PRIMARY KEY IDENTITY(1,1),
-	examination_id INT FOREIGN KEY REFERENCES Examination(id),
-	medicine_id INT FOREIGN KEY REFERENCES Medicine(id),
-	daysUse INT NOT NULL,
-	morning INT NOT NULL,
-	noon INT NOT NULL,
-	evening INT NOT NULL
-)
-
-CREATE TABLE Details_Indication(
-	id INT PRIMARY KEY IDENTITY(1,1),
-	Indication_id INT FOREIGN KEY REFERENCES Indication(id),
-	technicalCatalog_id INT FOREIGN KEY REFERENCES TechnicalCatalog(id),
-	quantity INT NOT NULL,
-)
-
 GO
 
 CREATE TRIGGER createNewUser
@@ -112,7 +117,7 @@ END
 -- Thêm dữ liệu mẫu (giữ nguyên cho các bảng không liên quan đến Prescription/Details)
 INSERT INTO Users (username, password, displayName, email, authority_level) VALUES
 ('admin', '2', N'Nguyen Van A', 'admin1@hospital.com', 3),
-('hea', '2', N'Nguyen Van B', 'aaaa@hospital.com', 1)
+('aaa', '2', N'Nguyen Van B', 'aaaa@hospital.com', 1)
 
 INSERT INTO Patient (namePat, dob, gender, addressPat, phone, email, healthInsuranceId, idCard, medicalHistory, createDate) VALUES
 (N'Nguyen Van An', '1990-05-15', 0, N'123 Le Loi, Hanoi', '0912345678', 'an.nguyen@gmail.com', 'BH123456789', '123456789012', N'High blood pressure', '2025-05-08'),
@@ -128,12 +133,17 @@ INSERT INTO Medicine (nameMed, manufacturer, typeMed, descriptionMed, discountPr
 (N'Aspirin', N'GlobalMed', N'Tablet', N'Pain relief and anti-inflammatory', 2700, 3000, 2000, '2024-05-01', '2026-05-01', '2024-06-01', N'Oral', N'100mg, 1 tablet daily'),
 (N'Ibuprofen', N'BioMed', N'Tablet', N'Pain relief and anti-inflammatory', 6300, 7000, 800, '2024-04-10', '2026-04-10', '2024-05-05', N'Oral', N'400mg, 1 tablet every 8 hours')
 
-INSERT INTO TechnicalCatalog (typeTech, nameTech, price, discountPrice, descriptionTech) VALUES
-(N'Imaging', N'X-ray', 500000, 450000, N'Chest X-ray for diagnostic purposes'),
-(N'Lab', N'Blood test', 200000, 180000, N'Complete blood count and glucose test'),
-(N'Imaging', N'Ultrasound', 700000, 650000, N'Abdominal ultrasound for organ assessment'),
-(N'Test', N'Spirometry', 300000, 270000, N'Lung function test for asthma patients'),
-(N'Test', N'Allergy test', 400000, 360000, N'Skin prick test for allergen identification')
+-- Sửa câu lệnh INSERT cho Prescription và Details
+INSERT INTO Prescription (totalPrice, Doctorid, createDate) VALUES
+(15000, 1, '2025-05-08'), -- Đơn thuốc 1, bác sĩ id=1
+(25000, 2, '2025-05-10')  -- Đơn thuốc 2, bác sĩ id=2
+
+INSERT INTO Details (prescriptionId, medicineId, quantity, daysUse, morning, noon, evening) VALUES
+(1, 1, 20, 10, 1, 1, 0), -- Đơn thuốc 1, Paracetamol
+(1, 2, 15, 5, 1, 0, 1),  -- Đơn thuốc 1, Amoxicillin
+(2, 3, 10, 10, 1, 0, 0),  -- Đơn thuốc 2, Omeprazole
+(2, 4, 30, 30, 0, 0, 1),  -- Đơn thuốc 2, Aspirin
+(2, 5, 15, 5, 1, 1, 1)    -- Đơn thuốc 2, Ibuprofen
 
 INSERT INTO Examination (examinationDate, doctorName, medicalHistory, diagnosisName, notes, patientId, doctorId) VALUES
 ('2025-04-01 09:00:00', N'Tran Thi B', N'High blood pressure', N'Hypertension', N'Advise lifestyle changes and medication', 1,1),
@@ -149,12 +159,12 @@ INSERT INTO Indication (indicationDate, indicationType, doctorName, diagnosisNam
 ('2025-04-04 11:45:00', N'Spirometry', N'Tran Thi B', N'Asthma exacerbation', N'Assess lung function', 4, 1),
 ('2025-04-05 09:15:00', N'Allergy test', N'Le Van E', N'Seasonal allergies', N'Identify specific allergens', 5, 2)
 
-INSERT INTO Details_Examination(examination_id, medicine_id, daysUse, morning, noon, evening) VALUES
-(1, 1, 7, 1, 1, 1), 
-(2, 2, 3, 1, 1, 1)  
-
-INSERT INTO Details_Indication(Indication_id, technicalCatalog_id, quantity) VALUES
-(1, 1, 1)
+INSERT INTO TechnicalCatalog (typeTech, nameTech, price, discountPrice, descriptionTech) VALUES
+(N'Imaging', N'X-ray', 500000, 450000, N'Chest X-ray for diagnostic purposes'),
+(N'Lab', N'Blood test', 200000, 180000, N'Complete blood count and glucose test'),
+(N'Imaging', N'Ultrasound', 700000, 650000, N'Abdominal ultrasound for organ assessment'),
+(N'Test', N'Spirometry', 300000, 270000, N'Lung function test for asthma patients'),
+(N'Test', N'Allergy test', 400000, 360000, N'Skin prick test for allergen identification')
 
 -- Stored procedures hiện có (giữ nguyên)
 GO
@@ -304,9 +314,55 @@ BEGIN
 END;
 GO
 
-CREATE FUNCTION getPrescription(
-	@id INT -- id của đơn thuốc tại bảng Examination
-)
-RETURNS TABLE
+
+CREATE PROC uspAddPrescription
+	@totalPrice FLOAT,
+	@Doctorid INT,
+	@prescriptionId INT OUTPUT
 AS
-	RETURN (SELECT * FROM Details_Examination WHERE examination_id=@id)
+BEGIN
+	INSERT INTO Prescription (totalPrice, Doctorid)
+	VALUES (@totalPrice, @Doctorid);
+	
+	SET @prescriptionId = SCOPE_IDENTITY();
+END;
+GO
+
+CREATE PROC uspAddPrescriptionDetail
+	@prescriptionId INT,
+	@medicineId INT,
+	@quantity INT,
+	@daysUse INT,
+	@morning INT,
+	@noon INT,
+	@evening INT
+AS
+BEGIN
+	INSERT INTO Details (prescriptionId, medicineId, quantity, daysUse, morning, noon, evening)
+	VALUES (@prescriptionId, @medicineId, @quantity, @daysUse, @morning, @noon, @evening);
+END;
+GO
+
+CREATE PROC uspUpdatePrescription
+	@id INT,
+	@totalPrice FLOAT,
+	@Doctorid INT
+AS
+BEGIN
+	UPDATE Prescription
+	SET 
+		totalPrice = @totalPrice,
+		Doctorid = @Doctorid
+	WHERE id = @id;
+END;
+GO
+
+CREATE PROC uspDeletePrescription
+	@id INT
+AS
+BEGIN
+	DELETE FROM Details WHERE prescriptionId = @id;
+	DELETE FROM Prescription WHERE id = @id;
+END;
+GO
+
