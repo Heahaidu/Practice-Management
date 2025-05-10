@@ -89,10 +89,10 @@
             this.panel4.Controls.Add(this.bunifuPanel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(30, 30, 30, 3);
+            this.panel4.Margin = new System.Windows.Forms.Padding(45, 47, 45, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel4.Size = new System.Drawing.Size(1244, 77);
+            this.panel4.Padding = new System.Windows.Forms.Padding(30, 31, 30, 0);
+            this.panel4.Size = new System.Drawing.Size(1866, 120);
             this.panel4.TabIndex = 23;
             // 
             // bunifuPanel2
@@ -106,20 +106,22 @@
             this.bunifuPanel2.Controls.Add(this.autoLabel1);
             this.bunifuPanel2.Controls.Add(this.btnBack);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel2.Location = new System.Drawing.Point(20, 20);
+            this.bunifuPanel2.Location = new System.Drawing.Point(30, 31);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuPanel2.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(1204, 57);
+            this.bunifuPanel2.Size = new System.Drawing.Size(1806, 89);
             this.bunifuPanel2.TabIndex = 0;
             // 
             // autoLabel1
             // 
             this.autoLabel1.BackColor = System.Drawing.Color.White;
             this.autoLabel1.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoLabel1.Location = new System.Drawing.Point(53, 13);
+            this.autoLabel1.Location = new System.Drawing.Point(80, 20);
+            this.autoLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.autoLabel1.Name = "autoLabel1";
-            this.autoLabel1.Size = new System.Drawing.Size(233, 33);
+            this.autoLabel1.Size = new System.Drawing.Size(373, 53);
             this.autoLabel1.TabIndex = 0;
             this.autoLabel1.Text = "Thông tin lượt khám";
             // 
@@ -173,7 +175,8 @@
             this.btnBack.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnBack.IdleIconLeftImage")));
             this.btnBack.IdleIconRightImage = null;
             this.btnBack.IndicateFocus = false;
-            this.btnBack.Location = new System.Drawing.Point(10, 10);
+            this.btnBack.Location = new System.Drawing.Point(15, 16);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
             this.btnBack.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBack.OnDisabledState.BorderRadius = 15;
@@ -207,7 +210,7 @@
             this.btnBack.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.btnBack.OnPressedState.IconLeftImage = null;
             this.btnBack.OnPressedState.IconRightImage = null;
-            this.btnBack.Size = new System.Drawing.Size(37, 37);
+            this.btnBack.Size = new System.Drawing.Size(56, 57);
             this.btnBack.TabIndex = 82;
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBack.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -221,10 +224,11 @@
             // 
             this.panel6.Controls.Add(this.bunifuPanel3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(858, 77);
+            this.panel6.Location = new System.Drawing.Point(1287, 120);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(20);
-            this.panel6.Size = new System.Drawing.Size(386, 637);
+            this.panel6.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.panel6.Size = new System.Drawing.Size(579, 996);
             this.panel6.TabIndex = 24;
             // 
             // bunifuPanel3
@@ -250,10 +254,11 @@
             this.bunifuPanel3.Controls.Add(this.label2);
             this.bunifuPanel3.Controls.Add(this.label1);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel3.Location = new System.Drawing.Point(20, 20);
+            this.bunifuPanel3.Location = new System.Drawing.Point(30, 31);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(346, 597);
+            this.bunifuPanel3.Size = new System.Drawing.Size(519, 934);
             this.bunifuPanel3.TabIndex = 17;
             // 
             // btnAddNewPatient
@@ -306,7 +311,8 @@
             this.btnAddNewPatient.IdleIconLeftImage = null;
             this.btnAddNewPatient.IdleIconRightImage = null;
             this.btnAddNewPatient.IndicateFocus = false;
-            this.btnAddNewPatient.Location = new System.Drawing.Point(23, 534);
+            this.btnAddNewPatient.Location = new System.Drawing.Point(34, 835);
+            this.btnAddNewPatient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddNewPatient.Name = "btnAddNewPatient";
             this.btnAddNewPatient.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddNewPatient.OnDisabledState.BorderRadius = 10;
@@ -340,13 +346,14 @@
             this.btnAddNewPatient.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAddNewPatient.OnPressedState.IconLeftImage = null;
             this.btnAddNewPatient.OnPressedState.IconRightImage = null;
-            this.btnAddNewPatient.Size = new System.Drawing.Size(302, 43);
+            this.btnAddNewPatient.Size = new System.Drawing.Size(453, 67);
             this.btnAddNewPatient.TabIndex = 58;
             this.btnAddNewPatient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddNewPatient.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAddNewPatient.TextMarginLeft = 0;
             this.btnAddNewPatient.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAddNewPatient.UseDefaultRadiusAndThickness = true;
+            this.btnAddNewPatient.Click += new System.EventHandler(this.btnAddNewPatient_Click);
             // 
             // label11
             // 
@@ -354,9 +361,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(143, 287);
+            this.label11.Location = new System.Drawing.Point(214, 448);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 24);
+            this.label11.Size = new System.Drawing.Size(108, 40);
             this.label11.TabIndex = 57;
             this.label11.Text = ".............";
             // 
@@ -366,9 +374,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(19, 287);
+            this.label12.Location = new System.Drawing.Point(28, 448);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 24);
+            this.label12.Size = new System.Drawing.Size(160, 40);
             this.label12.TabIndex = 56;
             this.label12.Text = "BS Điều trị:";
             // 
@@ -378,9 +387,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(141, 250);
+            this.label9.Location = new System.Drawing.Point(212, 391);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 24);
+            this.label9.Size = new System.Drawing.Size(108, 40);
             this.label9.TabIndex = 55;
             this.label9.Text = ".............";
             // 
@@ -390,9 +400,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(17, 250);
+            this.label10.Location = new System.Drawing.Point(26, 391);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 24);
+            this.label10.Size = new System.Drawing.Size(198, 40);
             this.label10.TabIndex = 54;
             this.label10.Text = "Chuẩn đoán:";
             // 
@@ -402,9 +413,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(143, 215);
+            this.label5.Location = new System.Drawing.Point(214, 336);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 24);
+            this.label5.Size = new System.Drawing.Size(108, 40);
             this.label5.TabIndex = 53;
             this.label5.Text = ".............";
             // 
@@ -414,9 +426,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(17, 215);
+            this.label6.Location = new System.Drawing.Point(26, 336);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 24);
+            this.label6.Size = new System.Drawing.Size(130, 40);
             this.label6.TabIndex = 52;
             this.label6.Text = "Bệnh sử:";
             // 
@@ -426,9 +439,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(143, 176);
+            this.label7.Location = new System.Drawing.Point(214, 275);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 24);
+            this.label7.Size = new System.Drawing.Size(108, 40);
             this.label7.TabIndex = 51;
             this.label7.Text = ".............";
             // 
@@ -438,9 +452,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(17, 176);
+            this.label8.Location = new System.Drawing.Point(26, 275);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 24);
+            this.label8.Size = new System.Drawing.Size(185, 40);
             this.label8.TabIndex = 50;
             this.label8.Text = "Ngày khám:";
             // 
@@ -453,11 +468,11 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(20, 143);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(30, 223);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(305, 16);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(458, 25);
             this.bunifuSeparator1.TabIndex = 49;
             // 
             // label3
@@ -466,9 +481,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(141, 104);
+            this.label3.Location = new System.Drawing.Point(212, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 24);
+            this.label3.Size = new System.Drawing.Size(108, 40);
             this.label3.TabIndex = 48;
             this.label3.Text = ".............";
             // 
@@ -478,9 +494,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(19, 104);
+            this.label4.Location = new System.Drawing.Point(28, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 24);
+            this.label4.Size = new System.Drawing.Size(140, 40);
             this.label4.TabIndex = 47;
             this.label4.Text = "Tiền căn:";
             // 
@@ -490,9 +507,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(141, 71);
+            this.label2.Location = new System.Drawing.Point(212, 111);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 24);
+            this.label2.Size = new System.Drawing.Size(108, 40);
             this.label2.TabIndex = 46;
             this.label2.Text = ".............";
             // 
@@ -502,9 +520,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(19, 71);
+            this.label1.Location = new System.Drawing.Point(28, 111);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 24);
+            this.label1.Size = new System.Drawing.Size(171, 40);
             this.label1.TabIndex = 27;
             this.label1.Text = "Bệnh nhân:";
             // 
@@ -512,10 +531,11 @@
             // 
             this.panel1.Controls.Add(this.bunifuPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 77);
+            this.panel1.Location = new System.Drawing.Point(0, 120);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20, 20, 0, 20);
-            this.panel1.Size = new System.Drawing.Size(858, 637);
+            this.panel1.Padding = new System.Windows.Forms.Padding(30, 31, 0, 31);
+            this.panel1.Size = new System.Drawing.Size(1287, 996);
             this.panel1.TabIndex = 25;
             // 
             // bunifuPanel1
@@ -528,11 +548,12 @@
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.panel2);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel1.Location = new System.Drawing.Point(20, 20);
+            this.bunifuPanel1.Location = new System.Drawing.Point(30, 31);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.Padding = new System.Windows.Forms.Padding(20);
+            this.bunifuPanel1.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(838, 597);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1257, 934);
             this.bunifuPanel1.TabIndex = 18;
             // 
             // panel2
@@ -543,9 +564,10 @@
             this.panel2.Controls.Add(this.bunifuSeparator2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(20, 20);
+            this.panel2.Location = new System.Drawing.Point(30, 31);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(798, 557);
+            this.panel2.Size = new System.Drawing.Size(1197, 872);
             this.panel2.TabIndex = 63;
             // 
             // panelMedicineList
@@ -554,10 +576,11 @@
             this.panelMedicineList.BackColor = System.Drawing.Color.White;
             this.panelMedicineList.Controls.Add(this.btnAddMoreMedicine);
             this.panelMedicineList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMedicineList.Location = new System.Drawing.Point(0, 230);
+            this.panelMedicineList.Location = new System.Drawing.Point(0, 359);
+            this.panelMedicineList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMedicineList.Name = "panelMedicineList";
-            this.panelMedicineList.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.panelMedicineList.Size = new System.Drawing.Size(798, 327);
+            this.panelMedicineList.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.panelMedicineList.Size = new System.Drawing.Size(1197, 513);
             this.panelMedicineList.TabIndex = 80;
             // 
             // btnAddMoreMedicine
@@ -609,7 +632,8 @@
             this.btnAddMoreMedicine.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAddMoreMedicine.IdleIconLeftImage")));
             this.btnAddMoreMedicine.IdleIconRightImage = null;
             this.btnAddMoreMedicine.IndicateFocus = false;
-            this.btnAddMoreMedicine.Location = new System.Drawing.Point(10, 14);
+            this.btnAddMoreMedicine.Location = new System.Drawing.Point(15, 22);
+            this.btnAddMoreMedicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddMoreMedicine.Name = "btnAddMoreMedicine";
             this.btnAddMoreMedicine.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddMoreMedicine.OnDisabledState.BorderRadius = 15;
@@ -643,7 +667,7 @@
             this.btnAddMoreMedicine.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.btnAddMoreMedicine.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAddMoreMedicine.OnPressedState.IconLeftImage")));
             this.btnAddMoreMedicine.OnPressedState.IconRightImage = null;
-            this.btnAddMoreMedicine.Size = new System.Drawing.Size(182, 40);
+            this.btnAddMoreMedicine.Size = new System.Drawing.Size(273, 62);
             this.btnAddMoreMedicine.TabIndex = 15;
             this.btnAddMoreMedicine.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMoreMedicine.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -662,11 +686,11 @@
             this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 214);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 334);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(798, 16);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(1197, 25);
             this.bunifuSeparator2.TabIndex = 79;
             // 
             // panel3
@@ -687,8 +711,9 @@
             this.panel3.Controls.Add(this.bunifuLabel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(798, 214);
+            this.panel3.Size = new System.Drawing.Size(1197, 334);
             this.panel3.TabIndex = 78;
             // 
             // label23
@@ -698,9 +723,10 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label23.Location = new System.Drawing.Point(531, 146);
+            this.label23.Location = new System.Drawing.Point(796, 228);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 26);
+            this.label23.Size = new System.Drawing.Size(122, 42);
             this.label23.TabIndex = 87;
             this.label23.Text = ".............";
             // 
@@ -711,9 +737,10 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label24.Location = new System.Drawing.Point(478, 146);
+            this.label24.Location = new System.Drawing.Point(717, 228);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 26);
+            this.label24.Size = new System.Drawing.Size(73, 42);
             this.label24.TabIndex = 88;
             this.label24.Text = "SĐT:";
             // 
@@ -723,9 +750,10 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Location = new System.Drawing.Point(139, 185);
+            this.label21.Location = new System.Drawing.Point(208, 289);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 26);
+            this.label21.Size = new System.Drawing.Size(122, 42);
             this.label21.TabIndex = 85;
             this.label21.Text = ".............";
             // 
@@ -735,9 +763,10 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label22.Location = new System.Drawing.Point(5, 185);
+            this.label22.Location = new System.Drawing.Point(8, 289);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(128, 26);
+            this.label22.Size = new System.Drawing.Size(205, 42);
             this.label22.TabIndex = 86;
             this.label22.Text = "Chuẩn đoán:";
             // 
@@ -747,9 +776,10 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(86, 146);
+            this.label19.Location = new System.Drawing.Point(129, 228);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 26);
+            this.label19.Size = new System.Drawing.Size(122, 42);
             this.label19.TabIndex = 83;
             this.label19.Text = ".............";
             // 
@@ -759,9 +789,10 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(5, 146);
+            this.label20.Location = new System.Drawing.Point(8, 228);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(78, 26);
+            this.label20.Size = new System.Drawing.Size(124, 42);
             this.label20.TabIndex = 84;
             this.label20.Text = "Địa chỉ:";
             // 
@@ -772,9 +803,10 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(716, 103);
+            this.label17.Location = new System.Drawing.Point(1074, 161);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 26);
+            this.label17.Size = new System.Drawing.Size(122, 42);
             this.label17.TabIndex = 81;
             this.label17.Text = ".............";
             // 
@@ -785,9 +817,10 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(658, 103);
+            this.label18.Location = new System.Drawing.Point(987, 161);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 26);
+            this.label18.Size = new System.Drawing.Size(82, 42);
             this.label18.TabIndex = 82;
             this.label18.Text = "Tuổi:";
             // 
@@ -798,9 +831,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(573, 103);
+            this.label15.Location = new System.Drawing.Point(860, 161);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 26);
+            this.label15.Size = new System.Drawing.Size(122, 42);
             this.label15.TabIndex = 79;
             this.label15.Text = ".............";
             // 
@@ -811,9 +845,10 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(478, 103);
+            this.label16.Location = new System.Drawing.Point(717, 161);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 26);
+            this.label16.Size = new System.Drawing.Size(144, 42);
             this.label16.TabIndex = 80;
             this.label16.Text = "Giới tính:";
             // 
@@ -823,9 +858,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(86, 103);
+            this.label14.Location = new System.Drawing.Point(129, 161);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 26);
+            this.label14.Size = new System.Drawing.Size(122, 42);
             this.label14.TabIndex = 76;
             this.label14.Text = ".............";
             // 
@@ -835,9 +871,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(5, 103);
+            this.label13.Location = new System.Drawing.Point(8, 161);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 26);
+            this.label13.Size = new System.Drawing.Size(118, 42);
             this.label13.TabIndex = 77;
             this.label13.Text = "Họ tên:";
             // 
@@ -847,10 +884,11 @@
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(5, 3);
+            this.bunifuLabel1.Location = new System.Drawing.Point(8, 5);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(222, 47);
+            this.bunifuLabel1.Size = new System.Drawing.Size(358, 75);
             this.bunifuLabel1.TabIndex = 78;
             this.bunifuLabel1.Text = "Phiếu chỉ định";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -858,12 +896,13 @@
             // 
             // MedicalTestsScriptionPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 714);
+            this.ClientSize = new System.Drawing.Size(1866, 1116);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MedicalTestsScriptionPage";
             this.Text = "PrescriptionPage";
             this.panel4.ResumeLayout(false);

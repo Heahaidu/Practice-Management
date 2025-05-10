@@ -47,7 +47,8 @@ CREATE TABLE Indication (
 	diagnosisName NVARCHAR(100),
 	notes NVARCHAR(200),
 	patientId INT FOREIGN KEY REFERENCES Patient(id),
-	doctorId INT FOREIGN KEY REFERENCES Users(id)
+	doctorId INT FOREIGN KEY REFERENCES Users(id),
+	detailsiIndicationId INT FOREIGN KEY REFERENCES DetailsIndication(id)
 )
 
 CREATE TABLE Medicine (
@@ -73,13 +74,12 @@ CREATE TABLE Prescription (
 	createDate DATETIME
 )
 
-ALTER TABLE Prescription ADD createDate DATETIME
 
 CREATE TABLE Details (
 	id INT PRIMARY KEY IDENTITY(1,1),
 	medicineId INT FOREIGN KEY REFERENCES Medicine(id),
 	prescriptionId INT FOREIGN KEY REFERENCES Prescription(id),
-	quantity INT,
+	notes NVARCHAR(100),
 	daysUse INT,
 	morning INT,
 	noon INT,
@@ -97,10 +97,10 @@ CREATE TABLE TechnicalCatalog (
 
 CREATE TABLE DetailsIndication (
 	id INT PRIMARY KEY IDENTITY(1,1),
-	indicationId INT FOREIGN KEY REFERENCES Indication(id),
 	patientId INT FOREIGN KEY REFERENCES Patient(id)
 )
 GO
+
 CREATE TRIGGER createNewUser
 ON Users
 FOR INSERT, UPDATE

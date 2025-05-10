@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace UIUX.View
 {
@@ -18,6 +19,15 @@ namespace UIUX.View
         public DashboardPage()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            lbPatient.Text = new PatientBL().GetTotalPatients().ToString();
+            lbNewPatient.Text = new PatientBL().GetPatientsCreatedToday().ToString();
+            lbPrescription.Text = new PrescriptionBL().GetTotalPrescriptionsToday().ToString();
+            lbIndication.Text = new IndicationBL().GetTotalIndications().ToString();
         }
 
         private void DashForm_Load(object sender, EventArgs e)

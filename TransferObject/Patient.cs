@@ -83,6 +83,20 @@ namespace TransferObject
             this.medicalHistory = medicalHistory;
         }
 
+        public Patient()
+        {
+            this.id = id;
+            this.name = name;
+            this.dob = dob;
+            this.gender = gender;
+            this.address = address;
+            this.phone = phone;
+            this.email = email;
+            this.healthInsuranceId = healthInsuranceId;
+            this.idCard = idCard;
+            this.medicalHistory = medicalHistory;
+        }
+
         public override string ToString()
         {
             return String.Format("ID: {0} Name: {1} Dob: {2} Gender: {3} Address: {4} Phone: {5} Email: {6} HealthInsuranceId: {7} IdCard: {8} MedicalHistory",

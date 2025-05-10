@@ -4,7 +4,9 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using TransferObject;
@@ -143,6 +145,74 @@ namespace DataLayer
             finally
             {
                 DisConnect();
+            }
+        }
+
+        public int GetTotalPatients()
+        {
+            string sql = "SELECT COUNT(*) FROM Patient";
+            try
+            {
+                object result = MyExecuteScalar(sql, CommandType.Text);
+                return Convert.ToInt32(result);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int GetPatientsCreatedToday()
+        {
+            try
+            {
+                string sql = "SELECT COUNT(*) FROM Patient WHERE CAST(createDate AS DATE) = CAST(GETDATE() AS DATE)";
+                object result = MyExecuteScalar(sql, CommandType.Text);
+                return Convert.ToInt32(result);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Patient GetPatientById(int patientId)
+        {
+            try
+            {
+                string sql = "SELECT * FROM Patient WHERE = @patientId";
+                List<SqlParameter> parameters = new List<SqlParameter>
+                {
+                    new SqlParameter("@patientId", patientId)
+                };
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text, parameters);
+                Gender gender = Gender.MALE;
+                while (reader.Read())
+                {
+                    int genderValue = reader.GetInt32(reader.GetOrdinal("gender"));
+                    if (genderValue == 0)
+                        gender = Gender.MALE;
+                    else if (genderValue == 1) gender = Gender.FEMALE;
+                    return new Patient
+                    {
+                        id = reader.GetInt32(reader.GetOrdinal("id")),
+                        name = reader["namePat"].ToString(),
+                        dob = reader.GetDateTime(reader.GetOrdinal("dob")),
+                        gender = gender,
+                        address = reader["addressPat"].ToString(),
+                        phone = reader["phone"].ToString(),
+                        email = reader["email"].ToString(),
+                        healthInsuranceId = reader["healthInsuranceId"].ToString(),
+                        idCard = reader["idCard"].ToString(),
+                        medicalHistory = reader["medicalHistory"].ToString(),
+                    };
+                }
+                return null;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
             }
         }
     }

@@ -15,6 +15,7 @@ namespace UIUX.View
     {
 
         public EventHandler backEvent;
+        private Patient patient;
 
         public PrescriptionPage(Examination examination)
         {

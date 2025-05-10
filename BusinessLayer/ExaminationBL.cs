@@ -33,7 +33,7 @@ namespace BusinessLayer
 
         public int Add(Examination examination, int patientId)
         {
-                return examinationDL.Add(examination, patientId);
+            return examinationDL.Add(examination, patientId);
         }
     }
 }

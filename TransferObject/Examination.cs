@@ -11,45 +11,57 @@ namespace TransferObject
     public class Examination
     {
         [Browsable(false)]
-        public int id { get; set; }
+        public int Id { get; set; }
+
         // Ngày khám
-        [Display(Name="Ngày khám")]
+        [Display(Name = "Ngày khám")]
         public DateTime ExaminationDate { get; set; }
+
         // B.Sĩ điều trị
-        [Display(Name="B.Sĩ điều trị")]
+        [Display(Name = "B.Sĩ điều trị")]
         public string DoctorName { get; set; }
+
         // Lịch sử bệnh
-        [Display(Name="Lịch sử bệnh")]
+        [Display(Name = "Lịch sử bệnh")]
         public string MedicalHistory { get; set; }
+
         // Tên chuẩn đoán
-        [Display(Name="Tên chuẩn đoán")]
+        [Display(Name = "Tên chuẩn đoán")]
         public string DiagnosisName { get; set; }
+
         // Ghi chú
         [Display(Name = "Ghi chú")]
-        public string notes { get; set; }
+        public string Notes { get; set; }
+
         // Mã bệnh nhân
-        [Display(Name ="Mã bệnh nhân")]
-        public int patientId {  get; set; }
+        [Display(Name = "Mã bệnh nhân")]
+        public int PatientId { get; set; }
 
-        public Examination(DateTime examinationDate, string doctorName, string medicalHistory, string diagnosisName, string notes, int patientId)
+        // Mã bác sĩ
+        [Display(Name = "Mã bác sĩ")]
+        public int DoctorId { get; set; }
+
+        public Examination(DateTime examinationDate, string doctorName, string medicalHistory, string diagnosisName, string notes, int patientId, int doctorId)
         {
             this.ExaminationDate = examinationDate;
             this.DoctorName = doctorName;
             this.MedicalHistory = medicalHistory;
             this.DiagnosisName = diagnosisName;
-            this.notes = notes;
-            this.patientId = patientId;
+            this.Notes = notes;
+            this.PatientId = patientId;
+            this.DoctorId = doctorId;
         }
 
-        public Examination(int id, DateTime examinationDate, string doctorName, string medicalHistory, string diagnosisName, string notes)
+        public Examination(int id, DateTime examinationDate, string doctorName, string medicalHistory, string diagnosisName, string notes, int patientId, int doctorId)
         {
-            this.id = id;
+            this.Id = id;
             this.ExaminationDate = examinationDate;
             this.DoctorName = doctorName;
             this.MedicalHistory = medicalHistory;
             this.DiagnosisName = diagnosisName;
-            this.notes = notes;
+            this.Notes = notes;
+            this.PatientId = patientId;
+            this.DoctorId = doctorId;
         }
-
     }
 }

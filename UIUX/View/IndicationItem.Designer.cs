@@ -40,7 +40,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ddGender = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.ddTeachnicalCatalog = new Bunifu.UI.WinForms.BunifuDropdown();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,9 +61,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 6);
+            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.Size = new System.Drawing.Size(179, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên chỉ định";
             // 
@@ -72,56 +73,58 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 6);
+            this.label2.Location = new System.Drawing.Point(4, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 24);
+            this.label2.Size = new System.Drawing.Size(134, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số lượng";
             // 
-            // ddGender
+            // ddTeachnicalCatalog
             // 
-            this.ddGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ddGender.BackColor = System.Drawing.Color.Transparent;
-            this.ddGender.BackgroundColor = System.Drawing.Color.White;
-            this.ddGender.BorderColor = System.Drawing.Color.Silver;
-            this.ddGender.BorderRadius = 5;
-            this.ddGender.Color = System.Drawing.Color.Silver;
-            this.ddGender.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.ddGender.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ddGender.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ddGender.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ddGender.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ddGender.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ddGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ddGender.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.ddGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddGender.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ddGender.FillDropDown = true;
-            this.ddGender.FillIndicator = false;
-            this.ddGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddGender.Font = new System.Drawing.Font("Segoe UI Semibold", 9.2F, System.Drawing.FontStyle.Bold);
-            this.ddGender.ForeColor = System.Drawing.Color.Black;
-            this.ddGender.FormattingEnabled = true;
-            this.ddGender.Icon = null;
-            this.ddGender.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddGender.IndicatorColor = System.Drawing.Color.Black;
-            this.ddGender.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddGender.IndicatorThickness = 2;
-            this.ddGender.IsDropdownOpened = false;
-            this.ddGender.ItemBackColor = System.Drawing.Color.White;
-            this.ddGender.ItemBorderColor = System.Drawing.Color.White;
-            this.ddGender.ItemForeColor = System.Drawing.Color.Black;
-            this.ddGender.ItemHeight = 30;
-            this.ddGender.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.ddGender.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ddGender.ItemTopMargin = 3;
-            this.ddGender.Location = new System.Drawing.Point(12, 37);
-            this.ddGender.Name = "ddGender";
-            this.ddGender.Size = new System.Drawing.Size(393, 36);
-            this.ddGender.TabIndex = 32;
-            this.ddGender.Text = null;
-            this.ddGender.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ddGender.TextLeftMargin = 5;
+            this.ddTeachnicalCatalog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ddTeachnicalCatalog.BackColor = System.Drawing.Color.Transparent;
+            this.ddTeachnicalCatalog.BackgroundColor = System.Drawing.Color.White;
+            this.ddTeachnicalCatalog.BorderColor = System.Drawing.Color.Silver;
+            this.ddTeachnicalCatalog.BorderRadius = 5;
+            this.ddTeachnicalCatalog.Color = System.Drawing.Color.Silver;
+            this.ddTeachnicalCatalog.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.ddTeachnicalCatalog.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ddTeachnicalCatalog.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ddTeachnicalCatalog.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ddTeachnicalCatalog.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ddTeachnicalCatalog.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ddTeachnicalCatalog.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ddTeachnicalCatalog.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.ddTeachnicalCatalog.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddTeachnicalCatalog.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddTeachnicalCatalog.FillDropDown = true;
+            this.ddTeachnicalCatalog.FillIndicator = false;
+            this.ddTeachnicalCatalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddTeachnicalCatalog.Font = new System.Drawing.Font("Segoe UI Semibold", 9.2F, System.Drawing.FontStyle.Bold);
+            this.ddTeachnicalCatalog.ForeColor = System.Drawing.Color.Black;
+            this.ddTeachnicalCatalog.FormattingEnabled = true;
+            this.ddTeachnicalCatalog.Icon = null;
+            this.ddTeachnicalCatalog.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddTeachnicalCatalog.IndicatorColor = System.Drawing.Color.Black;
+            this.ddTeachnicalCatalog.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddTeachnicalCatalog.IndicatorThickness = 2;
+            this.ddTeachnicalCatalog.IsDropdownOpened = false;
+            this.ddTeachnicalCatalog.ItemBackColor = System.Drawing.Color.White;
+            this.ddTeachnicalCatalog.ItemBorderColor = System.Drawing.Color.White;
+            this.ddTeachnicalCatalog.ItemForeColor = System.Drawing.Color.Black;
+            this.ddTeachnicalCatalog.ItemHeight = 30;
+            this.ddTeachnicalCatalog.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.ddTeachnicalCatalog.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ddTeachnicalCatalog.ItemTopMargin = 3;
+            this.ddTeachnicalCatalog.Location = new System.Drawing.Point(18, 58);
+            this.ddTeachnicalCatalog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ddTeachnicalCatalog.Name = "ddTeachnicalCatalog";
+            this.ddTeachnicalCatalog.Size = new System.Drawing.Size(590, 36);
+            this.ddTeachnicalCatalog.TabIndex = 32;
+            this.ddTeachnicalCatalog.Text = null;
+            this.ddTeachnicalCatalog.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddTeachnicalCatalog.TextLeftMargin = 5;
             // 
             // tableLayoutPanel1
             // 
@@ -129,26 +132,28 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(949, 85);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1424, 133);
             this.tableLayoutPanel1.TabIndex = 37;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ddGender);
+            this.panel1.Controls.Add(this.ddTeachnicalCatalog);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(408, 79);
+            this.panel1.Size = new System.Drawing.Size(614, 123);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -156,9 +161,10 @@
             this.panel2.Controls.Add(this.tbPatientName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(417, 3);
+            this.panel2.Location = new System.Drawing.Point(626, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(114, 79);
+            this.panel2.Size = new System.Drawing.Size(172, 123);
             this.panel2.TabIndex = 1;
             // 
             // tbPatientName
@@ -192,9 +198,10 @@
             this.tbPatientName.IconRight = null;
             this.tbPatientName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPatientName.Lines = new string[0];
-            this.tbPatientName.Location = new System.Drawing.Point(7, 37);
+            this.tbPatientName.Location = new System.Drawing.Point(10, 58);
+            this.tbPatientName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPatientName.MaxLength = 32767;
-            this.tbPatientName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbPatientName.MinimumSize = new System.Drawing.Size(2, 2);
             this.tbPatientName.Modified = false;
             this.tbPatientName.Multiline = false;
             this.tbPatientName.Name = "tbPatientName";
@@ -218,7 +225,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Black;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbPatientName.OnIdleState = stateProperties4;
-            this.tbPatientName.Padding = new System.Windows.Forms.Padding(3);
+            this.tbPatientName.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPatientName.PasswordChar = '\0';
             this.tbPatientName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.tbPatientName.PlaceholderText = "";
@@ -228,7 +235,7 @@
             this.tbPatientName.SelectionLength = 0;
             this.tbPatientName.SelectionStart = 0;
             this.tbPatientName.ShortcutsEnabled = true;
-            this.tbPatientName.Size = new System.Drawing.Size(104, 39);
+            this.tbPatientName.Size = new System.Drawing.Size(157, 61);
             this.tbPatientName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbPatientName.TabIndex = 31;
             this.tbPatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -244,9 +251,10 @@
             this.panel3.Controls.Add(this.bunifuTextBox1);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(537, 3);
+            this.panel3.Location = new System.Drawing.Point(806, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(409, 79);
+            this.panel3.Size = new System.Drawing.Size(614, 123);
             this.panel3.TabIndex = 2;
             // 
             // bunifuTextBox1
@@ -280,9 +288,10 @@
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(7, 37);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(10, 58);
+            this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(2, 2);
             this.bunifuTextBox1.Modified = false;
             this.bunifuTextBox1.Multiline = false;
             this.bunifuTextBox1.Name = "bunifuTextBox1";
@@ -306,7 +315,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Black;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties8;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.bunifuTextBox1.PlaceholderText = "Ghi chú";
@@ -316,7 +325,7 @@
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(399, 39);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(598, 61);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 33;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -332,9 +341,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Location = new System.Drawing.Point(4, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 24);
+            this.label3.Size = new System.Drawing.Size(124, 40);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ghi chú";
             // 
@@ -388,7 +398,8 @@
             this.btnDelete.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.IdleIconLeftImage")));
             this.btnDelete.IdleIconRightImage = null;
             this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(955, 40);
+            this.btnDelete.Location = new System.Drawing.Point(1432, 62);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.OnDisabledState.BorderRadius = 15;
@@ -422,7 +433,7 @@
             this.btnDelete.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.btnDelete.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.OnPressedState.IconLeftImage")));
             this.btnDelete.OnPressedState.IconRightImage = null;
-            this.btnDelete.Size = new System.Drawing.Size(43, 42);
+            this.btnDelete.Size = new System.Drawing.Size(64, 66);
             this.btnDelete.TabIndex = 81;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -442,22 +453,23 @@
             this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 85);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 133);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(1010, 16);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(1515, 25);
             this.bunifuSeparator2.TabIndex = 80;
             // 
             // IndicationItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1010, 101);
+            this.ClientSize = new System.Drawing.Size(1515, 158);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "IndicationItem";
             this.Text = "MedicineMenu";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -475,7 +487,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuDropdown ddGender;
+        private Bunifu.UI.WinForms.BunifuDropdown ddTeachnicalCatalog;
         private Bunifu.UI.WinForms.BunifuTextBox tbPatientName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
