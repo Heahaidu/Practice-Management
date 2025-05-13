@@ -33,12 +33,8 @@ namespace TransferObject
         [Display(Name = "Ghi chú")]
         public string Notes { get; set; }
 
-        // Mã bệnh nhân
-        [Display(Name = "Mã bệnh nhân")]
         public int PatientId { get; set; }
 
-        // Mã bác sĩ
-        [Display(Name = "Mã bác sĩ")]
         public int DoctorId { get; set; }
 
         public Examination(DateTime examinationDate, string doctorName, string medicalHistory, string diagnosisName, string notes, int patientId, int doctorId)

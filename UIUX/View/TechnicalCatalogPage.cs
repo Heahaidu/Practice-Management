@@ -21,16 +21,16 @@ namespace UIUX.View
         {
             InitializeComponent();
             LoadTech();
-            
-            sfDataGrid.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
-            sfDataGrid.Columns["id"].Visible = false;
-            sfDataGrid.Columns["description"].MinimumWidth = 500;
+
         }
 
         private void LoadTech()
         {
-           
             sfDataGrid.DataSource = new TechCatalogBL().GetTechnicalCatalogs();
+
+            sfDataGrid.FilterRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Top;
+            sfDataGrid.Columns["id"].Visible = false;
+            sfDataGrid.Columns["description"].MinimumWidth = 350;
         }
 
         private void addNewTechnicalCatalog_btn_Click(object sender, EventArgs e)
@@ -57,7 +57,8 @@ namespace UIUX.View
             if (e.DataRow.RowIndex == 1) return;
             TechnicalCatalog technicalCatalog = (TechnicalCatalog)sfDataGrid.SelectedItem;
             TechnicalCatalogEditPopup technicalCatalogEditPopup = new TechnicalCatalogEditPopup(technicalCatalog);
-            technicalCatalogEditPopup.Show();
+            technicalCatalogEditPopup.UpdateTechnicalCatalogEvent += UpdateTechnicalCatalog;
+            technicalCatalogEditPopup.ShowDialog();
 
         }
     }

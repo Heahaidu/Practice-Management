@@ -1,4 +1,5 @@
-﻿using DataLayer;
+﻿using BusinessLayer;
+using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -31,9 +32,36 @@ namespace BusinessLayer
             }
         }
 
+        public int AddPrescription(Examination examination, List<Prescription> prescriptions)
+        {
+            try
+            {
+                foreach (Prescription prescription in prescriptions)
+                {
+                    new ExaminationDL().AddPrescription(examination.Id, prescription);
+                }
+            }
+            catch 
+            {
+                return 0;
+            }
+            return 1;
+        }
+
+
         public int Add(Examination examination, int patientId)
         {
             return examinationDL.Add(examination, patientId);
+        }
+
+        public int Delete(int id)
+        {
+            return examinationDL.Delete(id);
+        }
+
+        public List<Prescription> GetPrescription(int id)
+        {
+            return examinationDL.GetPrescription(id);
         }
     }
 }

@@ -20,7 +20,8 @@ namespace DataLayer
             }
             catch (SqlException ex)
             {
-                throw ex;
+                Console.WriteLine(ex.Message);
+                return 0;
             }
         }
     }

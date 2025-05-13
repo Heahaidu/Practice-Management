@@ -31,6 +31,21 @@ namespace BusinessLayer
             }
         }
 
+        public List<Medicine> GetMedicines(List<Prescription> prescriptions)
+        {
+            List<Medicine> medicines = new List<Medicine>();
+            ObservableCollection<Medicine> medicines_ = medicineDL.GetMedicines(true);
+            foreach (var prescription in prescriptions)
+            {
+                var medicine = medicines_.FirstOrDefault(m => m.id == prescription.MedicineId);
+                if (medicine != null)
+                {
+                    medicines.Add(medicine);
+                }
+            }
+            return medicines;
+        }
+
         public int Add(Medicine medicine) { 
             return medicineDL.Add(medicine);
         }

@@ -72,5 +72,33 @@ namespace BusinessLayer
             }
         }
 
+        public int NewAccount(User user)
+        {
+            try
+            {
+                DataLayer.AccountDL accountDL = new DataLayer.AccountDL();
+                int id = accountDL.NewAccount(user);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int Delete(string username)
+        {
+            try
+            {
+                DataLayer.AccountDL accountDL = new DataLayer.AccountDL();
+                int id = accountDL.Delete(username);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

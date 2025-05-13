@@ -27,8 +27,9 @@ namespace UIUX
         private AccountPopup accountPopup;
         private TransPanel overlayPanel;
         private AccountSettingPopup accountSettingPopup;
+        private bool isRealClose = true;
 
-        public Main()
+        public Main(LoginForm LoginForm)
         {
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             InitializeComponent();
@@ -56,6 +57,17 @@ namespace UIUX
                 Visible = false
             };
             accountPopup.Clicked += AccountSettingShowup_Click;
+
+            accountPopup.LogoutEvent += (sender_, e_) =>
+            {
+                if (!LoginForm.IsDisposed)
+                {
+                    LoginForm.ResetTextBox();
+                    LoginForm.Show();
+                }
+                isRealClose = false;
+                BeginInvoke(new Action(() => this.Close()));
+            };
 
             this.Controls.Add(accountPopup);
 
@@ -183,16 +195,15 @@ namespace UIUX
 
         }
 
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isRealClose)
+                Application.Exit();
+        }
     }
 }

@@ -13,9 +13,9 @@ namespace DataLayer
 {
     public class MedicineDL:DataProvider
     {
-        public ObservableCollection<Medicine> GetMedicines()
+        public ObservableCollection<Medicine> GetMedicines(bool isCludingInvisible = false)
         {
-            string sql = "SELECT * FROM Medicine";
+            string sql = "SELECT * FROM Medicine" + (!isCludingInvisible? " WHERE NOT(nameMed LIKE '-%')": "");
             int id, quantity;
             string name, manufacturer, type, description, usage, dosage;
             float discountPrice, price;
@@ -134,15 +134,12 @@ namespace DataLayer
             try
             {
                 Connect();
-                return MyExecuteNonQuerry("DELETE FROM Medicine WHERE id=@id", CommandType.Text, new List<SqlParameter> { new SqlParameter("@id", id) });
-
+                int a = MyExecuteNonQuerry("uspDeleteMedicine", CommandType.StoredProcedure, new List<SqlParameter> { new SqlParameter("@id", id) });
+                Console.WriteLine(a + " " + id);
+                return a;
             } catch (SqlException ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                DisConnect();
             }
         }
     }

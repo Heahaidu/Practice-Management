@@ -30,11 +30,33 @@ namespace BusinessLayer
             }
         }
 
+        public ObservableCollection<TechnicalCatalog> GetTechnicalCatalogsOfType(string indicationType)
+        {
+            try
+            {
+                return (techCatalogDL.GetTechnicalCatalogsOfType(indicationType));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<TechnicalCatalog> GetTechnicalCatalogs(List<MedicineTestPrescription> medicineTestPrescriptions)
+        {
+            return techCatalogDL.GetTechnicalCatalogs(true)
+                .Where(technicalCatalog => medicineTestPrescriptions.Select(m => m.TechnicalCatalogId).Contains(technicalCatalog.id)).ToList();
+        }
+
         public int Add(TechnicalCatalog technicalCatalog)
         {
             return techCatalogDL.Add(technicalCatalog);
         }
 
+        public int Update(TechnicalCatalog technicalCatalog)
+        {
+            return techCatalogDL.Update(technicalCatalog);
+        }
         public int Delete(int id)
         {
             try

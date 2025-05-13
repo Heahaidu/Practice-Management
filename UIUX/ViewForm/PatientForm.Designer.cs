@@ -697,6 +697,7 @@
             this.btnDeletePatient.TextMarginLeft = 0;
             this.btnDeletePatient.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnDeletePatient.UseDefaultRadiusAndThickness = true;
+            this.btnDeletePatient.Click += new System.EventHandler(this.btnDeletePatient_Click);
             // 
             // btnExit
             // 
@@ -709,6 +710,7 @@
             this.btnExit.Size = new System.Drawing.Size(44, 17);
             this.btnExit.TabIndex = 44;
             this.btnExit.Text = "Thoát";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -721,6 +723,7 @@
             this.btnSave.Size = new System.Drawing.Size(32, 17);
             this.btnSave.TabIndex = 43;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnChangeInfo
             // 
@@ -732,6 +735,7 @@
             this.btnChangeInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnChangeInfo.TabIndex = 14;
             this.btnChangeInfo.TabStop = false;
+            this.btnChangeInfo.Click += new System.EventHandler(this.btnChangeInfo_Click);
             // 
             // tbHealthInsuranceId
             // 

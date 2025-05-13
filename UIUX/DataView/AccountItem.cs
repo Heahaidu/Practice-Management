@@ -15,6 +15,7 @@ namespace UIUX.DataView
     public partial class AccountItem: Form
     {
         private User user;
+        public EventHandler deleteAccountEvent;
         public AccountItem(User user)
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace UIUX.DataView
             this.lbAuthority.Text = "";
             this.lbEmail.Text = user.email;
 
-            if(UserSession.Instance.CurrentUser.level == 3)
+            if(UserSession.Instance.CurrentUser.level == 3 && UserSession.Instance.CurrentUser.username != user.username)
             {
                 this.btnDeleteAccount.Visible = true;
             }
@@ -44,10 +45,14 @@ namespace UIUX.DataView
             DialogResult dialogResult = MessageBox.Show("Bạn chắc muốn xóa tài khoản này chứ?", "Xóa tài khoản", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //UserBL userBL = new UserBL();
-                //userBL.Delete(user.username);
-                //this.Visible = false;
-                //this.Dispose();
+                AccountBL accountBL = new AccountBL();
+                if (accountBL.Delete(user.username) == 1)
+                {
+                    MessageBox.Show("Xóa tài khoản thành công!");
+                    deleteAccountEvent?.Invoke(sender, e);
+                    return;
+                }
+                MessageBox.Show("Xóa tài khoản thất bại!");
             }
         }
     }

@@ -20,8 +20,6 @@ namespace UIUX.ViewForm
         private static ObservableCollection<Indication> indications;
         public EventHandler updatePatientsEvent;
 
-        private PrescriptionPage prescriptionPage;
-        private MedicalTestsScriptionPage medicalTestsScriptionPage;
         public PatientForm(Patient patient)
         {
             this.patient = patient;
@@ -53,25 +51,6 @@ namespace UIUX.ViewForm
 
             altPanel.Dock = DockStyle.Fill;
 
-            prescriptionPage = new PrescriptionPage()
-            {
-                TopLevel = false,
-                Dock = DockStyle.Fill,
-                FormBorderStyle = FormBorderStyle.None,
-                Visible = false
-            };
-
-            this.Controls.Add(prescriptionPage);
-
-            medicalTestsScriptionPage = new MedicalTestsScriptionPage()
-            {
-                TopLevel = false,
-                Dock = DockStyle.Fill,
-                FormBorderStyle = FormBorderStyle.None,
-                Visible = false
-            };
-
-            this.Controls.Add(medicalTestsScriptionPage);
         }
 
         private void LoadExam()
@@ -79,6 +58,7 @@ namespace UIUX.ViewForm
             dataGridExamination.DataSource = new ExaminationBL().GetExaminations(patient.id);
             dataGridExamination.Columns["Id"].Visible = false;
             dataGridExamination.Columns["PatientId"].Visible = false;
+            dataGridExamination.Columns["DoctorId"].Visible = false;
         }
 
         private void LoadIndication()
@@ -86,6 +66,7 @@ namespace UIUX.ViewForm
             dataGridIndication.DataSource = new IndicationBL().GetIndications(patient.id);
             dataGridIndication.Columns["Id"].Visible = false;
             dataGridIndication.Columns["PatientId"].Visible = false;
+            dataGridIndication.Columns["DoctorId"].Visible = false;
         }
 
         private void btnAddNewExamination_Click(object sender, EventArgs e)
@@ -208,12 +189,29 @@ namespace UIUX.ViewForm
             Examination examination = e.DataRow.RowData as Examination;
             if (examination == null) return;
 
+            PrescriptionPage prescriptionPage = new PrescriptionPage()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+                FormBorderStyle = FormBorderStyle.None,
+                Visible = false
+            };
+
+            this.Controls.Add(prescriptionPage);
+
             prescriptionPage.backEvent += (sender_, e_) =>
             {
                 prescriptionPage.Visible = false;
-
+                Controls.Remove(prescriptionPage);
             };
 
+            prescriptionPage.deleteEvent += (sender_, e_) =>
+            {
+                prescriptionPage.Visible = false;
+                LoadExam();
+            };
+
+            prescriptionPage.SetData(examination, patient);
             prescriptionPage.Visible = true;
             prescriptionPage.Refresh();
             prescriptionPage.BringToFront();
@@ -226,13 +224,31 @@ namespace UIUX.ViewForm
             Patient row = e.DataRow.RowData as Patient;
             if (indication == null) return;
 
+
+            MedicalTestsScriptionPage medicalTestsScriptionPage = new MedicalTestsScriptionPage()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+                FormBorderStyle = FormBorderStyle.None,
+                Visible = false
+            };
+
+            this.Controls.Add(medicalTestsScriptionPage);
+
             medicalTestsScriptionPage.backEvent += (sender_, e_) =>
             {
                 medicalTestsScriptionPage.Visible = false;
+                Controls.Remove(medicalTestsScriptionPage);
+            };
 
+            medicalTestsScriptionPage.deleteEvent += (sender_, e_) =>
+            {
+                medicalTestsScriptionPage.Visible = false;
+                LoadIndication();
             };
 
             medicalTestsScriptionPage.Visible = true;
+            medicalTestsScriptionPage.SetData(indication, patient);
             medicalTestsScriptionPage.Refresh();
             medicalTestsScriptionPage.BringToFront();
         }

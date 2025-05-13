@@ -15,17 +15,6 @@ namespace UIUX
         public LoginForm()
         {
             InitializeComponent();
-            //BusinessLayer.AuthenticationService authenticationService = new BusinessLayer.AuthenticationService();
-            //(bool success, TransferObject.User user) = authenticationService.Login("admin", "password");
-            //if (success)
-            //{
-            //    // Proceed to the next form or functionality
-            //    Main main = new Main();
-            //    this.Hide();
-
-            //    main.Show();
-            //}
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -35,13 +24,38 @@ namespace UIUX
             if (success)
             {
                 // Proceed to the next form or functionality
-                Main main = new Main();
+                Main main = new Main(this);
                 main.Show();
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Invalid username or password.");
+            }
+        }
+
+        public void ResetTextBox()
+        {
+            tbPassword.Text = "";
+            tbUsername.Text = "";
+        }
+
+        private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Trigger the login button click event
+                btnLogin.Focus();
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void tbUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Trigger the password textbox focus
+                tbPassword.Focus();
             }
         }
     }

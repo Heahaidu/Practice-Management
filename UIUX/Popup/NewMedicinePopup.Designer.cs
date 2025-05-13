@@ -70,6 +70,7 @@
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.title = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnDeleteMedicine = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.tbNameMed = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -113,7 +114,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDeleteMedicine = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -195,6 +195,18 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(668, 66);
             this.bunifuPanel1.TabIndex = 7;
+            // 
+            // btnDeleteMedicine
+            // 
+            this.btnDeleteMedicine.AutoSize = true;
+            this.btnDeleteMedicine.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteMedicine.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteMedicine.Location = new System.Drawing.Point(603, 22);
+            this.btnDeleteMedicine.Name = "btnDeleteMedicine";
+            this.btnDeleteMedicine.Size = new System.Drawing.Size(40, 23);
+            this.btnDeleteMedicine.TabIndex = 7;
+            this.btnDeleteMedicine.Text = "Xóa";
+            this.btnDeleteMedicine.Visible = false;
             // 
             // bunifuSeparator1
             // 
@@ -859,7 +871,7 @@
             this.tbUsage.Padding = new System.Windows.Forms.Padding(3);
             this.tbUsage.PasswordChar = '\0';
             this.tbUsage.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tbUsage.PlaceholderText = "Tenofovir (TDF)";
+            this.tbUsage.PlaceholderText = "";
             this.tbUsage.ReadOnly = false;
             this.tbUsage.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbUsage.SelectedText = "";
@@ -873,7 +885,7 @@
             this.tbUsage.TextMarginBottom = 0;
             this.tbUsage.TextMarginLeft = 3;
             this.tbUsage.TextMarginTop = 1;
-            this.tbUsage.TextPlaceholder = "Tenofovir (TDF)";
+            this.tbUsage.TextPlaceholder = "";
             this.tbUsage.UseSystemPasswordChar = false;
             this.tbUsage.WordWrap = true;
             // 
@@ -936,7 +948,7 @@
             this.tbTypeMed.Padding = new System.Windows.Forms.Padding(3);
             this.tbTypeMed.PasswordChar = '\0';
             this.tbTypeMed.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tbTypeMed.PlaceholderText = "Viên";
+            this.tbTypeMed.PlaceholderText = "";
             this.tbTypeMed.ReadOnly = false;
             this.tbTypeMed.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbTypeMed.SelectedText = "";
@@ -950,7 +962,7 @@
             this.tbTypeMed.TextMarginBottom = 0;
             this.tbTypeMed.TextMarginLeft = 3;
             this.tbTypeMed.TextMarginTop = 1;
-            this.tbTypeMed.TextPlaceholder = "Viên";
+            this.tbTypeMed.TextPlaceholder = "";
             this.tbTypeMed.UseSystemPasswordChar = false;
             this.tbTypeMed.WordWrap = true;
             // 
@@ -1425,18 +1437,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(160, 38);
             this.panel3.TabIndex = 19;
-            // 
-            // btnDeleteMedicine
-            // 
-            this.btnDeleteMedicine.AutoSize = true;
-            this.btnDeleteMedicine.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteMedicine.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteMedicine.Location = new System.Drawing.Point(603, 22);
-            this.btnDeleteMedicine.Name = "btnDeleteMedicine";
-            this.btnDeleteMedicine.Size = new System.Drawing.Size(40, 23);
-            this.btnDeleteMedicine.TabIndex = 7;
-            this.btnDeleteMedicine.Text = "Xóa";
-            this.btnDeleteMedicine.Visible = false;
             // 
             // NewMedicinePopup
             // 

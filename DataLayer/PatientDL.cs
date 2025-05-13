@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
@@ -18,7 +19,7 @@ namespace DataLayer
     {
         public ObservableCollection<Patient> GetPatients()
         {
-            string sql = "SELECT * FROM Patient";
+            string sql = "SELECT * FROM Patient WHERE NOT (namePat LIKE '-%')";
             int id;
             string name, address, phone, email, healthInsuranceId, idCard, medicalHistory;
             DateTime dob;
@@ -149,27 +150,23 @@ namespace DataLayer
             }
         }
 
-        public int GetTotalPatients()
+        public (List<double>, List<double>, List<float>) GetWeekStaistics()
         {
-            string sql = "SELECT COUNT(*) FROM Patient";
             try
             {
-                object result = MyExecuteScalar(sql, CommandType.Text);
-                return Convert.ToInt32(result);
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
+                List<double> patientsQuality = new List<double>();
+                List<double> newPatientsQuality = new List<double>();
+                List<float> totalCost = new List<float>();
 
-        public int GetPatientsCreatedToday()
-        {
-            try
-            {
-                string sql = "SELECT COUNT(*) FROM Patient WHERE CAST(createDate AS DATE) = CAST(GETDATE() AS DATE)";
-                object result = MyExecuteScalar(sql, CommandType.Text);
-                return Convert.ToInt32(result);
+                Connect();
+                SqlDataReader reader = MyExecuteReader("SELECT * FROM WEEKSTATISTIC()", CommandType.Text);
+                while (reader.Read())
+                {
+                    patientsQuality.Add(reader.GetInt32(reader.GetOrdinal("patient_quality")));
+                    newPatientsQuality.Add(reader.GetInt32(reader.GetOrdinal("new_patient_quality")));
+                    totalCost.Add(reader.IsDBNull(reader.GetOrdinal("total_cost")) ? 0.0f : (float)reader.GetDouble(reader.GetOrdinal("total_cost")));
+                }
+                return (patientsQuality, newPatientsQuality, totalCost);
             }
             catch (SqlException ex)
             {
@@ -271,6 +268,108 @@ namespace DataLayer
                 return totalPatients;
             }
             catch(SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public (int, int, int, int, int) GetDashboardData()
+        {
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader("SELECT * FROM dayStatistic()", CommandType.Text);
+                int patientQuality = 0;
+                int newPatientQuality = 0;
+                int prescriptionQuality = 0;
+                int indicationQuality = 0;
+                int examinationQuality = 0;
+
+                while (reader.Read())
+                {
+                    patientQuality = reader.GetInt32(reader.GetOrdinal("patient_quality"));
+                    newPatientQuality = reader.GetInt32(reader.GetOrdinal("new_patient_quality"));
+                    prescriptionQuality = reader.GetInt32(reader.GetOrdinal("prescription_quality"));
+                    indicationQuality = reader.GetInt32(reader.GetOrdinal("indication_quality"));
+                    examinationQuality =reader.GetInt32(reader.GetOrdinal("examination_quality"));
+                }
+                reader.Close();
+
+                List<double> patientsQuality = new List<double>();
+                List<double> newPatientsQuality = new List<double>();
+                List<float> totalCost = new List<float>();
+
+                Connect();
+                reader = MyExecuteReader("SELECT * FROM WEEKSTATISTIC()", CommandType.Text);
+                while (reader.Read())
+                {
+                    patientsQuality.Add(reader.GetInt32(reader.GetOrdinal("patient_quality")));
+                    newPatientsQuality.Add(reader.GetInt32(reader.GetOrdinal("new_patient_quality")));
+                    totalCost.Add(reader.IsDBNull(reader.GetOrdinal("total_cost")) ? 0.0f : (float)reader.GetDouble(reader.GetOrdinal("total_cost")));
+                }
+
+                return (patientQuality, newPatientQuality, prescriptionQuality, indicationQuality, examinationQuality);
+            } catch
+            {
+                return (0, 0, 0, 0, 0);
+            }
+        }
+
+        public (List<double>, List<double>) GetGenderStatistics()
+        {
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader("SELECT * FROM AGE_STATISTIC()", CommandType.Text);
+                List<double> maleQuality = new List<double>();
+                List<double> femaleQuality = new List<double>();
+
+                while (reader.Read())
+                {
+                    maleQuality.Add(reader.GetDouble(reader.GetOrdinal("male")));
+                    femaleQuality.Add(reader.GetDouble(reader.GetOrdinal("female")));
+                }
+                reader.Close();
+                return (maleQuality, femaleQuality);
+            }
+            catch
+            {
+                return (new List<double>(), new List<double>());
+            }
+        }
+
+        public (List<double>, List<double>, List<float>, List<double>, List<double>) GetChartsData()
+        {
+            try
+            {
+                List<double> patientsQuality = new List<double>();
+                List<double> newPatientsQuality = new List<double>();
+                List<float> totalCost = new List<float>();
+
+                Connect();
+                MyExecuteNonQuerry("SET DATEFIRST 1;", CommandType.Text);
+                SqlDataReader reader = MyExecuteReader("SELECT * FROM WEEKSTATISTIC() ORDER BY weekday", CommandType.Text);
+                while (reader.Read())
+                {
+                    patientsQuality.Add(reader.GetInt32(reader.GetOrdinal("patient_quality")));
+                    newPatientsQuality.Add(reader.GetInt32(reader.GetOrdinal("new_patient_quality")));
+                    totalCost.Add(reader.IsDBNull(reader.GetOrdinal("total_cost")) ? 0.0f : (float)reader.GetDouble(reader.GetOrdinal("total_cost")));
+                    Console.WriteLine(reader["weekday"]);
+                }
+
+                reader = MyExecuteReader("SELECT * FROM AGE_STATISTIC()", CommandType.Text);
+                List<double> maleQuality = new List<double>();
+                List<double> femaleQuality = new List<double>();
+
+                while (reader.Read())
+                {
+                    maleQuality.Add(reader.GetInt32(reader.GetOrdinal("male")));
+                    femaleQuality.Add(reader.GetInt32(reader.GetOrdinal("female")));
+                }
+                reader.Close();
+                return (patientsQuality, newPatientsQuality, totalCost, maleQuality, femaleQuality);
+            }
+            catch (SqlException ex)
             {
                 throw ex;
             }

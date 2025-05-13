@@ -22,6 +22,9 @@ namespace TransferObject
         [Display(Name = "Bào chế dạng")]
         public string type { get; set; }
 
+        // Cách sử dụng -> Hoạt chất
+        [Display(Name = "Hoạt chất")]
+        public string usage { get; set; }
         // Giá khuyến mãi
         [Display(Name = "Giá khuyến mãi")]
         public float discountPrice { get; set; }
@@ -44,9 +47,7 @@ namespace TransferObject
         // Liều lượng
         [Display(Name = "Liều lượng")]
         public string dosage { get; set; }
-        // Cách sử dụng
-        [Display(Name = "Cách sử dụng")]
-        public string usage { get; set; }
+
         // Mô tả
         [Display(Name = "Mô tả")]
         public string description { get; set; }

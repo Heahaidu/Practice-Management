@@ -98,9 +98,9 @@
             this.bunifuPanel1.Location = new System.Drawing.Point(-1, -1);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.bunifuPanel1.Padding = new System.Windows.Forms.Padding(14, 15, 14, 15);
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(674, 432);
+            this.bunifuPanel1.Size = new System.Drawing.Size(842, 540);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // panel7
@@ -109,10 +109,10 @@
             this.panel7.Controls.Add(this.btnChangePassword);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(11, 351);
+            this.panel7.Location = new System.Drawing.Point(14, 441);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(652, 60);
+            this.panel7.Size = new System.Drawing.Size(814, 75);
             this.panel7.TabIndex = 31;
             // 
             // label9
@@ -120,10 +120,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nunito Sans Normal", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label9.Location = new System.Drawing.Point(10, 8);
+            this.label9.Location = new System.Drawing.Point(12, 10);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 22);
+            this.label9.Size = new System.Drawing.Size(91, 27);
             this.label9.TabIndex = 0;
             this.label9.Text = "Mật khẩu";
             // 
@@ -176,7 +176,7 @@
             this.btnChangePassword.IdleIconLeftImage = null;
             this.btnChangePassword.IdleIconRightImage = null;
             this.btnChangePassword.IndicateFocus = false;
-            this.btnChangePassword.Location = new System.Drawing.Point(521, 16);
+            this.btnChangePassword.Location = new System.Drawing.Point(651, 20);
             this.btnChangePassword.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -211,7 +211,7 @@
             this.btnChangePassword.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.btnChangePassword.OnPressedState.IconLeftImage = null;
             this.btnChangePassword.OnPressedState.IconRightImage = null;
-            this.btnChangePassword.Size = new System.Drawing.Size(121, 28);
+            this.btnChangePassword.Size = new System.Drawing.Size(151, 35);
             this.btnChangePassword.TabIndex = 2;
             this.btnChangePassword.TabStop = false;
             this.btnChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -226,10 +226,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nunito Sans Normal", 11.25F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label10.Location = new System.Drawing.Point(10, 26);
+            this.label10.Location = new System.Drawing.Point(12, 32);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(405, 22);
+            this.label10.Size = new System.Drawing.Size(511, 27);
             this.label10.TabIndex = 1;
             this.label10.Text = "Đặt mật khẩu cố định để đăng nhập vào tài khoản của bạn.";
             // 
@@ -239,10 +239,10 @@
             this.panel5.Controls.Add(this.btnChangeEmail);
             this.panel5.Controls.Add(this.lbEmail);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(11, 291);
+            this.panel5.Location = new System.Drawing.Point(14, 366);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(652, 60);
+            this.panel5.Size = new System.Drawing.Size(814, 75);
             this.panel5.TabIndex = 29;
             // 
             // label5
@@ -250,10 +250,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nunito Sans Normal", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label5.Location = new System.Drawing.Point(10, 8);
+            this.label5.Location = new System.Drawing.Point(12, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 22);
+            this.label5.Size = new System.Drawing.Size(59, 27);
             this.label5.TabIndex = 0;
             this.label5.Text = "Email";
             // 
@@ -285,6 +285,7 @@
             this.btnChangeEmail.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnChangeEmail.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnChangeEmail.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnChangeEmail.Enabled = false;
             this.btnChangeEmail.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnChangeEmail.Font = new System.Drawing.Font("Nunito Sans Normal", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
@@ -306,7 +307,7 @@
             this.btnChangeEmail.IdleIconLeftImage = null;
             this.btnChangeEmail.IdleIconRightImage = null;
             this.btnChangeEmail.IndicateFocus = false;
-            this.btnChangeEmail.Location = new System.Drawing.Point(552, 13);
+            this.btnChangeEmail.Location = new System.Drawing.Point(690, 16);
             this.btnChangeEmail.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeEmail.Name = "btnChangeEmail";
             this.btnChangeEmail.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -341,7 +342,7 @@
             this.btnChangeEmail.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.btnChangeEmail.OnPressedState.IconLeftImage = null;
             this.btnChangeEmail.OnPressedState.IconRightImage = null;
-            this.btnChangeEmail.Size = new System.Drawing.Size(90, 28);
+            this.btnChangeEmail.Size = new System.Drawing.Size(112, 35);
             this.btnChangeEmail.TabIndex = 2;
             this.btnChangeEmail.TabStop = false;
             this.btnChangeEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,10 +357,10 @@
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Nunito Sans Normal", 11.25F);
             this.lbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.lbEmail.Location = new System.Drawing.Point(10, 26);
+            this.lbEmail.Location = new System.Drawing.Point(12, 32);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(156, 22);
+            this.lbEmail.Size = new System.Drawing.Size(196, 27);
             this.lbEmail.TabIndex = 1;
             this.lbEmail.Text = "acbdefgh@gmail.com";
             // 
@@ -369,10 +370,10 @@
             this.panel6.Controls.Add(this.btnChangeUsername);
             this.panel6.Controls.Add(this.lbUsername);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(11, 231);
+            this.panel6.Location = new System.Drawing.Point(14, 291);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(652, 60);
+            this.panel6.Size = new System.Drawing.Size(814, 75);
             this.panel6.TabIndex = 30;
             // 
             // label7
@@ -380,10 +381,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nunito Sans Normal", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label7.Location = new System.Drawing.Point(10, 8);
+            this.label7.Location = new System.Drawing.Point(12, 10);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 22);
+            this.label7.Size = new System.Drawing.Size(139, 27);
             this.label7.TabIndex = 0;
             this.label7.Text = "Tên đăng nhập";
             // 
@@ -415,6 +416,7 @@
             this.btnChangeUsername.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnChangeUsername.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnChangeUsername.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnChangeUsername.Enabled = false;
             this.btnChangeUsername.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnChangeUsername.Font = new System.Drawing.Font("Nunito Sans Normal", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
@@ -436,7 +438,7 @@
             this.btnChangeUsername.IdleIconLeftImage = null;
             this.btnChangeUsername.IdleIconRightImage = null;
             this.btnChangeUsername.IndicateFocus = false;
-            this.btnChangeUsername.Location = new System.Drawing.Point(482, 16);
+            this.btnChangeUsername.Location = new System.Drawing.Point(602, 20);
             this.btnChangeUsername.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeUsername.Name = "btnChangeUsername";
             this.btnChangeUsername.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -471,7 +473,7 @@
             this.btnChangeUsername.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.btnChangeUsername.OnPressedState.IconLeftImage = null;
             this.btnChangeUsername.OnPressedState.IconRightImage = null;
-            this.btnChangeUsername.Size = new System.Drawing.Size(160, 28);
+            this.btnChangeUsername.Size = new System.Drawing.Size(200, 35);
             this.btnChangeUsername.TabIndex = 2;
             this.btnChangeUsername.TabStop = false;
             this.btnChangeUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -486,10 +488,10 @@
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Nunito Sans Normal", 11.25F);
             this.lbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.lbUsername.Location = new System.Drawing.Point(13, 30);
+            this.lbUsername.Location = new System.Drawing.Point(16, 38);
             this.lbUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(74, 22);
+            this.lbUsername.Size = new System.Drawing.Size(93, 27);
             this.lbUsername.TabIndex = 1;
             this.lbUsername.Text = "Heahaidu";
             // 
@@ -503,20 +505,21 @@
             this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(11, 217);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(14, 273);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(652, 14);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(814, 18);
             this.bunifuSeparator2.TabIndex = 27;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(11, 179);
+            this.panel3.Location = new System.Drawing.Point(14, 225);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(652, 38);
+            this.panel3.Size = new System.Drawing.Size(814, 48);
             this.panel3.TabIndex = 26;
             // 
             // label4
@@ -524,10 +527,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nunito Sans Normal SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label4.Location = new System.Drawing.Point(9, 7);
+            this.label4.Location = new System.Drawing.Point(11, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 22);
+            this.label4.Size = new System.Drawing.Size(84, 27);
             this.label4.TabIndex = 1;
             this.label4.Text = "Bảo mật";
             // 
@@ -539,10 +542,10 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.tbDisplayName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(11, 64);
+            this.panel2.Location = new System.Drawing.Point(14, 81);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 115);
+            this.panel2.Size = new System.Drawing.Size(814, 144);
             this.panel2.TabIndex = 20;
             // 
             // btnChangePreferredName
@@ -594,7 +597,7 @@
             this.btnChangePreferredName.IdleIconLeftImage = null;
             this.btnChangePreferredName.IdleIconRightImage = null;
             this.btnChangePreferredName.IndicateFocus = true;
-            this.btnChangePreferredName.Location = new System.Drawing.Point(267, 37);
+            this.btnChangePreferredName.Location = new System.Drawing.Point(334, 46);
             this.btnChangePreferredName.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangePreferredName.Name = "btnChangePreferredName";
             this.btnChangePreferredName.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -629,7 +632,7 @@
             this.btnChangePreferredName.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnChangePreferredName.OnPressedState.IconLeftImage = null;
             this.btnChangePreferredName.OnPressedState.IconRightImage = null;
-            this.btnChangePreferredName.Size = new System.Drawing.Size(87, 27);
+            this.btnChangePreferredName.Size = new System.Drawing.Size(109, 34);
             this.btnChangePreferredName.TabIndex = 3;
             this.btnChangePreferredName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnChangePreferredName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -645,13 +648,13 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.bunifuPictureBox2.AutoSizeHeight = true;
             this.bunifuPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuPictureBox2.BorderRadius = 24;
+            this.bunifuPictureBox2.BorderRadius = 30;
             this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
             this.bunifuPictureBox2.IsCircle = false;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(17, 16);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(21, 20);
             this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(60, 60);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox2.TabIndex = 9;
             this.bunifuPictureBox2.TabStop = false;
@@ -663,10 +666,10 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Nunito Sans Normal Medium", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(15, 76);
+            this.label3.Location = new System.Drawing.Point(19, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 18);
+            this.label3.Size = new System.Drawing.Size(185, 25);
             this.label3.TabIndex = 11;
             this.label3.Text = "Chỉnh sửa ảnh đại diện";
             // 
@@ -676,10 +679,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nunito Sans Normal Light", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label2.Location = new System.Drawing.Point(76, 18);
+            this.label2.Location = new System.Drawing.Point(95, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 18);
+            this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên hiển thị";
             // 
@@ -713,7 +716,7 @@
             this.tbDisplayName.IconRight = null;
             this.tbDisplayName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbDisplayName.Lines = new string[0];
-            this.tbDisplayName.Location = new System.Drawing.Point(76, 37);
+            this.tbDisplayName.Location = new System.Drawing.Point(95, 46);
             this.tbDisplayName.Margin = new System.Windows.Forms.Padding(2);
             this.tbDisplayName.MaxLength = 32767;
             this.tbDisplayName.MinimumSize = new System.Drawing.Size(1, 1);
@@ -750,7 +753,7 @@
             this.tbDisplayName.SelectionLength = 0;
             this.tbDisplayName.SelectionStart = 0;
             this.tbDisplayName.ShortcutsEnabled = true;
-            this.tbDisplayName.Size = new System.Drawing.Size(164, 27);
+            this.tbDisplayName.Size = new System.Drawing.Size(205, 34);
             this.tbDisplayName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbDisplayName.TabIndex = 10;
             this.tbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -772,20 +775,21 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(11, 50);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(14, 63);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(652, 14);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(814, 18);
             this.bunifuSeparator1.TabIndex = 19;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(11, 12);
+            this.panel1.Location = new System.Drawing.Point(14, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(652, 38);
+            this.panel1.Size = new System.Drawing.Size(814, 48);
             this.panel1.TabIndex = 18;
             // 
             // label1
@@ -793,19 +797,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nunito Sans Normal SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 22);
+            this.label1.Size = new System.Drawing.Size(96, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tài khoản";
             // 
             // AccountSettingPopup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(674, 432);
+            this.ClientSize = new System.Drawing.Size(842, 540);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);

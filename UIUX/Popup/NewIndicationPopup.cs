@@ -17,17 +17,13 @@ namespace UIUX.Popup
 
         public EventHandler addIndicationEvent;
         private int patientId;
-        public NewIndicationPopup()
-        {
-            InitializeComponent();
-            dtIndication.Value = DateTime.Now;
-        }
 
         public NewIndicationPopup(int patientId)
         {
             InitializeComponent();
             dtIndication.Value = DateTime.Now;
             this.patientId = patientId;
+            tbDoctorName.Text = "B.s " + UserSession.Instance.CurrentUser.displayName;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -37,11 +33,15 @@ namespace UIUX.Popup
 
         private void btnAddNewIndication_Click(object sender, EventArgs e)
         {
-
+            if (ddIndicationType.SelectedItem == null || tbDiagnosisName.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
+                return;
+            }
             DateTime indicationDate = dtIndication.Value.Value;
             Indication indication = new Indication(indicationDate:  indicationDate,
-                indicationType: tbIndicationType.Text, doctorName: tbDoctorName.Text,
-                diagnosisName: tbDiagnosisName.Text, notes: tbNotes.Text, patientId: patientId, doctorId: UserSession.Instance.CurrentUser?.id ?? 1, 1);
+                indicationType: ddIndicationType.SelectedItem.ToString(), doctorName: tbDoctorName.Text,
+                diagnosisName: tbDiagnosisName.Text, notes: tbNotes.Text, patientId: patientId, doctorId: UserSession.Instance.CurrentUser.id);
             addIndicationEvent?.Invoke(indication, e);
             Close();
         }

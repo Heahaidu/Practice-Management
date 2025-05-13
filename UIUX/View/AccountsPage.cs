@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferObject;
 using UIUX.DataView;
+using UIUX.Popup;
 
 namespace UIUX.View
 {
@@ -18,6 +19,14 @@ namespace UIUX.View
         public AccountsPage()
         {
             InitializeComponent();
+            if (UserSession.Instance.CurrentUser.level != 3)
+            {
+                addNewMedicine_btn.Visible = false;
+            }
+            else
+            {
+                addNewMedicine_btn.Visible = true;
+            }
             LoadAccounts();
         }
 
@@ -29,6 +38,10 @@ namespace UIUX.View
             foreach (User user in users)
             {
                 AccountItem accountItem = new AccountItem(user);
+                accountItem.deleteAccountEvent += (sender_, e_) =>
+                {
+                    panelAccount.Controls.Remove(accountItem);
+                };
                 accountItem.TopLevel = false;
                 accountItem.FormBorderStyle = FormBorderStyle.None;
                 accountItem.Dock = DockStyle.Top;
@@ -38,6 +51,17 @@ namespace UIUX.View
                 accountItem.Show();
             }
 
+        }
+
+        private void addNewMedicine_btn_Click(object sender, EventArgs e)
+        {
+            NewAccountPopup newAccountPopup = new NewAccountPopup();
+            newAccountPopup.createAccountEvent += (sender_, e_) =>
+            {
+                panelAccount.Controls.Clear();
+                LoadAccounts();
+            };
+            newAccountPopup.ShowDialog();
         }
     }
 

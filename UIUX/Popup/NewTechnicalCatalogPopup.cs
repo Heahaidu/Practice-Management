@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,10 +46,16 @@ namespace UIUX.Popup
             }
 
             TechnicalCatalog technicalCatalog = new TechnicalCatalog(
-                name: tbNameTech.Text, type: ddTypeTech.Text,
+                name: tbNameTech.Text.Replace("-", ""), type: ddTypeTech.Text,
                 price: float.Parse(tbPrice.Text), discountPrice: float.Parse(tbDiscountPrice.Text),
                 description: tbDescriptionTech.Text);
 
+            if (technicalCatalog == null)
+            {
+
+            }
+            TechCatalogBL techCatalogBL = new TechCatalogBL();
+            techCatalogBL.Add(technicalCatalog);
 
             UpdateTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
             Close();

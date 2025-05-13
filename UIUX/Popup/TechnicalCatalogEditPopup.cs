@@ -11,7 +11,6 @@ namespace UIUX.Popup
 {
     public class TechnicalCatalogEditPopup : NewTechnicalCatalogPopup
     {
-        public EventHandler editTechnicalCatalogEvent;
         private TechnicalCatalog technicalCatalog;
 
         public TechnicalCatalogEditPopup(TechnicalCatalog technicalCatalog)
@@ -21,9 +20,10 @@ namespace UIUX.Popup
             title.Text = "Cập nhật thông tin chỉ định";
             btnAddNewTechnical.Text = "Cập nhật";
             btnAddNewTechnical.Click -= btnAddNewTechnical_Click;
-            btnAddNewTechnical.Click += btnEditNewTechnical_Click;
+            btnAddNewTechnical.Click += btnSaveEdit_Click;
 
             ddTypeTech.Enabled = false;
+            btnDeleteTech.Visible = true;
             btnDeleteTech.Click += btnDeleteTech_Click;
         }
 
@@ -60,16 +60,25 @@ namespace UIUX.Popup
             tbDiscountPrice.Text = technicalCatalog.discountPrice.ToString();
             tbDescriptionTech.Text = technicalCatalog.description;
         }
-        private void btnEditNewTechnical_Click(object sender, EventArgs e)
+        private void btnSaveEdit_Click(object sender, EventArgs e)
         {
             TechnicalCatalog technicalCatalog = new TechnicalCatalog(
+                id: this.technicalCatalog.id,
                 name: tbNameTech.Text, type: ddTypeTech.Text,
                 price: float.Parse(tbPrice.Text), discountPrice: float.Parse(tbDiscountPrice.Text),
                 description: tbDescriptionTech.Text);
-            editTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
+
+            TechCatalogBL techCatalogBL = new TechCatalogBL();
+            if (techCatalogBL.Update(technicalCatalog) == 0)
+            {
+                MessageBox.Show("Cập nhập thông tin thất bại.");
+                return;
+            }
+
+            UpdateTechnicalCatalogEvent?.Invoke(technicalCatalog, e);
             Close();
         }
 
-
+       
     }
 }

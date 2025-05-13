@@ -43,6 +43,18 @@ namespace BusinessLayer
             }
         }
 
+        public int Delete(int id)
+        {
+            try
+            {
+                return IndicationDL.Delete(id);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         public int GetTotalIndications()
         {
             try
@@ -53,6 +65,27 @@ namespace BusinessLayer
             {
                 throw ex;
             }
+        }
+
+        public int AddTestsScription(Indication indication, List<MedicineTestPrescription> medicineTestPrescriptions)
+        {
+            try
+            {
+                foreach (MedicineTestPrescription medicineTestPrescription in medicineTestPrescriptions)
+                {
+                    new IndicationDL().AddTestsScription(indication.Id, medicineTestPrescription);
+                }
+            } catch (SqlException ex)
+            {
+                Console.WriteLine(ex);
+                return 0;
+            }
+            return 1;
+        }
+
+        public List<MedicineTestPrescription> GetTestsPrescription(int id)
+        {
+            return new IndicationDL().GetTestsPrescription(id);
         }
     }
 }

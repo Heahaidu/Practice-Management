@@ -34,23 +34,26 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnDeletePrescription = new System.Windows.Forms.Label();
             this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.btnBack = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnAddNewPatient = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.label11 = new System.Windows.Forms.Label();
+            this.total_cost = new System.Windows.Forms.Label();
+            this.cost_title = new System.Windows.Forms.Label();
+            this.btnPrintPrescription = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.doctor_name = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.diagnosis_name = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.medicalHistory = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.label3 = new System.Windows.Forms.Label();
+            this.previous_cause = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.patient_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -59,19 +62,21 @@
             this.btnAddMoreMedicine = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
+            this.phone_number = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.diagnosis_name_2 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.location = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.age = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.patient_name_2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.panel4.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -103,6 +108,7 @@
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 20;
             this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.btnDeletePrescription);
             this.bunifuPanel2.Controls.Add(this.autoLabel1);
             this.bunifuPanel2.Controls.Add(this.btnBack);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -112,6 +118,20 @@
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(1204, 57);
             this.bunifuPanel2.TabIndex = 0;
+            // 
+            // btnDeletePrescription
+            // 
+            this.btnDeletePrescription.AutoSize = true;
+            this.btnDeletePrescription.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeletePrescription.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePrescription.ForeColor = System.Drawing.Color.Red;
+            this.btnDeletePrescription.Location = new System.Drawing.Point(1147, 19);
+            this.btnDeletePrescription.Name = "btnDeletePrescription";
+            this.btnDeletePrescription.Size = new System.Drawing.Size(32, 17);
+            this.btnDeletePrescription.TabIndex = 83;
+            this.btnDeletePrescription.Text = "Xóa";
+            this.btnDeletePrescription.Visible = false;
+            this.btnDeletePrescription.Click += new System.EventHandler(this.btnDeletePrescription_Click);
             // 
             // autoLabel1
             // 
@@ -235,19 +255,21 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 20;
             this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.btnAddNewPatient);
-            this.bunifuPanel3.Controls.Add(this.label11);
+            this.bunifuPanel3.Controls.Add(this.total_cost);
+            this.bunifuPanel3.Controls.Add(this.cost_title);
+            this.bunifuPanel3.Controls.Add(this.btnPrintPrescription);
+            this.bunifuPanel3.Controls.Add(this.doctor_name);
             this.bunifuPanel3.Controls.Add(this.label12);
-            this.bunifuPanel3.Controls.Add(this.label9);
+            this.bunifuPanel3.Controls.Add(this.diagnosis_name);
             this.bunifuPanel3.Controls.Add(this.label10);
-            this.bunifuPanel3.Controls.Add(this.label5);
+            this.bunifuPanel3.Controls.Add(this.medicalHistory);
             this.bunifuPanel3.Controls.Add(this.label6);
-            this.bunifuPanel3.Controls.Add(this.label7);
+            this.bunifuPanel3.Controls.Add(this.date);
             this.bunifuPanel3.Controls.Add(this.label8);
             this.bunifuPanel3.Controls.Add(this.bunifuSeparator1);
-            this.bunifuPanel3.Controls.Add(this.label3);
+            this.bunifuPanel3.Controls.Add(this.previous_cause);
             this.bunifuPanel3.Controls.Add(this.label4);
-            this.bunifuPanel3.Controls.Add(this.label2);
+            this.bunifuPanel3.Controls.Add(this.patient_name);
             this.bunifuPanel3.Controls.Add(this.label1);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPanel3.Location = new System.Drawing.Point(20, 20);
@@ -256,109 +278,136 @@
             this.bunifuPanel3.Size = new System.Drawing.Size(346, 597);
             this.bunifuPanel3.TabIndex = 17;
             // 
-            // btnAddNewPatient
+            // total_cost
             // 
-            this.btnAddNewPatient.AllowAnimations = true;
-            this.btnAddNewPatient.AllowMouseEffects = true;
-            this.btnAddNewPatient.AllowToggling = false;
-            this.btnAddNewPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddNewPatient.AnimationSpeed = 200;
-            this.btnAddNewPatient.AutoGenerateColors = false;
-            this.btnAddNewPatient.AutoRoundBorders = false;
-            this.btnAddNewPatient.AutoSizeLeftIcon = true;
-            this.btnAddNewPatient.AutoSizeRightIcon = true;
-            this.btnAddNewPatient.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddNewPatient.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnAddNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddNewPatient.BackgroundImage")));
-            this.btnAddNewPatient.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.ButtonText = "In đơn thuốc";
-            this.btnAddNewPatient.ButtonTextMarginLeft = 0;
-            this.btnAddNewPatient.ColorContrastOnClick = 45;
-            this.btnAddNewPatient.ColorContrastOnHover = 45;
-            this.btnAddNewPatient.Cursor = System.Windows.Forms.Cursors.Default;
+            this.total_cost.AutoSize = true;
+            this.total_cost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.total_cost.Font = new System.Drawing.Font("Century Gothic Variable ExtraBo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_cost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(157)))), ((int)(((byte)(245)))));
+            this.total_cost.Location = new System.Drawing.Point(114, 489);
+            this.total_cost.Name = "total_cost";
+            this.total_cost.Size = new System.Drawing.Size(21, 24);
+            this.total_cost.TabIndex = 60;
+            this.total_cost.Text = "đ";
+            this.total_cost.Visible = false;
+            // 
+            // cost_title
+            // 
+            this.cost_title.AutoSize = true;
+            this.cost_title.BackColor = System.Drawing.Color.Transparent;
+            this.cost_title.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cost_title.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cost_title.Location = new System.Drawing.Point(19, 489);
+            this.cost_title.Name = "cost_title";
+            this.cost_title.Size = new System.Drawing.Size(89, 24);
+            this.cost_title.TabIndex = 59;
+            this.cost_title.Text = "Tổng tiền:";
+            this.cost_title.Visible = false;
+            // 
+            // btnPrintPrescription
+            // 
+            this.btnPrintPrescription.AllowAnimations = true;
+            this.btnPrintPrescription.AllowMouseEffects = true;
+            this.btnPrintPrescription.AllowToggling = false;
+            this.btnPrintPrescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrintPrescription.AnimationSpeed = 200;
+            this.btnPrintPrescription.AutoGenerateColors = false;
+            this.btnPrintPrescription.AutoRoundBorders = false;
+            this.btnPrintPrescription.AutoSizeLeftIcon = true;
+            this.btnPrintPrescription.AutoSizeRightIcon = true;
+            this.btnPrintPrescription.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrintPrescription.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnPrintPrescription.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrintPrescription.BackgroundImage")));
+            this.btnPrintPrescription.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPrintPrescription.ButtonText = "In đơn thuốc";
+            this.btnPrintPrescription.ButtonTextMarginLeft = 0;
+            this.btnPrintPrescription.ColorContrastOnClick = 45;
+            this.btnPrintPrescription.ColorContrastOnHover = 45;
+            this.btnPrintPrescription.Cursor = System.Windows.Forms.Cursors.Default;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
             borderEdges2.TopRight = true;
-            this.btnAddNewPatient.CustomizableEdges = borderEdges2;
-            this.btnAddNewPatient.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAddNewPatient.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddNewPatient.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAddNewPatient.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.IconLeft = null;
-            this.btnAddNewPatient.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewPatient.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddNewPatient.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnAddNewPatient.IconMarginLeft = 11;
-            this.btnAddNewPatient.IconPadding = 10;
-            this.btnAddNewPatient.IconRight = null;
-            this.btnAddNewPatient.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddNewPatient.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddNewPatient.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAddNewPatient.IconSize = 25;
-            this.btnAddNewPatient.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.IdleBorderRadius = 0;
-            this.btnAddNewPatient.IdleBorderThickness = 0;
-            this.btnAddNewPatient.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnAddNewPatient.IdleIconLeftImage = null;
-            this.btnAddNewPatient.IdleIconRightImage = null;
-            this.btnAddNewPatient.IndicateFocus = false;
-            this.btnAddNewPatient.Location = new System.Drawing.Point(23, 534);
-            this.btnAddNewPatient.Name = "btnAddNewPatient";
-            this.btnAddNewPatient.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddNewPatient.OnDisabledState.BorderRadius = 10;
-            this.btnAddNewPatient.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.OnDisabledState.BorderThickness = 1;
-            this.btnAddNewPatient.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAddNewPatient.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAddNewPatient.OnDisabledState.IconLeftImage = null;
-            this.btnAddNewPatient.OnDisabledState.IconRightImage = null;
-            this.btnAddNewPatient.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnAddNewPatient.onHoverState.BorderRadius = 10;
-            this.btnAddNewPatient.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.onHoverState.BorderThickness = 1;
-            this.btnAddNewPatient.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnAddNewPatient.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.onHoverState.IconLeftImage = null;
-            this.btnAddNewPatient.onHoverState.IconRightImage = null;
-            this.btnAddNewPatient.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnIdleState.BorderRadius = 10;
-            this.btnAddNewPatient.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.OnIdleState.BorderThickness = 1;
-            this.btnAddNewPatient.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.OnIdleState.IconLeftImage = null;
-            this.btnAddNewPatient.OnIdleState.IconRightImage = null;
-            this.btnAddNewPatient.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnPressedState.BorderRadius = 10;
-            this.btnAddNewPatient.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddNewPatient.OnPressedState.BorderThickness = 1;
-            this.btnAddNewPatient.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddNewPatient.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPatient.OnPressedState.IconLeftImage = null;
-            this.btnAddNewPatient.OnPressedState.IconRightImage = null;
-            this.btnAddNewPatient.Size = new System.Drawing.Size(302, 43);
-            this.btnAddNewPatient.TabIndex = 58;
-            this.btnAddNewPatient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddNewPatient.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAddNewPatient.TextMarginLeft = 0;
-            this.btnAddNewPatient.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnAddNewPatient.UseDefaultRadiusAndThickness = true;
+            this.btnPrintPrescription.CustomizableEdges = borderEdges2;
+            this.btnPrintPrescription.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPrintPrescription.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPrintPrescription.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnPrintPrescription.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnPrintPrescription.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnPrintPrescription.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintPrescription.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPrescription.IconLeft = null;
+            this.btnPrintPrescription.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintPrescription.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPrintPrescription.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnPrintPrescription.IconMarginLeft = 11;
+            this.btnPrintPrescription.IconPadding = 10;
+            this.btnPrintPrescription.IconRight = null;
+            this.btnPrintPrescription.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrintPrescription.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPrintPrescription.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnPrintPrescription.IconSize = 25;
+            this.btnPrintPrescription.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnPrintPrescription.IdleBorderRadius = 0;
+            this.btnPrintPrescription.IdleBorderThickness = 0;
+            this.btnPrintPrescription.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnPrintPrescription.IdleIconLeftImage = null;
+            this.btnPrintPrescription.IdleIconRightImage = null;
+            this.btnPrintPrescription.IndicateFocus = false;
+            this.btnPrintPrescription.Location = new System.Drawing.Point(23, 534);
+            this.btnPrintPrescription.Name = "btnPrintPrescription";
+            this.btnPrintPrescription.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPrintPrescription.OnDisabledState.BorderRadius = 10;
+            this.btnPrintPrescription.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPrintPrescription.OnDisabledState.BorderThickness = 1;
+            this.btnPrintPrescription.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnPrintPrescription.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnPrintPrescription.OnDisabledState.IconLeftImage = null;
+            this.btnPrintPrescription.OnDisabledState.IconRightImage = null;
+            this.btnPrintPrescription.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnPrintPrescription.onHoverState.BorderRadius = 10;
+            this.btnPrintPrescription.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPrintPrescription.onHoverState.BorderThickness = 1;
+            this.btnPrintPrescription.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnPrintPrescription.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPrescription.onHoverState.IconLeftImage = null;
+            this.btnPrintPrescription.onHoverState.IconRightImage = null;
+            this.btnPrintPrescription.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnPrintPrescription.OnIdleState.BorderRadius = 10;
+            this.btnPrintPrescription.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPrintPrescription.OnIdleState.BorderThickness = 1;
+            this.btnPrintPrescription.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnPrintPrescription.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPrescription.OnIdleState.IconLeftImage = null;
+            this.btnPrintPrescription.OnIdleState.IconRightImage = null;
+            this.btnPrintPrescription.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnPrintPrescription.OnPressedState.BorderRadius = 10;
+            this.btnPrintPrescription.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPrintPrescription.OnPressedState.BorderThickness = 1;
+            this.btnPrintPrescription.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnPrintPrescription.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPrescription.OnPressedState.IconLeftImage = null;
+            this.btnPrintPrescription.OnPressedState.IconRightImage = null;
+            this.btnPrintPrescription.Size = new System.Drawing.Size(302, 43);
+            this.btnPrintPrescription.TabIndex = 58;
+            this.btnPrintPrescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrintPrescription.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPrintPrescription.TextMarginLeft = 0;
+            this.btnPrintPrescription.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnPrintPrescription.UseDefaultRadiusAndThickness = true;
+            this.btnPrintPrescription.Click += new System.EventHandler(this.btnPrintPrescription_Click);
             // 
-            // label11
+            // doctor_name
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(143, 287);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 24);
-            this.label11.TabIndex = 57;
-            this.label11.Text = ".............";
+            this.doctor_name.AutoSize = true;
+            this.doctor_name.BackColor = System.Drawing.Color.Transparent;
+            this.doctor_name.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doctor_name.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.doctor_name.Location = new System.Drawing.Point(143, 287);
+            this.doctor_name.Name = "doctor_name";
+            this.doctor_name.Size = new System.Drawing.Size(75, 24);
+            this.doctor_name.TabIndex = 57;
+            this.doctor_name.Text = ".............";
             // 
             // label12
             // 
@@ -372,17 +421,17 @@
             this.label12.TabIndex = 56;
             this.label12.Text = "BS Điều trị:";
             // 
-            // label9
+            // diagnosis_name
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(141, 250);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 24);
-            this.label9.TabIndex = 55;
-            this.label9.Text = ".............";
+            this.diagnosis_name.AutoSize = true;
+            this.diagnosis_name.BackColor = System.Drawing.Color.Transparent;
+            this.diagnosis_name.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diagnosis_name.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.diagnosis_name.Location = new System.Drawing.Point(141, 250);
+            this.diagnosis_name.Name = "diagnosis_name";
+            this.diagnosis_name.Size = new System.Drawing.Size(75, 24);
+            this.diagnosis_name.TabIndex = 55;
+            this.diagnosis_name.Text = ".............";
             // 
             // label10
             // 
@@ -396,17 +445,17 @@
             this.label10.TabIndex = 54;
             this.label10.Text = "Chuẩn đoán:";
             // 
-            // label5
+            // medicalHistory
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(143, 215);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 24);
-            this.label5.TabIndex = 53;
-            this.label5.Text = ".............";
+            this.medicalHistory.AutoSize = true;
+            this.medicalHistory.BackColor = System.Drawing.Color.Transparent;
+            this.medicalHistory.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicalHistory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.medicalHistory.Location = new System.Drawing.Point(143, 215);
+            this.medicalHistory.Name = "medicalHistory";
+            this.medicalHistory.Size = new System.Drawing.Size(75, 24);
+            this.medicalHistory.TabIndex = 53;
+            this.medicalHistory.Text = ".............";
             // 
             // label6
             // 
@@ -420,17 +469,17 @@
             this.label6.TabIndex = 52;
             this.label6.Text = "Bệnh sử:";
             // 
-            // label7
+            // date
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(143, 176);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 24);
-            this.label7.TabIndex = 51;
-            this.label7.Text = ".............";
+            this.date.AutoSize = true;
+            this.date.BackColor = System.Drawing.Color.Transparent;
+            this.date.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.date.Location = new System.Drawing.Point(143, 176);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(75, 24);
+            this.date.TabIndex = 51;
+            this.date.Text = ".............";
             // 
             // label8
             // 
@@ -460,17 +509,17 @@
             this.bunifuSeparator1.Size = new System.Drawing.Size(305, 16);
             this.bunifuSeparator1.TabIndex = 49;
             // 
-            // label3
+            // previous_cause
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(141, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 24);
-            this.label3.TabIndex = 48;
-            this.label3.Text = ".............";
+            this.previous_cause.AutoSize = true;
+            this.previous_cause.BackColor = System.Drawing.Color.Transparent;
+            this.previous_cause.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previous_cause.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.previous_cause.Location = new System.Drawing.Point(141, 104);
+            this.previous_cause.Name = "previous_cause";
+            this.previous_cause.Size = new System.Drawing.Size(75, 24);
+            this.previous_cause.TabIndex = 48;
+            this.previous_cause.Text = ".............";
             // 
             // label4
             // 
@@ -484,17 +533,17 @@
             this.label4.TabIndex = 47;
             this.label4.Text = "Tiền căn:";
             // 
-            // label2
+            // patient_name
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(141, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 24);
-            this.label2.TabIndex = 46;
-            this.label2.Text = ".............";
+            this.patient_name.AutoSize = true;
+            this.patient_name.BackColor = System.Drawing.Color.Transparent;
+            this.patient_name.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patient_name.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.patient_name.Location = new System.Drawing.Point(141, 71);
+            this.patient_name.Name = "patient_name";
+            this.patient_name.Size = new System.Drawing.Size(75, 24);
+            this.patient_name.TabIndex = 46;
+            this.patient_name.Text = ".............";
             // 
             // label1
             // 
@@ -672,17 +721,17 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label23);
+            this.panel3.Controls.Add(this.phone_number);
             this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.diagnosis_name_2);
             this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.location);
             this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.age);
             this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.gender);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.patient_name_2);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.bunifuLabel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -691,18 +740,18 @@
             this.panel3.Size = new System.Drawing.Size(798, 214);
             this.panel3.TabIndex = 78;
             // 
-            // label23
+            // phone_number
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label23.Location = new System.Drawing.Point(531, 146);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 26);
-            this.label23.TabIndex = 87;
-            this.label23.Text = ".............";
+            this.phone_number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.phone_number.AutoSize = true;
+            this.phone_number.BackColor = System.Drawing.Color.Transparent;
+            this.phone_number.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone_number.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.phone_number.Location = new System.Drawing.Point(531, 146);
+            this.phone_number.Name = "phone_number";
+            this.phone_number.Size = new System.Drawing.Size(77, 26);
+            this.phone_number.TabIndex = 87;
+            this.phone_number.Text = ".............";
             // 
             // label24
             // 
@@ -717,17 +766,17 @@
             this.label24.TabIndex = 88;
             this.label24.Text = "SĐT:";
             // 
-            // label21
+            // diagnosis_name_2
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Location = new System.Drawing.Point(139, 185);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 26);
-            this.label21.TabIndex = 85;
-            this.label21.Text = ".............";
+            this.diagnosis_name_2.AutoSize = true;
+            this.diagnosis_name_2.BackColor = System.Drawing.Color.Transparent;
+            this.diagnosis_name_2.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diagnosis_name_2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.diagnosis_name_2.Location = new System.Drawing.Point(139, 185);
+            this.diagnosis_name_2.Name = "diagnosis_name_2";
+            this.diagnosis_name_2.Size = new System.Drawing.Size(77, 26);
+            this.diagnosis_name_2.TabIndex = 85;
+            this.diagnosis_name_2.Text = ".............";
             // 
             // label22
             // 
@@ -741,17 +790,17 @@
             this.label22.TabIndex = 86;
             this.label22.Text = "Chuẩn đoán:";
             // 
-            // label19
+            // location
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(86, 146);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 26);
-            this.label19.TabIndex = 83;
-            this.label19.Text = ".............";
+            this.location.AutoSize = true;
+            this.location.BackColor = System.Drawing.Color.Transparent;
+            this.location.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.location.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.location.Location = new System.Drawing.Point(86, 146);
+            this.location.Name = "location";
+            this.location.Size = new System.Drawing.Size(77, 26);
+            this.location.TabIndex = 83;
+            this.location.Text = ".............";
             // 
             // label20
             // 
@@ -765,18 +814,18 @@
             this.label20.TabIndex = 84;
             this.label20.Text = "Địa chỉ:";
             // 
-            // label17
+            // age
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(716, 103);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 26);
-            this.label17.TabIndex = 81;
-            this.label17.Text = ".............";
+            this.age.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.age.AutoSize = true;
+            this.age.BackColor = System.Drawing.Color.Transparent;
+            this.age.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.age.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.age.Location = new System.Drawing.Point(716, 103);
+            this.age.Name = "age";
+            this.age.Size = new System.Drawing.Size(77, 26);
+            this.age.TabIndex = 81;
+            this.age.Text = ".............";
             // 
             // label18
             // 
@@ -791,18 +840,18 @@
             this.label18.TabIndex = 82;
             this.label18.Text = "Tuổi:";
             // 
-            // label15
+            // gender
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(573, 103);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 26);
-            this.label15.TabIndex = 79;
-            this.label15.Text = ".............";
+            this.gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gender.AutoSize = true;
+            this.gender.BackColor = System.Drawing.Color.Transparent;
+            this.gender.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gender.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.gender.Location = new System.Drawing.Point(573, 103);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(77, 26);
+            this.gender.TabIndex = 79;
+            this.gender.Text = ".............";
             // 
             // label16
             // 
@@ -817,17 +866,17 @@
             this.label16.TabIndex = 80;
             this.label16.Text = "Giới tính:";
             // 
-            // label14
+            // patient_name_2
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(86, 103);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 26);
-            this.label14.TabIndex = 76;
-            this.label14.Text = ".............";
+            this.patient_name_2.AutoSize = true;
+            this.patient_name_2.BackColor = System.Drawing.Color.Transparent;
+            this.patient_name_2.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patient_name_2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.patient_name_2.Location = new System.Drawing.Point(86, 103);
+            this.patient_name_2.Name = "patient_name_2";
+            this.patient_name_2.Size = new System.Drawing.Size(77, 26);
+            this.patient_name_2.TabIndex = 76;
+            this.patient_name_2.Text = ".............";
             // 
             // label13
             // 
@@ -855,6 +904,21 @@
             this.bunifuLabel1.Text = "Đơn thuốc";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // printDocument
+            // 
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
+            // 
+            // printPreviewDialog
+            // 
+            this.printPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog.Document = this.printDocument;
+            this.printPreviewDialog.Enabled = true;
+            this.printPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog.Icon")));
+            this.printPreviewDialog.Name = "printPreviewDialog";
+            this.printPreviewDialog.Visible = false;
             // 
             // PrescriptionPage
             // 
@@ -888,19 +952,19 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private System.Windows.Forms.Panel panel6;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddNewPatient;
-        private System.Windows.Forms.Label label11;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPrintPrescription;
+        private System.Windows.Forms.Label doctor_name;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label diagnosis_name;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label medicalHistory;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label date;
         private System.Windows.Forms.Label label8;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label previous_cause;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label patient_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
@@ -909,20 +973,25 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddMoreMedicine;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label phone_number;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label diagnosis_name_2;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label location;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label age;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label gender;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label patient_name_2;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBack;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
+        private System.Drawing.Printing.PrintDocument printDocument;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
+        private System.Windows.Forms.Label total_cost;
+        private System.Windows.Forms.Label cost_title;
+        private System.Windows.Forms.Label btnDeletePrescription;
     }
 }

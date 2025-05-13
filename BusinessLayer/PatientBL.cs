@@ -45,12 +45,12 @@ namespace BusinessLayer
         {
             return patientDL.Delete(id);
         }
-
-        public int GetTotalPatients()
+        
+        public (int,int,int,int,int) GetDashboardData()
         {
             try
             {
-                return patientDL.GetTotalPatients();
+                return patientDL.GetDashboardData();
             }
             catch (SqlException ex)
             {
@@ -58,11 +58,11 @@ namespace BusinessLayer
             }
         }
 
-        public int GetPatientsCreatedToday()
+        public (List<double>, List<double>, List<float>) GetWeekStaistics()
         {
             try
             {
-                return patientDL.GetPatientsCreatedToday();
+                return patientDL.GetWeekStaistics();
             }
             catch (SqlException ex)
             {
@@ -70,25 +70,24 @@ namespace BusinessLayer
             }
         }
 
-        public List<double> GetNewPatientsByWeek()
+        public (List<double>, List<double>) GetGenderStatistics()
         {
             try
             {
-                return patientDL.GetNewPatientsByWeek();
+                return patientDL.GetGenderStatistics();
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
         }
-
-        public List<double> GetTotalPatientsByWeek()
+        public (List<double>, List<double>, List<float>, List<double>, List<double>) GetChartsData()
         {
             try
             {
-                return patientDL.GetTotalPatientsByWeek();
+                return patientDL.GetChartsData();
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 throw ex;
             }

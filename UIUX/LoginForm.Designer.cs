@@ -128,6 +128,7 @@
             this.tbUsername.TextPlaceholder = "";
             this.tbUsername.UseSystemPasswordChar = false;
             this.tbUsername.WordWrap = true;
+            this.tbUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUsername_KeyPress);
             // 
             // label1
             // 
@@ -226,6 +227,7 @@
             this.tbPassword.TextPlaceholder = "";
             this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.WordWrap = true;
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
             // btnLogin
             // 

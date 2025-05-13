@@ -23,19 +23,14 @@ namespace UIUX.Popup
             btnDeleteMedicine.Click += btnDeleteMedicine_Click;
 
             tbNameMed.Text = medicine.name;
-            tbNameMed.Enabled = false;
 
             tbManafacture.Text = medicine.manufacturer;
-            tbManafacture.Enabled = false;
 
             tbDousage.Text = medicine.dosage;
-            tbDousage.Enabled = false;
 
             tbUsage.Text = medicine.usage;
-            tbUsage.Enabled = false;
 
             tbTypeMed.Text = medicine.type;
-            tbTypeMed.Enabled = false;
 
             tbDescriptionMed.Text = medicine.description;
 
@@ -46,13 +41,10 @@ namespace UIUX.Popup
             tbDiscountPrice.Text = medicine.discountPrice.ToString();
 
             dtManufacturingDate.Value = medicine.manufacturingDate;
-            dtManufacturingDate.Enabled = false;
 
             dtExpiryDate.Value = medicine.expiryDate;
-            dtExpiryDate.Enabled = false;
 
             dtImportDate.Value = medicine.importDate;
-            dtImportDate.Enabled = false;
 
             btnAddNewMedicine.Click -= btnAddNewMedicine_Click;
             btnAddNewMedicine.Click += btnEditMedicine_Click;

@@ -41,9 +41,8 @@ namespace TransferObject
         [Display(Name = "Mã bác sĩ")]
         public int DoctorId { get; set; }
 
-        public int DetailsIndicationId { get; set; }
 
-        public Indication(DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId, int doctorId, int detailsIndicationId)
+        public Indication(DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId, int doctorId)
         {
             this.IndicationDate = indicationDate;
             this.IndicationType = indicationType;
@@ -52,10 +51,9 @@ namespace TransferObject
             this.Notes = notes;
             this.PatientId = patientId;
             this.DoctorId = doctorId;
-            DetailsIndicationId = detailsIndicationId;
         }
 
-        public Indication(int id, DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId, int doctorId, int detailsIndicationId)
+        public Indication(int id, DateTime indicationDate, string indicationType, string doctorName, string diagnosisName, string notes, int patientId, int doctorId)
         {
             this.Id = id;
             this.IndicationDate = indicationDate;
@@ -65,7 +63,6 @@ namespace TransferObject
             this.Notes = notes;
             this.PatientId = patientId;
             this.DoctorId = doctorId;
-            this.DetailsIndicationId = detailsIndicationId;
         }
     }
 }

@@ -305,6 +305,12 @@
     <Compile Include="Popup\MedicineEditPopup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Popup\NewAccountPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\NewAccountPopup.Designer.cs">
+      <DependentUpon>NewAccountPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Popup\NewIndicationPopup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,16 +381,16 @@
     <Compile Include="View\DashboardPage.Designer.cs">
       <DependentUpon>DashboardPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\IndicationItem.cs">
+    <Compile Include="ContentGrid\IndicationItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\IndicationItem.Designer.cs">
+    <Compile Include="ContentGrid\IndicationItem.Designer.cs">
       <DependentUpon>IndicationItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\MedicineItem.cs">
+    <Compile Include="ContentGrid\MedicineItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\MedicineItem.Designer.cs">
+    <Compile Include="ContentGrid\MedicineItem.Designer.cs">
       <DependentUpon>MedicineItem.cs</DependentUpon>
     </Compile>
     <Compile Include="View\PatientPage.cs">
@@ -429,6 +435,9 @@
     <EmbeddedResource Include="Popup\ChangePasswordPopup.resx">
       <DependentUpon>ChangePasswordPopup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Popup\NewAccountPopup.resx">
+      <DependentUpon>NewAccountPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Popup\NewIndicationPopup.resx">
       <DependentUpon>NewIndicationPopup.cs</DependentUpon>
     </EmbeddedResource>
@@ -443,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Popup\NewTechnicalCatalogPopup.resx">
       <DependentUpon>NewTechnicalCatalogPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\TechnicalCatalogEditPopup.resx">
+      <DependentUpon>TechnicalCatalogEditPopup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -462,10 +474,10 @@
     <EmbeddedResource Include="View\DashboardPage.resx">
       <DependentUpon>DashboardPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\IndicationItem.resx">
+    <EmbeddedResource Include="ContentGrid\IndicationItem.resx">
       <DependentUpon>IndicationItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MedicineItem.resx">
+    <EmbeddedResource Include="ContentGrid\MedicineItem.resx">
       <DependentUpon>MedicineItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PatientPage.resx">

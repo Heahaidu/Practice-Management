@@ -42,17 +42,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tbNotes = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbDiagnosisName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbIndicationType = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbDoctorName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,6 +60,7 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.ddIndicationType = new Bunifu.UI.WinForms.BunifuDropdown();
             this.panel1.SuspendLayout();
             this.dateBackColorPanel.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -308,7 +304,7 @@
             this.tbDiagnosisName.Padding = new System.Windows.Forms.Padding(3);
             this.tbDiagnosisName.PasswordChar = '\0';
             this.tbDiagnosisName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbDiagnosisName.PlaceholderText = "Bệnh sử";
+            this.tbDiagnosisName.PlaceholderText = "";
             this.tbDiagnosisName.ReadOnly = false;
             this.tbDiagnosisName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDiagnosisName.SelectedText = "";
@@ -322,7 +318,7 @@
             this.tbDiagnosisName.TextMarginBottom = 0;
             this.tbDiagnosisName.TextMarginLeft = 3;
             this.tbDiagnosisName.TextMarginTop = 1;
-            this.tbDiagnosisName.TextPlaceholder = "Bệnh sử";
+            this.tbDiagnosisName.TextPlaceholder = "";
             this.tbDiagnosisName.UseSystemPasswordChar = false;
             this.tbDiagnosisName.WordWrap = true;
             // 
@@ -335,83 +331,6 @@
             this.label6.Size = new System.Drawing.Size(102, 23);
             this.label6.TabIndex = 41;
             this.label6.Text = "Tên chỉ định";
-            // 
-            // tbIndicationType
-            // 
-            this.tbIndicationType.AcceptsReturn = false;
-            this.tbIndicationType.AcceptsTab = false;
-            this.tbIndicationType.AnimationSpeed = 200;
-            this.tbIndicationType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tbIndicationType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbIndicationType.AutoSizeHeight = true;
-            this.tbIndicationType.BackColor = System.Drawing.Color.Transparent;
-            this.tbIndicationType.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbIndicationType.BackgroundImage")));
-            this.tbIndicationType.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.tbIndicationType.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.tbIndicationType.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tbIndicationType.BorderColorIdle = System.Drawing.Color.Silver;
-            this.tbIndicationType.BorderRadius = 10;
-            this.tbIndicationType.BorderThickness = 1;
-            this.tbIndicationType.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.tbIndicationType.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbIndicationType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIndicationType.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIndicationType.DefaultText = "";
-            this.tbIndicationType.FillColor = System.Drawing.Color.White;
-            this.tbIndicationType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbIndicationType.HideSelection = true;
-            this.tbIndicationType.IconLeft = null;
-            this.tbIndicationType.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIndicationType.IconPadding = 10;
-            this.tbIndicationType.IconRight = null;
-            this.tbIndicationType.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIndicationType.Lines = new string[0];
-            this.tbIndicationType.Location = new System.Drawing.Point(43, 197);
-            this.tbIndicationType.MaxLength = 32767;
-            this.tbIndicationType.MinimumSize = new System.Drawing.Size(1, 1);
-            this.tbIndicationType.Modified = false;
-            this.tbIndicationType.Multiline = false;
-            this.tbIndicationType.Name = "tbIndicationType";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbIndicationType.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.tbIndicationType.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbIndicationType.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbIndicationType.OnIdleState = stateProperties12;
-            this.tbIndicationType.Padding = new System.Windows.Forms.Padding(3);
-            this.tbIndicationType.PasswordChar = '\0';
-            this.tbIndicationType.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tbIndicationType.PlaceholderText = "";
-            this.tbIndicationType.ReadOnly = false;
-            this.tbIndicationType.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbIndicationType.SelectedText = "";
-            this.tbIndicationType.SelectionLength = 0;
-            this.tbIndicationType.SelectionStart = 0;
-            this.tbIndicationType.ShortcutsEnabled = true;
-            this.tbIndicationType.Size = new System.Drawing.Size(376, 45);
-            this.tbIndicationType.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.tbIndicationType.TabIndex = 40;
-            this.tbIndicationType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbIndicationType.TextMarginBottom = 0;
-            this.tbIndicationType.TextMarginLeft = 3;
-            this.tbIndicationType.TextMarginTop = 1;
-            this.tbIndicationType.TextPlaceholder = "";
-            this.tbIndicationType.UseSystemPasswordChar = false;
-            this.tbIndicationType.WordWrap = true;
             // 
             // label5
             // 
@@ -444,6 +363,7 @@
             this.tbDoctorName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbDoctorName.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDoctorName.DefaultText = "";
+            this.tbDoctorName.Enabled = false;
             this.tbDoctorName.FillColor = System.Drawing.Color.White;
             this.tbDoctorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.tbDoctorName.HideSelection = true;
@@ -459,26 +379,26 @@
             this.tbDoctorName.Modified = false;
             this.tbDoctorName.Multiline = false;
             this.tbDoctorName.Name = "tbDoctorName";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbDoctorName.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.tbDoctorName.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbDoctorName.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbDoctorName.OnIdleState = stateProperties16;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbDoctorName.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbDoctorName.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbDoctorName.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbDoctorName.OnIdleState = stateProperties12;
             this.tbDoctorName.Padding = new System.Windows.Forms.Padding(3);
             this.tbDoctorName.PasswordChar = '\0';
             this.tbDoctorName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -738,17 +658,71 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
+            // ddIndicationType
+            // 
+            this.ddIndicationType.BackColor = System.Drawing.Color.Transparent;
+            this.ddIndicationType.BackgroundColor = System.Drawing.Color.White;
+            this.ddIndicationType.BorderColor = System.Drawing.Color.Silver;
+            this.ddIndicationType.BorderRadius = 5;
+            this.ddIndicationType.Color = System.Drawing.Color.Silver;
+            this.ddIndicationType.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.ddIndicationType.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ddIndicationType.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ddIndicationType.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ddIndicationType.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ddIndicationType.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ddIndicationType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ddIndicationType.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.ddIndicationType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddIndicationType.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddIndicationType.FillDropDown = true;
+            this.ddIndicationType.FillIndicator = false;
+            this.ddIndicationType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddIndicationType.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.ddIndicationType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.ddIndicationType.FormattingEnabled = true;
+            this.ddIndicationType.Icon = null;
+            this.ddIndicationType.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddIndicationType.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.ddIndicationType.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddIndicationType.IndicatorThickness = 2;
+            this.ddIndicationType.IsDropdownOpened = false;
+            this.ddIndicationType.ItemBackColor = System.Drawing.Color.White;
+            this.ddIndicationType.ItemBorderColor = System.Drawing.Color.White;
+            this.ddIndicationType.ItemForeColor = System.Drawing.Color.Black;
+            this.ddIndicationType.ItemHeight = 38;
+            this.ddIndicationType.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.ddIndicationType.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ddIndicationType.Items.AddRange(new object[] {
+            "Hóa sinh",
+            "Huyết học",
+            "X Quang",
+            "Cắt lớp vi tính",
+            "Cộng hưởng từ",
+            "Siêu âm",
+            "Nội soi",
+            "Giải phẫu",
+            "Thủ thuật"});
+            this.ddIndicationType.ItemTopMargin = 3;
+            this.ddIndicationType.Location = new System.Drawing.Point(43, 201);
+            this.ddIndicationType.Name = "ddIndicationType";
+            this.ddIndicationType.Size = new System.Drawing.Size(376, 44);
+            this.ddIndicationType.TabIndex = 47;
+            this.ddIndicationType.Text = null;
+            this.ddIndicationType.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddIndicationType.TextLeftMargin = 5;
+            // 
             // NewIndicationPopup
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(467, 573);
+            this.Controls.Add(this.ddIndicationType);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tbNotes);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbDiagnosisName);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbIndicationType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbDoctorName);
             this.Controls.Add(this.label4);
@@ -777,7 +751,6 @@
         private System.Windows.Forms.Label label7;
         private Bunifu.UI.WinForms.BunifuTextBox tbDiagnosisName;
         private System.Windows.Forms.Label label6;
-        private Bunifu.UI.WinForms.BunifuTextBox tbIndicationType;
         private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuTextBox tbDoctorName;
         private System.Windows.Forms.Label label4;
@@ -790,5 +763,6 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        protected Bunifu.UI.WinForms.BunifuDropdown ddIndicationType;
     }
 }

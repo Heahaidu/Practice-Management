@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountsPage));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addNewMedicine_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelAccount = new System.Windows.Forms.Panel();
-            this.addNewMedicine_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,33 +47,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(901, 55);
             this.panel1.TabIndex = 8;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(20, 10);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(230, 33);
-            this.bunifuLabel1.TabIndex = 5;
-            this.bunifuLabel1.Text = "Danh sách tài khoản";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // panelAccount
-            // 
-            this.panelAccount.BackColor = System.Drawing.SystemColors.Control;
-            this.panelAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAccount.Location = new System.Drawing.Point(0, 55);
-            this.panelAccount.Name = "panelAccount";
-            this.panelAccount.Padding = new System.Windows.Forms.Padding(20);
-            this.panelAccount.Size = new System.Drawing.Size(901, 499);
-            this.panelAccount.TabIndex = 10;
             // 
             // addNewMedicine_btn
             // 
@@ -125,7 +98,7 @@
             this.addNewMedicine_btn.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("addNewMedicine_btn.IdleIconLeftImage")));
             this.addNewMedicine_btn.IdleIconRightImage = null;
             this.addNewMedicine_btn.IndicateFocus = false;
-            this.addNewMedicine_btn.Location = new System.Drawing.Point(728, 8);
+            this.addNewMedicine_btn.Location = new System.Drawing.Point(722, 8);
             this.addNewMedicine_btn.Margin = new System.Windows.Forms.Padding(2);
             this.addNewMedicine_btn.Name = "addNewMedicine_btn";
             this.addNewMedicine_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -167,6 +140,34 @@
             this.addNewMedicine_btn.TextMarginLeft = 0;
             this.addNewMedicine_btn.TextPadding = new System.Windows.Forms.Padding(35, 0, 0, 10);
             this.addNewMedicine_btn.UseDefaultRadiusAndThickness = true;
+            this.addNewMedicine_btn.Click += new System.EventHandler(this.addNewMedicine_btn_Click);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic Variable SemiBol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(20, 10);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(230, 33);
+            this.bunifuLabel1.TabIndex = 5;
+            this.bunifuLabel1.Text = "Danh sách tài khoản";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // panelAccount
+            // 
+            this.panelAccount.BackColor = System.Drawing.SystemColors.Control;
+            this.panelAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAccount.Location = new System.Drawing.Point(0, 55);
+            this.panelAccount.Name = "panelAccount";
+            this.panelAccount.Padding = new System.Windows.Forms.Padding(20);
+            this.panelAccount.Size = new System.Drawing.Size(901, 499);
+            this.panelAccount.TabIndex = 10;
             // 
             // AccountsPage
             // 

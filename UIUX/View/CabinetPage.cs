@@ -71,9 +71,9 @@ namespace UIUX.View
         {
             try
             {
-                MedicineBL medicineBL = new MedicineBL();
-                medicineBL.MedicineUpdate((Medicine)medicine);
-                this.DialogResult = DialogResult.OK;
+                //MedicineBL medicineBL = new MedicineBL();
+                //medicineBL.MedicineUpdate((Medicine)medicine);
+                //this.DialogResult = DialogResult.OK;
                 LoadMedicine();
             }
             catch (Exception ex)

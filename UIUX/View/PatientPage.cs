@@ -62,7 +62,6 @@ namespace UIUX.View
             sfDataGrid.Columns["email"].MinimumWidth = 250;
             sfDataGrid.Columns["address"].MinimumWidth = 270;
             sfDataGrid.Columns["medicalHistory"].MinimumWidth = 350;
-            Console.WriteLine("Load Patients");
             sfDataGrid.QueryCellStyle += (sender, e) =>
             {
                 switch (e.Column.MappingName)

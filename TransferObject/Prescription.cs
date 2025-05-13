@@ -10,38 +10,23 @@ namespace TransferObject
 {
     public class Prescription
     {
-        public int Id { get; set; }
+        public int MedicineId { get; set; }
+        public int DateUses { get; set; }
 
-        // Tổng giá
-        [Display(Name = "Tổng giá")]
-        public double TotalPrice { get; set; }
+        public int Moring { get; set; }
+        public int Noon { get; set; }
+        public int Evening { get; set; }
 
-        // Mã bác sĩ
-        [Display(Name = "Mã bác sĩ")]
-        public int DoctorId { get; set; }
+        public string Description { get; set; }
 
-        // Danh sách chi tiết đơn thuốc
-        [Display(Name = "Chi tiết đơn thuốc")]
-        public List<Details> PrescriptionDetails { get; set; }
-
-        public Prescription()
+        public Prescription(int medicineId, int dateUses, int moring, int noon, int evening, string description)
         {
-            PrescriptionDetails = new List<Details>();
-        }
-
-        public Prescription(int id, double totalPrice, int doctorId, List<Details> prescriptionDetails)
-        {
-            Id = id;
-            TotalPrice = totalPrice;
-            DoctorId = doctorId;
-            PrescriptionDetails = prescriptionDetails ?? new List<Details>();
-        }
-
-        public Prescription(double totalPrice, int doctorId, List<Details> prescriptionDetails)
-        {
-            TotalPrice = totalPrice;
-            DoctorId = doctorId;
-            PrescriptionDetails = prescriptionDetails ?? new List<Details>();
+            MedicineId = medicineId;
+            DateUses = dateUses;
+            Moring = moring;
+            Noon = noon;
+            Evening = evening;
+            Description = description;
         }
     }
 }

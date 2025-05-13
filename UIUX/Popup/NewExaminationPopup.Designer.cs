@@ -119,7 +119,7 @@
             this.btnClose.IdleIconLeftImage = null;
             this.btnClose.IdleIconRightImage = null;
             this.btnClose.IndicateFocus = false;
-            this.btnClose.Location = new System.Drawing.Point(113, 549);
+            this.btnClose.Location = new System.Drawing.Point(110, 438);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClose.OnDisabledState.BorderRadius = 10;
@@ -192,7 +192,7 @@
             this.tbNote.IconRight = null;
             this.tbNote.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNote.Lines = new string[0];
-            this.tbNote.Location = new System.Drawing.Point(43, 408);
+            this.tbNote.Location = new System.Drawing.Point(43, 366);
             this.tbNote.MaxLength = 32767;
             this.tbNote.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNote.Modified = false;
@@ -228,7 +228,7 @@
             this.tbNote.SelectionLength = 0;
             this.tbNote.SelectionStart = 0;
             this.tbNote.ShortcutsEnabled = true;
-            this.tbNote.Size = new System.Drawing.Size(450, 117);
+            this.tbNote.Size = new System.Drawing.Size(450, 45);
             this.tbNote.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNote.TabIndex = 44;
             this.tbNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -243,7 +243,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 386);
+            this.label7.Location = new System.Drawing.Point(39, 340);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 23);
             this.label7.TabIndex = 43;
@@ -279,7 +279,7 @@
             this.tbMedicalHistory.IconRight = null;
             this.tbMedicalHistory.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMedicalHistory.Lines = new string[0];
-            this.tbMedicalHistory.Location = new System.Drawing.Point(43, 279);
+            this.tbMedicalHistory.Location = new System.Drawing.Point(43, 283);
             this.tbMedicalHistory.MaxLength = 32767;
             this.tbMedicalHistory.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbMedicalHistory.Modified = false;
@@ -315,7 +315,7 @@
             this.tbMedicalHistory.SelectionLength = 0;
             this.tbMedicalHistory.SelectionStart = 0;
             this.tbMedicalHistory.ShortcutsEnabled = true;
-            this.tbMedicalHistory.Size = new System.Drawing.Size(450, 91);
+            this.tbMedicalHistory.Size = new System.Drawing.Size(450, 45);
             this.tbMedicalHistory.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbMedicalHistory.TabIndex = 42;
             this.tbMedicalHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -444,6 +444,7 @@
             this.tbDoctorName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbDoctorName.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDoctorName.DefaultText = "";
+            this.tbDoctorName.Enabled = false;
             this.tbDoctorName.FillColor = System.Drawing.Color.White;
             this.tbDoctorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.tbDoctorName.HideSelection = true;
@@ -581,7 +582,7 @@
             this.btnAddNewExamination.IdleIconLeftImage = null;
             this.btnAddNewExamination.IdleIconRightImage = null;
             this.btnAddNewExamination.IndicateFocus = false;
-            this.btnAddNewExamination.Location = new System.Drawing.Point(250, 549);
+            this.btnAddNewExamination.Location = new System.Drawing.Point(247, 438);
             this.btnAddNewExamination.Name = "btnAddNewExamination";
             this.btnAddNewExamination.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddNewExamination.OnDisabledState.BorderRadius = 10;
@@ -742,7 +743,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(537, 618);
+            this.ClientSize = new System.Drawing.Size(537, 501);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tbNote);
             this.Controls.Add(this.label7);

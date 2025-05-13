@@ -16,7 +16,7 @@ namespace DataLayer
             try
             {
                 Connect();
-                string sql = "SELECT * FROM Users WHERE username = @username AND password = @password";
+                string sql = "SELECT * FROM Users WHERE username = @username AND password = @password AND NOT(username LIKE '-%')";
                 List<SqlParameter> sqlParameters = new List<SqlParameter>
                 {
                     new SqlParameter("@username", username),
@@ -29,6 +29,7 @@ namespace DataLayer
                     reader.Read();
                     TransferObject.User user = new TransferObject.User
                     {
+                        id = reader.GetInt32(reader.GetOrdinal("id")),
                         username = reader["username"].ToString(),
                         password = reader["password"].ToString(),
                         displayName = reader["displayName"].ToString(),

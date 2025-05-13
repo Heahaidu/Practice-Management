@@ -36,7 +36,7 @@ namespace UIUX.Popup
                 float value2 = float.Parse(tbPrice.Text);
                 float value3 = int.Parse(tbQuantity.Text);
 
-                Medicine medicine = new Medicine(name: tbNameMed.Text, manufacturer: tbManafacture.Text,
+                Medicine medicine = new Medicine(name: tbNameMed.Text.Replace("-", ""), manufacturer: tbManafacture.Text,
                     type: tbTypeMed.Text, description: tbDescriptionMed.Text,
                     discountPrice: float.Parse(tbDiscountPrice.Text),
                     price: float.Parse(tbPrice.Text), quantity: int.Parse(tbQuantity.Text),

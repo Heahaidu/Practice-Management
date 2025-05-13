@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Details.cs" />
     <Compile Include="Examination.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="Indication.cs" />
     <Compile Include="Medicine.cs" />
+    <Compile Include="MedicineTestPrescription.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="Prescription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

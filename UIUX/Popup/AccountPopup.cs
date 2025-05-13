@@ -14,7 +14,7 @@ namespace UIUX.Popup
     {
 
         public EventHandler Clicked;
-
+        public EventHandler LogoutEvent;
         public AccountPopup()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace UIUX.Popup
         private void ShowAccountSettingPopup_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-            Clicked?.Invoke(sender, e);
+            Clicked?.Invoke(null, null);
         }
 
         public void Refesh()
@@ -31,5 +31,9 @@ namespace UIUX.Popup
             lbDisplayName.Text = BusinessLayer.UserSession.Instance.CurrentUser.displayName;
         }
 
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            LogoutEvent?.Invoke(sender, e);
+        }
     }
 }

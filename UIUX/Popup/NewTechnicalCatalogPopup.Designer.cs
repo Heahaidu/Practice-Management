@@ -255,7 +255,7 @@
             this.tbDescriptionTech.SelectionLength = 0;
             this.tbDescriptionTech.SelectionStart = 0;
             this.tbDescriptionTech.ShortcutsEnabled = true;
-            this.tbDescriptionTech.Size = new System.Drawing.Size(369, 45);
+            this.tbDescriptionTech.Size = new System.Drawing.Size(430, 45);
             this.tbDescriptionTech.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbDescriptionTech.TabIndex = 26;
             this.tbDescriptionTech.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

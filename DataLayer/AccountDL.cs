@@ -44,7 +44,7 @@ namespace DataLayer
             {
                 List<User> users = new List<User>();
                 Connect();
-                string sql = "SELECT * FROM Users";
+                string sql = "SELECT * FROM Users WHERE NOT(username LIKE '-%')";
                 SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
                 while (reader.Read())
                 {
@@ -61,6 +61,54 @@ namespace DataLayer
             } catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public int NewAccount(User user)
+        {
+            try
+            {
+                Connect();
+                List<SqlParameter> sqlParameters = new List<SqlParameter>
+                {
+                    new SqlParameter("@username", user.username),
+                    new SqlParameter("@password", user.password),
+                    new SqlParameter("@displayName", user.displayName),
+                    new SqlParameter("@email", user.email),
+                    new SqlParameter("@authority_level", user.level)
+                };
+                int rowsAffected = MyExecuteNonQuerry("uspCreateAccount", CommandType.StoredProcedure, sqlParameters);
+                return rowsAffected;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
+
+        public int Delete(string username)
+        {
+            try
+            {
+                Connect();
+                List<SqlParameter> sqlParameters = new List<SqlParameter>
+                {
+                    new SqlParameter("@username", username)
+                };
+                int rowsAffected = MyExecuteNonQuerry("uspDeleteAccount", CommandType.StoredProcedure, sqlParameters);
+                return rowsAffected;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
             }
         }
 
