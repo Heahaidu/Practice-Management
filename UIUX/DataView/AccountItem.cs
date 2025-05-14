@@ -22,7 +22,7 @@ namespace UIUX.DataView
             this.user = user;
 
             this.lbUsernameName.Text = user.username + "\\" + user.displayName;
-            this.lbAuthority.Text = "";
+            this.lbAuthority.Text = user.level == 3? "Trưởng khoa": "Bác sĩ";
             this.lbEmail.Text = user.email;
 
             if(UserSession.Instance.CurrentUser.level == 3 && UserSession.Instance.CurrentUser.username != user.username)

@@ -29,6 +29,7 @@ namespace UIUX.Popup
         public void Refesh()
         {
             lbDisplayName.Text = BusinessLayer.UserSession.Instance.CurrentUser.displayName;
+            label1.Text = BusinessLayer.UserSession.Instance.CurrentUser.level == 3 ? "Trưởng khoa" : "Bác sĩ";
         }
 
         private void bunifuButton3_Click(object sender, EventArgs e)

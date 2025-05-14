@@ -52,6 +52,7 @@ namespace DataLayer
                     {
                         username = reader["username"].ToString(),
                         password = "",
+                        level =  int.Parse( reader["authority_level"].ToString()),
                         displayName = reader["displayName"].ToString(),
                         email = reader["email"].ToString()
                     };

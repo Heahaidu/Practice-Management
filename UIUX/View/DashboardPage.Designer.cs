@@ -551,7 +551,7 @@ namespace UIUX.View
         "> 40"};
             this.bunifuChartCanvas2.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
             this.bunifuChartCanvas2.LegendDisplay = true;
-            this.bunifuChartCanvas2.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuChartCanvas2.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.bunifuChartCanvas2.LegendForeColor = System.Drawing.Color.DarkGray;
             this.bunifuChartCanvas2.LegendFullWidth = true;
             this.bunifuChartCanvas2.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.right;
